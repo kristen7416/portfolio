@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kristen Wang | 产品运营与内容生态作品集</title>
+  <style>
+    :root {
+      --primary: #1B3A6B;
+      --primary-light: #2B5797;
+      --primary-accent: #2563EB;
+      --secondary: #059669;
+      --dark-text: #0F172A;
+      --body-text: #334155;
+      --muted-text: #64748B;
+      --light-bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --badge-bg: #EFF6FF;
+      --tag-border: #BFDBFE;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--light-bg);
+      color: var(--body-text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #1B3A6B 0%, #2B5797 100%);
+      color: white;
+      padding: 44px 20px 32px;
+      box-shadow: 0 4px 20px rgba(27, 58, 107, 0.15);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .avatar-wrapper {
+      position: relative;
+    }
+    .avatar {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.95);
+      object-fit: cover;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      background: #e2e8f0;
+    }
+    .header-text h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .header-subtitle {
+      font-size: 1.05rem;
+      opacity: 0.94;
+      margin-bottom: 12px;
+    }
+    .header-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+    }
+    .nav-tabs {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .nav-tabs-inner {
+      display: flex;
+      overflow-x: auto;
+      gap: 6px;
+    }
+    .tab-btn {
+      padding: 15px 18px;
+      border: none;
+      background: none;
+      color: var(--muted-text);
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover {
+      color: var(--primary-accent);
+    }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    main {
+      padding: 36px 0 60px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      font-size: 1.35rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .section-title span.number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: white;
+      font-size: 0.95rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    }
+    .card-header {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dark-text);
+    }
+    .card-tag {
+      background: var(--badge-bg);
+      color: var(--primary-light);
+      border: 1px solid var(--tag-border);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .img-preview {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #f1f5f9;
+      display: block;
+    }
+    .img-preview:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+    .action-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      background: #FFFFFF;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .action-box:hover {
+      border-color: var(--primary-accent);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+    }
+    .action-box-img-wrap {
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      border: 1px solid #E2E8F0;
+      position: relative;
+    }
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      background: var(--primary-light);
+      color: white;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 500;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-link:hover {
+      background: var(--primary);
+    }
+    .btn-secondary {
+      background: #F1F5F9;
+      color: var(--dark-text);
+      border: 1px solid #CBD5E1;
+    }
+    .btn-secondary:hover {
+      background: #E2E8F0;
+    }
+    .social-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: #FFFFFF;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .social-card:hover {
+      border-color: var(--primary-accent);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transform: translateY(-2px);
+    }
+    .social-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: white;
+    }
+    .workflow-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .workflow-step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #F8FAFC;
+      padding: 14px 18px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-accent);
+    }
+    .step-badge {
+      background: white;
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      white-space: nowrap;
+      border: 1px solid #E2E8F0;
+    }
+    .step-desc {
+      font-size: 0.9rem;
+      color: #334155;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 0.9rem;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #E2E8F0;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    table.data-table th {
+      background: #F8FAFC;
+      color: #475569;
+      font-weight: 600;
+    }
+    table.data-table tr:hover {
+      background: #F8FAFC;
+    }
+    .formula-badge {
+      font-family: monospace;
+      background: #EFF6FF;
+      color: #1D4ED8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 0;
+      text-align: center;
+      color: var(--muted-text);
+      font-size: 0.9rem;
+      background: white;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      max-width: 92%;
+      max-height: 90%;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .modal-img {
+      max-width: 100%;
+      max-height: 85vh;
+      display: block;
+    }
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ECFDF5;
+      color: #065F46;
+      border: 1px solid #A7F3D0;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .appstore-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .appstore-item {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .appstore-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .appstore-item-title {
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #1E293B;
+      background: white;
+      border-bottom: 1px solid #E2E8F0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 头部信息 -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="avatar-wrapper">
+          <img src="assets/portrait.jpg" alt="Kristen Wang" class="avatar" onerror="this.src='portrait.jpg'">
+        </div>
+        <div class="header-text">
+          <h1>Kristen Wang | 个人作品集</h1>
+          <div class="header-subtitle">产品运营 · 微信公众号采编排版 · 校园教育活动全流程 · 开源社区协作与全栈落地</div>
+          <div class="header-badges">
+            <span class="badge">西南财经大学（211 / 双一流）</span>
+            <span class="badge">金融数学 本科（2027 届）</span>
+            <span class="badge">公众号图文排版（秀米/135）</span>
+            <span class="badge">实体印刷设计（入场券/书签）</span>
+            <span class="badge">GitHub 贡献 842 次</span>
+            <span class="badge">Vibecoding 全栈落地</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 导航锚点 -->
+  <nav class="nav-tabs">
+    <div class="container">
+      <div class="nav-tabs-inner">
+        <button class="tab-btn active" onclick="scrollToSection('media')">📱 1. 微信公众号图文</button>
+        <button class="tab-btn" onclick="scrollToSection('design')">🎨 2. 活动物料 & 应用商店图</button>
+        <button class="tab-btn" onclick="scrollToSection('event-data')">📊 3. 赛事活动与数据表格</button>
+        <button class="tab-btn" onclick="scrollToSection('opensource-ai')">⚡ 4. GitHub开源与Vibecoding</button>
+        <button class="tab-btn" onclick="scrollToSection('social-matrix')">🌍 5. 全球多渠道社媒矩阵</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- 板块一：微信公众号图文采编与排版 -->
+    <section id="media">
+      <div class="section-title">
+        <span class="number">1</span>
+        <span>新媒体图文采编与排版作品（微信公众号 · 真实已发表）</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">实发微信公众号图文（附手机端精美排版实录与原文链接）</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">深度负责推文选题策划、文案采编、秀米/135精细化美化排版与审校发布，注重图文排版呼吸感与视觉规范。</p>
+          </div>
+          <span class="card-tag">微信公众号真实案例</span>
+        </div>
+
+        <div class="grid-2">
+          <!-- 公众号案例 1 -->
+          <div class="action-box">
+            <div class="action-box-img-wrap" style="max-height: 380px; overflow: hidden;">
+              <img src="assets/wechat_article_01.png" alt="青春就业大讲堂文章截图" class="img-preview" onclick="openModal(this.src)">
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span class="stat-pill">✨ 实发推文 · 讲座专栏</span>
+                <span style="font-size: 0.78rem; color: #64748B;">西南财经大学数学学院</span>
+              </div>
+              <h4 style="font-size: 1.05rem; color: #0F172A; margin-bottom: 6px;">《青春就业大讲堂 —— 保研经验分享讲座》</h4>
+              <p style="font-size: 0.85rem; color: #475569; margin-bottom: 12px;">
+                结合深色模式适配、重点引言加框、图文多栏排版与文末互动引导，实现移动端高舒适度阅读体验。
+              </p>
+              <div style="margin-bottom: 14px;">
+                <span class="formula-badge">排版工具：秀米 / 135</span>
+                <span class="formula-badge" style="margin-left: 4px;">规范：字间距/行高微调</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw" target="_blank" class="btn-link">
+                🔗 跳转微信阅读原文
+              </a>
+              <button class="btn-link btn-secondary" onclick="copyText('https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw')">复制文章链接</button>
+            </div>
+          </div>
+
+          <!-- 公众号案例 2 -->
+          <div class="action-box">
+            <div class="action-box-img-wrap" style="max-height: 380px; overflow: hidden;">
+              <img src="assets/wechat_article_02.png" alt="数企同行文章截图" class="img-preview" onclick="openModal(this.src)">
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span class="stat-pill">✨ 实发推文 · 参访专题</span>
+                <span style="font-size: 0.78rem; color: #64748B;">西南财经大学数学学院</span>
+              </div>
+              <h4 style="font-size: 1.05rem; color: #0F172A; margin-bottom: 6px;">《数企同行—复星联合健康保险企业参观来啦！》</h4>
+              <p style="font-size: 0.85rem; color: #475569; margin-bottom: 12px;">
+                采用生动活泼的宣发设计语言，配合企业介绍卡片、活动流程图解与清晰的报名指引，有效拉动线下报名率。
+              </p>
+              <div style="margin-bottom: 14px;">
+                <span class="formula-badge">排版亮点：信息图表结构化</span>
+                <span class="formula-badge" style="margin-left: 4px;">转化：文末二维码引导</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="https://mp.weixin.qq.com/s/8tLebzYzHkEDPTeH6R8o1A" target="_blank" class="btn-link">
+                🔗 跳转微信阅读原文
+              </a>
+              <button class="btn-link btn-secondary" onclick="copyText('https://mp.weixin.qq.com/s/8tLebzYzHkEDPTeH6R8o1A')">复制文章链接</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 科技长文视觉排版作为技术佐证 -->
+        <div style="margin-top: 24px;">
+          <h4 style="font-size: 0.95rem; color: #334155; margin-bottom: 8px;">🌟 延伸长文视觉：科技产品 Medium 深度长文头图（1600x900px）</h4>
+          <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 10px;">
+            <img src="assets/medium_cover.png" alt="科技长文封面排版" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <p style="font-size: 0.85rem; color: var(--muted-text);">为 Medium 深度长文独立设计的 16:9 横版头图，注重科技产品色彩系统与核心概念视觉化。</p>
+            <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="btn-link">
+              🔗 查看 Medium 原文
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 板块二：活动物料设计 & LynavoDrive 官方应用商店图 -->
+    <section id="design" style="margin-top: 48px;">
+      <div class="section-title">
+        <span class="number">2</span>
+        <span>实体活动物料 & LynavoDrive 官方应用商店图</span>
+      </div>
+
+      <!-- 实物入场券设计 -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">配音社团年度晚会实物入场券 / 书签正面设计</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">为「不语配音社」年度专场展演独立操盘设计的实体印刷入场券，兼具晚会检票与纪念书签双重功能。</p>
+          </div>
+          <span class="card-tag">实物设计 · 印刷打样</span>
+        </div>
+
+        <div style="background: #F8FAFC; padding: 18px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 12px;">
+          <div style="border-radius: 8px; overflow: hidden; border: 1px solid #CBD5E1; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+            <img src="assets/ticket_design.png" alt="不语配音社年度晚会入场券设计" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div style="font-size: 0.88rem; color: #334155;">
+              <strong>设计构思</strong>：主标「语你结缘」，副标「不语配音社年度晚会」，编号「NO.20241215」；融合“传统祥云金纹”与“声波流线”，左侧融入专属徽章标志；严格把控印刷出血线、烫金质感与成品质检。
+            </div>
+            <button class="btn-link btn-secondary" onclick="openModal('assets/ticket_design.png')">🔍 点击放大全图</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LynavoDrive 应用商店高清大图 -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">LynavoDrive 官方应用商店上架图（App Store Screenshots · 高清全览）</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">针对 App Store 规范制作的 2560x1600 高清应用商店图，结构化传达产品核心功能与隐私安全优势。</p>
+          </div>
+          <span class="card-tag">App Store 官方上架物料</span>
+        </div>
+
+        <!-- 商店下载链接预览卡片 -->
+        <div class="grid-2" style="margin-bottom: 18px;">
+          <div class="action-box" style="flex-direction: row; align-items: center; gap: 16px;">
+            <div style="font-size: 2.2rem;">🍏</div>
+            <div>
+              <h4 style="font-size: 1rem; color: #0F172A;">Apple App Store 官方下载页</h4>
+              <p style="font-size: 0.82rem; color: #64748B;">iOS 客户端已正式上架苹果应用商店</p>
+              <a href="https://apps.apple.com/app/lynavodrive/id6771620902" target="_blank" class="btn-link" style="margin-top: 6px;">
+                🔗 访问 iOS App Store 页面
+              </a>
+            </div>
+          </div>
+          <div class="action-box" style="flex-direction: row; align-items: center; gap: 16px;">
+            <div style="font-size: 2.2rem;">🤖</div>
+            <div>
+              <h4 style="font-size: 1rem; color: #0F172A;">Google Play Store 官方下载页</h4>
+              <p style="font-size: 0.82rem; color: #64748B;">Android 客户端已正式上架谷歌商店</p>
+              <a href="https://play.google.com/store/apps/details?id=com.vividrop.mobile.global" target="_blank" class="btn-link" style="margin-top: 6px;">
+                🔗 访问 Google Play 页面
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 张应用商店图展示 -->
+        <div class="appstore-grid">
+          <div class="appstore-item">
+            <div class="appstore-item-title">01 · 电脑与手机无缝连接</div>
+            <img src="assets/appstore_preview_01.jpg" alt="应用商店图 01" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div class="appstore-item">
+            <div class="appstore-item-title">02 · 自动相册备份到电脑</div>
+            <img src="assets/appstore_preview_02.jpg" alt="应用商店图 02" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div class="appstore-item">
+            <div class="appstore-item-title">03 · 跨端原图原文件传输</div>
+            <img src="assets/appstore_preview_03.jpg" alt="应用商店图 03" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div class="appstore-item">
+            <div class="appstore-item-title">04 · 手机端随时访问电脑文件</div>
+            <img src="assets/appstore_preview_04.jpg" alt="应用商店图 04" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div class="appstore-item">
+            <div class="appstore-item-title">05 · 局域网高速无中继点对点</div>
+            <img src="assets/appstore_preview_05.jpg" alt="应用商店图 05" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div class="appstore-item">
+            <div class="appstore-item-title">06 · 独立删除与多重备份安全</div>
+            <img src="assets/appstore_preview_06.jpg" alt="应用商店图 06" class="img-preview" onclick="openModal(this.src)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 板块三：活动全流程与 Excel 数据 -->
+    <section id="event-data" style="margin-top: 48px;">
+      <div class="section-title">
+        <span class="number">3</span>
+        <span>赛事活动全流程执行与 Excel 数据洞察</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">高校赛事 / 训练营全流程执行 SOP 甘特流程</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">标准化拆解“前期筹备 ➔ 宣发招募 ➔ 赛事执行 ➔ 数据复盘”的端到端完整闭环。</p>
+          </div>
+          <span class="card-tag">活动全流程 SOP</span>
+        </div>
+
+        <div class="workflow-flow">
+          <div class="workflow-step">
+            <span class="step-badge">阶段一：前期筹备</span>
+            <div class="step-desc">撰写活动策划案 PPT、敲定比赛规则与评分标准；定制物料清单（定制文化衫、证书模板、奖品盲盒）。</div>
+          </div>
+          <div class="workflow-step">
+            <span class="step-badge">阶段二：宣发招募</span>
+            <div class="step-desc">公众号长图文推介、高校社群裂变传播；搭建问卷星/金数据报名入口，设定每日报名进度追踪看板。</div>
+          </div>
+          <div class="workflow-step">
+            <span class="step-badge">阶段三：赛事执行</span>
+            <div class="step-desc">建立 500 人微信/QQ 赛事交流群；进行每日答疑与常见报错 FAQ 整理；腾讯会议开题直播调试与在线控麦。</div>
+          </div>
+          <div class="workflow-step">
+            <span class="step-badge">阶段四：数据复盘</span>
+            <div class="step-desc">使用 Excel 清洗选手作品提交名单，统计“报名-到场-完赛-获奖”四级漏斗；整理活动结案周报/月报。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Excel 数据处理与报名管理示例（金融数学背景优势）</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">熟练运用 <span class="formula-badge">VLOOKUP</span>、<span class="formula-badge">数据透视表</span>、多维交叉汇总快速清洗几千条报名与打卡数据。</p>
+          </div>
+          <span class="card-tag">数据清洗 / 漏斗模型</span>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>高校类别 / 战队编号</th>
+              <th>报名人数</th>
+              <th>打卡率 (VLOOKUP匹配)</th>
+              <th>作品提交率 (透视汇总)</th>
+              <th>完赛转化漏斗</th>
+              <th>运营策略动作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>985/211 核心高校战队</strong></td>
+              <td>1,240 人</td>
+              <td>88.5%</td>
+              <td>72.4%</td>
+              <td><span style="color: #10B981; font-weight: 600;">高转化</span> (Top 梯队)</td>
+              <td>一对一答疑、技术沙龙深访、优秀案例推选</td>
+            </tr>
+            <tr>
+              <td><strong>普通本科及高职技术社团</strong></td>
+              <td>2,150 人</td>
+              <td>64.2%</td>
+              <td>41.8%</td>
+              <td><span style="color: #F59E0B; font-weight: 600;">中转化</span> (需引导)</td>
+              <td>发放保姆级操作文档、作业打卡小红花激励</td>
+            </tr>
+            <tr>
+              <td><strong>零基础个人参赛散户</strong></td>
+              <td>890 人</td>
+              <td>35.0%</td>
+              <td>18.6%</td>
+              <td><span style="color: #EF4444; font-weight: 600;">易流失</span> (急需召回)</td>
+              <td>短信/社群关键节点催交提醒、发放补卡券</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top: 16px; background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 12px 16px; border-radius: 4px; font-size: 0.85rem; color: #1E3A8A;">
+          💡 <strong>运营复盘洞察</strong>：通过 Excel 对多批次参赛学员进行交叉分析，发现提供“开箱即用新手代码 Demo”的高校群组，作品提交率比无引导群组提升 <strong>31.2%</strong>；据此反哺优化后续宣发培训节奏。
+        </div>
+      </div>
+    </section>
+
+    <!-- 板块四：开源社区生态与 Vibecoding 交付 -->
+    <section id="opensource-ai" style="margin-top: 48px;">
+      <div class="section-title">
+        <span class="number">4</span>
+        <span>开源社区生态（GitHub/Gitee）与 Vibecoding 网页成果</span>
+      </div>
+
+      <!-- GitHub 真实数据展位 -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">GitHub 个人开源贡献与开发者协作（JD 明确加分项）</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">过去一年累计贡献 <strong>842 次（842 contributions）</strong>，参与 530+ Star 开源项目协同，熟悉 Git/PR 工作流。</p>
+          </div>
+          <span class="card-tag">GitHub 真实提交</span>
+        </div>
+
+        <div style="background: #0D1117; padding: 18px; border-radius: 10px; border: 1px solid #30363D; margin-bottom: 16px;">
+          <div style="border-radius: 8px; overflow: hidden; border: 1px solid #30363D;">
+            <img src="assets/github_profile.png" alt="GitHub 个人贡献与开源项目" class="img-preview" onclick="openModal(this.src)">
+          </div>
+          <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div style="font-size: 0.88rem; color: #C9D1D9;">
+              <strong>开源履历亮点</strong>：在 GitHub 深度协同 <span style="color: #58A6FF;">Lynavo/lynavo-drive</span>（530 Stars、81 Forks）、开源项目 OpenIM（69 个合并 PR）；主导个人开源项目 <span style="color: #58A6FF;">swufe-club-news</span>。
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <a href="https://github.com/kristen7416" target="_blank" class="btn-link" style="background: #238636;">
+                🐙 访问我的 GitHub 主页 (@kristen7416)
+              </a>
+              <button class="btn-link btn-secondary" onclick="copyText('https://github.com/kristen7416')">复制 GitHub 链接</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vibecoding 独立网页上线案例 -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Vibecoding 独立项目：SWUFE 社团资讯聚合站（已部署上线）</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">利用 AI 辅助编程（Vibecoding）思想全栈独立落地，部署于 Vercel 云平台，提供高校社团动态聚合。</p>
+          </div>
+          <span class="card-tag">全栈交付 · 已上线</span>
+        </div>
+
+        <div class="grid-2">
+          <!-- 站点一：SWUFE Club News -->
+          <div class="action-box">
+            <div class="action-box-img-wrap">
+              <img src="assets/swufe_club_preview.png" alt="SWUFE社团资讯站真实截图" class="img-preview" onclick="openModal(this.src)">
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span class="stat-pill">🌐 在线云部署</span>
+                <span style="font-size: 0.78rem; color: #64748B;">Vercel Platform</span>
+              </div>
+              <h4 style="font-size: 1.05rem; color: #0F172A; margin-bottom: 6px;">SWUFE Club News（西南财大社团资讯站）</h4>
+              <p style="font-size: 0.85rem; color: #475569; margin-bottom: 12px;">
+                针对高校社团信息分散痛点构建的轻量资讯网站。包含新闻列表、社团活动预告与分类导航，由 Python 后端与现代前端结合交付。
+              </p>
+              <div style="margin-bottom: 14px;">
+                <span class="formula-badge">技术栈：Python / HTML5 / Vercel</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="http://swufe-club-news.vercel.app" target="_blank" class="btn-link">
+                🚀 立即在线访问 (swufe-club-news)
+              </a>
+              <button class="btn-link btn-secondary" onclick="copyText('http://swufe-club-news.vercel.app')">复制网站链接</button>
+            </div>
+          </div>
+
+          <!-- 站点二：Lynavo 官网 -->
+          <div class="action-box">
+            <div class="action-box-img-wrap">
+              <img src="assets/lynavo_app_01.png" alt="Lynavo官网截图" class="img-preview" onclick="openModal(this.src)">
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span class="stat-pill">🖥️ 商业产品官网</span>
+                <span style="font-size: 0.78rem; color: #64748B;">15 个正式页面</span>
+              </div>
+              <h4 style="font-size: 1.05rem; color: #0F172A; margin-bottom: 6px;">LynavoDrive 官方网站与 Web 触点</h4>
+              <p style="font-size: 0.85rem; color: #475569; margin-bottom: 12px;">
+                主导信息架构、文案与 SEO 结构设计，梳理转化漏斗；完成 34 次个人提交与 11 个合并 PR，配合自动化冒烟测试上线。
+              </p>
+              <div style="margin-bottom: 14px;">
+                <span class="formula-badge">正式域名：drive.lynavo.io</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="https://drive.lynavo.io" target="_blank" class="btn-link">
+                🌐 访问产品官网 (drive.lynavo.io)
+              </a>
+              <button class="btn-link btn-secondary" onclick="copyText('https://drive.lynavo.io')">复制官网链接</button>
+            </div>
+          </div>
+
+          <!-- 站点三：SuccessBank 成功银行小程序 Web 端 -->
+          <div class="action-box">
+            <div class="action-box-img-wrap" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); display: flex; align-items: center; justify-content: center; min-height: 180px;">
+              <div style="text-align: center; padding: 20px;">
+                <div style="font-size: 2.8rem; margin-bottom: 8px;">🏦</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #38BDF8;">SuccessBank 成功银行</div>
+                <div style="font-size: 0.78rem; color: #94A3B8; margin-top: 4px;">Taro / React / H5 Web Deploy</div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span class="stat-pill">📱 小程序 Web 版</span>
+                <span style="font-size: 0.78rem; color: #64748B;">GitHub Pages 托管</span>
+              </div>
+              <h4 style="font-size: 1.05rem; color: #0F172A; margin-bottom: 6px;">SuccessBank（成功银行小程序 Web 演示端）</h4>
+              <p style="font-size: 0.85rem; color: #475569; margin-bottom: 12px;">
+                基于 Taro + React 构建的正向习惯与成就激励小程序，完成从微信/抖音小程序向移动端 Web (H5) 的跨端编译与静态部署，提供完整在线交互体验与花园成就系统。
+              </p>
+              <div style="margin-bottom: 14px;">
+                <span class="formula-badge">技术栈：Taro / React / TypeScript / TailwindCSS</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="https://kristen7416.github.io/successbank/" target="_blank" class="btn-link">
+                🚀 在线体验小程序 Web 端
+              </a>
+              <a href="https://github.com/kristen7416/successbank" target="_blank" class="btn-link btn-secondary">
+                🐙 查看 GitHub 源码仓库
+              </a>
+              <button class="btn-link btn-secondary" onclick="copyText('https://kristen7416.github.io/successbank/')">复制体验链接</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 板块五：全球多渠道社媒矩阵 -->
+    <section id="social-matrix" style="margin-top: 48px;">
+      <div class="section-title">
+        <span class="number">5</span>
+        <span>LynavoDrive 全球多渠道社交媒体与内容矩阵</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">海外社媒与技术社区公开发布记录（全部附真实链接）</div>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 4px;">建立包含 12 类平台的内容规范，针对不同社区生态定制标题、结构、身份披露与 UTM 转化归因。</p>
+          </div>
+          <span class="card-tag">海外社媒矩阵</span>
+        </div>
+
+        <div class="grid-4">
+          <!-- X (Twitter) -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #000000;">𝕏</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">X / Twitter</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">官方社媒发布</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                发布产品更新动态与视频推文，开展观点互动与用户需求测试。
+              </p>
+            </div>
+            <a href="https://x.com/founder_im63606/status/2082676677302477197" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              查看 X 推文
+            </a>
+          </div>
+
+          <!-- YouTube -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #FF0000;">▶</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">YouTube</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">产品演示视频</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                发布产品场景演示与对比实录，建立真实透明的视频信任资产。
+              </p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=XB397hMaeEo" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              观看 YouTube 视频
+            </a>
+          </div>
+
+          <!-- Quora -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #B92B27;">Q</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">Quora</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">深度问答专栏</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                回答手机访问电脑文件的真实痛点问题，长尾承接搜索流量。
+              </p>
+            </div>
+            <a href="https://www.quora.com/How-do-I-access-my-files-on-my-mobile-smartphone/answer/Lynavo" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              阅读 Quora 回答
+            </a>
+          </div>
+
+          <!-- Dev.to -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #0A0A0A;">DEV</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">Dev.to</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">技术社区专栏</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                发布技术测试矩阵长文，面向开发者群体建立技术信任。
+              </p>
+            </div>
+            <a href="https://dev.to/lynavo/local-first-is-not-offline-how-to-test-phone-to-computer-file-access-33pe" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              访问 Dev.to 文章
+            </a>
+          </div>
+
+          <!-- Hashnode -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #2962FF;">H</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">Hashnode</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">技术博客专栏</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                发布可执行的 Runbook 架构文章，沉淀长期技术品牌资产。
+              </p>
+            </div>
+            <a href="https://lynavodrive.hashnode.dev/designing-a-reliable-runbook-for-phone-to-computer-file-access" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              阅读 Hashnode 文章
+            </a>
+          </div>
+
+          <!-- Product Hunt -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #DA552F;">P</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">Product Hunt</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">社区自荐与讨论</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                在 Self-Promotion 社区发起产品讨论，收集早期用户反馈。
+              </p>
+            </div>
+            <a href="https://www.producthunt.com/p/self-promotion/we-documented-the-boundary-between-local-first-and-always-offline" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              查看 PH 讨论帖
+            </a>
+          </div>
+
+          <!-- Hacker News -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #FF6600;">Y</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">Hacker News</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">科技首发与讨论</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                发布客观克制的普通链接帖，获取高标准极客社区反馈。
+              </p>
+            </div>
+            <a href="https://news.ycombinator.com/item?id=49107192" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              查看 HN 帖子
+            </a>
+          </div>
+
+          <!-- Medium -->
+          <div class="social-card">
+            <div>
+              <div class="social-header">
+                <div class="social-icon" style="background: #12100E;">M</div>
+                <div>
+                  <strong style="font-size: 0.95rem; color: #0F172A;">Medium</strong>
+                  <div style="font-size: 0.75rem; color: #64748B;">官方深度长文</div>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #475569; margin-bottom: 10px;">
+                深度母文章发布，系统阐述个人数据存储工作流与产品逻辑。
+              </p>
+            </div>
+            <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="btn-link" style="font-size: 0.78rem; justify-content: center;">
+              阅读 Medium 母文
+            </a>
+          </div>
+        </div>
+
+        <!-- AI Agent 运营流水线总结 -->
+        <div style="margin-top: 24px; background: #F8FAFC; padding: 18px; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-size: 0.95rem; color: #1E293B; margin-bottom: 10px;">⚡ 支撑底层：AI Agent 辅助运营流水线架构</h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+            <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
+              <strong style="color: #1B3A6B; display: block; margin-bottom: 4px;">① 痛点检索与选题</strong>
+              <p style="font-size: 0.78rem; color: #64748B;">自动化监控行业热点与用户真实痛点，关键词打分入库。</p>
+            </div>
+            <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
+              <strong style="color: #1B3A6B; display: block; margin-bottom: 4px;">② 事实源与简报生成</strong>
+              <p style="font-size: 0.78rem; color: #64748B;">对齐产品事实真源表，明确宣传红线，AI 生成母内容大纲。</p>
+            </div>
+            <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
+              <strong style="color: #1B3A6B; display: block; margin-bottom: 4px;">③ 原生多渠道改写</strong>
+              <p style="font-size: 0.78rem; color: #64748B;">针对 12 类平台生态定制标题、结构、身份披露与 CTA。</p>
+            </div>
+            <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid #E2E8F0;">
+              <strong style="color: #1B3A6B; display: block; margin-bottom: 4px;">④ 多层审核与复盘</strong>
+              <p style="font-size: 0.78rem; color: #64748B;">人工介入四级审核，生成 UTM 追踪，执行 0-2h/24h/7d 效果归因。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="font-weight: 600; color: #1E293B; margin-bottom: 6px;">Kristen Wang | 产品运营与高校生态求职作品集</p>
+      <p>联系电话：18708165973 · 邮箱：kristen6670@163.com · 微信：kristen6670 · GitHub：github.com/kristen7416</p>
+      <p style="font-size: 0.82rem; color: #94A3B8; margin-top: 8px;">西南财经大学（211 / 双一流）· 金融数学 本科（2027 届）</p>
+    </div>
+  </footer>
+
+  <!-- 图片全屏查看模态框 -->
+  <div class="modal" id="imageModal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <img src="" alt="放大预览" class="modal-img" id="modalImg">
+    </div>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = el.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        if (event && event.currentTarget) {
+          event.currentTarget.classList.add('active');
+        }
+      }
+    }
+
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const img = document.getElementById('modalImg');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('链接已成功复制到剪贴板：\n' + text);
+      }).catch(() => {
+        prompt('请手动复制链接：', text);
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
