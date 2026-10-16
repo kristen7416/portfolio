@@ -1764,7 +1764,44 @@
           </div>
         </div>
 
-        <!-- 6 张应用商店图展示 -->
+        <!-- 商店全景展览图 (Panoramic Showcase) -->
+        <div style="margin-bottom: 28px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <h4 style="font-family: var(--font-serif); font-size: 1.18rem; font-weight: 600; color: var(--text-main);">
+              🖼️ LynavoDrive 官方应用商店全景展览图（App Store Panoramic Showcase）
+            </h4>
+            <button class="btn-act-secondary" onclick="openModal('assets/appstore_exhibition.webp')" style="font-size: 0.8rem;">
+              🔍 点击全屏查看高清展览图
+            </button>
+          </div>
+          <div class="browser-mockup-frame" style="margin-bottom: 10px; cursor: zoom-in;" onclick="openModal('assets/appstore_exhibition.webp')">
+            <div class="browser-top-bar">
+              <div class="browser-dots-group">
+                <span class="browser-dot dot-red"></span>
+                <span class="browser-dot dot-yellow"></span>
+                <span class="browser-dot dot-green"></span>
+              </div>
+              <div class="browser-address-bar">🔒 apps.apple.com/app/lynavodrive · App Store 官方上架全景展览图</div>
+            </div>
+            <div class="browser-viewport" style="background: #F8FAFC; padding: 12px 10px;">
+              <img src="assets/appstore_exhibition.webp" alt="LynavoDrive 应用商店全景展览图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/appstore_exhibition.png'" style="border-radius: var(--radius-sm); box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+            </div>
+          </div>
+          <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.6;">
+            涵盖「随时访问电脑文件」、「一码秒级连接」、「电脑即私有云盘」、「无须第三方云存储」与「相册视频自动备份」5 大核心用户场景的连续视觉流，兼具视觉传达与高转化说服力。
+          </p>
+        </div>
+
+        <!-- 6 张应用商店分图展示 -->
+        <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-light); margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <h4 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--text-main);">
+              📱 单张高清详细分图（01 ~ 06 · 2560x1600 · 点击放大）
+            </h4>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">针对应用商店各功能点拆解展示</span>
+          </div>
+        </div>
+
         <div class="appstore-showcase-grid">
           <div class="appstore-slide-card" onclick="openModal('assets/appstore_preview_01.webp')">
             <div class="appstore-card-header">
