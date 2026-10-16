@@ -1155,6 +1155,70 @@
     }
 
     /* ==========================================================================
+       MEDIUM SHOWCASE COMPACT (Moved to End & Reduced Scale)
+       ========================================================================== */
+    .medium-showcase-compact {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .medium-showcase-inner {
+      background: var(--bg-surface-tint);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: all 0.22s ease;
+    }
+
+    .medium-showcase-inner:hover {
+      background: #FFFFFF;
+      border-color: var(--border-card-hover);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .medium-showcase-preview {
+      width: 260px;
+      max-width: 35%;
+      flex-shrink: 0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--border-card);
+      box-shadow: var(--shadow-sm);
+      cursor: zoom-in;
+      background: #FFFFFF;
+    }
+
+    .medium-showcase-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .medium-showcase-preview:hover img {
+      transform: scale(1.03);
+    }
+
+    .medium-showcase-info {
+      flex: 1;
+    }
+
+    @media (max-width: 768px) {
+      .medium-showcase-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .medium-showcase-preview {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    /* ==========================================================================
        AI PIPELINE ARCHITECTURE (Four Steps)
        ========================================================================== */
     .pipeline-board {
@@ -1658,36 +1722,6 @@
             </div>
           </div>
         </div>
-
-        <!-- 科技长文视觉排版补充 (Medium 16:9 封面) -->
-        <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border-light);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
-            <div>
-              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--text-main);">
-                🌟 延伸视觉创作：科技产品 Medium 深度长文头图（1600x900px）
-              </h4>
-              <p style="font-size: 0.85rem; color: var(--text-muted);">针对海外科技技术读者独立设计的 16:9 宽屏视觉头图，建立统一的产品色彩与空间逻辑。</p>
-            </div>
-            <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="btn-act-secondary">
-              查看 Medium 原文 ↗
-            </a>
-          </div>
-
-          <div class="browser-mockup-frame" style="margin-bottom: 0;">
-            <div class="browser-top-bar">
-              <div class="browser-dots-group">
-                <span class="browser-dot dot-red"></span>
-                <span class="browser-dot dot-yellow"></span>
-                <span class="browser-dot dot-green"></span>
-              </div>
-              <div class="browser-address-bar">🔒 medium.com/@openimfounder/...</div>
-            </div>
-            <div class="browser-viewport" onclick="openModal('assets/medium_cover.webp')">
-              <img src="assets/medium_cover.webp" alt="科技长文封面排版" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/medium_cover.png'">
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -2253,6 +2287,35 @@
               <div class="pipeline-box-num">04</div>
               <h4 class="pipeline-box-title">多层审核与复盘</h4>
               <p class="pipeline-box-desc">人工介入四级审核，生成 UTM 追踪，执行效果持续归因。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 延伸视觉创作：科技产品 Medium 深度长文头图（占比小一点 · 放到最后） -->
+        <div class="medium-showcase-compact">
+          <div class="medium-showcase-inner">
+            <div class="medium-showcase-preview" onclick="openModal('assets/medium_cover.webp')">
+              <img src="assets/medium_cover.webp" alt="Medium 科技长文封面排版" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/medium_cover.png'">
+            </div>
+            <div class="medium-showcase-info">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
+                <span class="status-pill sky" style="font-size: 0.72rem; padding: 2px 8px;">1600x900px 宽屏头图</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">针对海外读者建立统一产品空间色彩与认知逻辑</span>
+              </div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
+                🌟 延伸视觉创作：科技产品 Medium 深度长文头图
+              </h4>
+              <p style="font-size: 0.82rem; color: var(--text-body); line-height: 1.6; margin-bottom: 10px;">
+                为 Medium 深度母文独立设计的 16:9 视觉图解，清晰呈现 iCloud vs Google Drive vs LynavoDrive 的云端/本地存储流差异，兼具严谨逻辑与国际化科技质感。
+              </p>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="btn-act-primary" style="font-size: 0.78rem; padding: 6px 14px;">
+                  查看 Medium 原文 ↗
+                </a>
+                <button class="btn-act-secondary" onclick="openModal('assets/medium_cover.webp')" style="font-size: 0.78rem; padding: 6px 12px;">
+                  🔍 点击放大头图
+                </button>
+              </div>
             </div>
           </div>
         </div>
