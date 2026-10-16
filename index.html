@@ -236,48 +236,156 @@
     }
 
     /* ==========================================================================
-       HERO STORYTELLER SECTION
+       COMPACT HIGH-DENSITY HERO (Background Art & Single-Fold Compact Layout)
        ========================================================================== */
-    .hero-storyteller {
-      padding: 64px 0 32px;
-      text-align: center;
+    .hero-compact-section {
+      padding: 32px 0 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container-rel {
       position: relative;
     }
 
-    .hero-avatar-wrap {
-      margin-bottom: 16px;
-      display: inline-flex;
-      position: relative;
+    /* The illustration image placed in the background without taking up vertical layout space */
+    .hero-bg-art {
+      position: absolute;
+      right: -20px;
+      bottom: -15px;
+      width: 580px;
+      max-width: 55vw;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.28;
+      user-select: none;
+      filter: saturate(1.05);
+      transition: opacity 0.3s ease;
     }
 
-    .hero-avatar-img {
-      width: 76px;
-      height: 76px;
+    @media (max-width: 768px) {
+      .hero-bg-art {
+        width: 380px;
+        max-width: 80vw;
+        right: -30px;
+        bottom: 0;
+        opacity: 0.18;
+      }
+    }
+
+    .hero-bg-art-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-compact-card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    @media (max-width: 640px) {
+      .hero-compact-card {
+        padding: 20px 18px;
+        gap: 16px;
+      }
+    }
+
+    /* Top Row */
+    .hero-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .hero-profile-cell {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hero-avatar-ring {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      padding: 3px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.08);
+      flex-shrink: 0;
+    }
+
+    .hero-avatar-photo {
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      border: 3px solid #FFFFFF;
-      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.1);
-      transition: transform 0.25s ease;
     }
 
-    .hero-avatar-img:hover {
-      transform: scale(1.05);
+    .hero-name-col {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
-    .hero-meta-badge {
-      display: inline-flex;
+    .hero-title-group {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-name-title {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-en-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-role-badge {
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: var(--bg-surface-alt);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-edu-status {
+      display: flex;
       align-items: center;
       gap: 8px;
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      padding: 5px 16px;
-      border-radius: var(--radius-pill);
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-body);
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 24px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      flex-wrap: wrap;
     }
 
     .status-dot-pulse {
@@ -287,6 +395,7 @@
       background: var(--color-sage);
       box-shadow: 0 0 0 3px rgba(117, 155, 108, 0.25);
       animation: pulseAnim 2.4s infinite ease-in-out;
+      flex-shrink: 0;
     }
 
     @keyframes pulseAnim {
@@ -294,77 +403,43 @@
       50% { transform: scale(0.85); opacity: 0.6; }
     }
 
-    .hero-main-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2.8rem, 6vw, 4.4rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--text-main);
-      line-height: 1.12;
-      margin-bottom: 18px;
-    }
-
-    .hero-main-title em {
-      font-style: italic;
-      font-weight: 500;
-      color: var(--color-charcoal);
-      font-family: var(--font-serif);
-    }
-
-    .hero-story-lead {
-      max-width: 680px;
-      margin: 0 auto 28px;
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: var(--text-body);
-      font-weight: 400;
-    }
-
-    .hero-story-lead strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .hero-actions-cluster {
+    .hero-cta-group {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 14px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 36px;
     }
 
     .btn-pill-dark {
       background: var(--color-charcoal);
       color: #FFFFFF;
-      padding: 12px 28px;
+      padding: 9px 20px;
       border-radius: var(--radius-pill);
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      transition: all 0.22s ease;
-      box-shadow: 0 4px 16px rgba(35, 34, 32, 0.12);
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(35, 34, 32, 0.12);
     }
 
     .btn-pill-dark:hover {
       background: #000000;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(35, 34, 32, 0.18);
+      transform: translateY(-1px);
     }
 
     .btn-pill-light {
       background: #FFFFFF;
       color: var(--text-main);
       border: 1px solid var(--border-card);
-      padding: 12px 24px;
+      padding: 9px 18px;
       border-radius: var(--radius-pill);
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       transition: all 0.2s ease;
       box-shadow: var(--shadow-sm);
     }
@@ -372,204 +447,131 @@
     .btn-pill-light:hover {
       background: var(--bg-surface-tint);
       border-color: var(--border-card-hover);
-      transform: translateY(-1px);
     }
 
-    .hero-quick-tags {
+    /* Middle Row */
+    .hero-dense-bio {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-body);
+      margin-bottom: 12px;
+    }
+
+    .hero-dense-bio strong {
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      color: var(--color-charcoal);
+      font-style: italic;
+    }
+
+    .hero-dense-tags {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
       flex-wrap: wrap;
-      max-width: 860px;
-      margin: 0 auto 20px;
+      gap: 6px;
+      margin-bottom: 14px;
     }
 
-    .quick-tag {
-      font-size: 0.78rem;
+    .dense-tag {
+      font-size: 0.76rem;
       font-weight: 600;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: var(--radius-pill);
-      background: rgba(255, 255, 255, 0.85);
+      background: #FFFFFF;
       border: 1px solid var(--border-card);
       color: var(--text-muted);
-      transition: all 0.15s ease;
     }
 
-    .quick-tag:hover {
-      color: var(--text-main);
-      border-color: var(--border-card-hover);
-    }
-
-    .quick-tag.highlight {
+    .dense-tag.highlight {
       background: var(--color-ochre-soft);
       border-color: var(--color-ochre-border);
       color: #9A6208;
     }
 
-    /* Contact Details Floating Bar */
-    .contact-bar-inline {
-      display: inline-flex;
+    .hero-dense-contacts {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
       flex-wrap: wrap;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid var(--border-card);
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      box-shadow: var(--shadow-sm);
+      gap: 8px;
     }
 
-    .contact-chip-btn {
-      font-size: 0.82rem;
+    .dense-contact-btn {
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-body);
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 5px 10px;
-      border-radius: var(--radius-pill);
       transition: all 0.18s ease;
     }
 
-    .contact-chip-btn:hover {
+    .dense-contact-btn:hover {
       background: var(--bg-surface-alt);
       color: var(--text-main);
+      border-color: var(--border-card-hover);
     }
 
-    /* ==========================================================================
-       CENTERPIECE COLLAGE ARTWORK (Faithful to Reference Picture)
-       ========================================================================== */
-    .collage-art-wrapper {
-      width: 100%;
-      max-width: 960px;
-      margin: 20px auto 48px;
-      position: relative;
-      user-select: none;
-    }
-
-    .collage-svg {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 14px 28px rgba(45, 40, 35, 0.08));
-    }
-
-    /* ==========================================================================
-       EDITORIAL FEATURE TRIAD SECTION (Gain the attention your story deserves)
-       ========================================================================== */
-    .feature-triad-section {
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-xl);
-      padding: 54px 44px;
-      margin-bottom: 72px;
-      box-shadow: var(--shadow-md);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .triad-grid {
+    /* Bottom Row: 3 Pillars Strip */
+    .hero-triad-strip {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 48px;
-      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-light);
     }
 
-    @media (min-width: 900px) {
-      .triad-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
+    @media (min-width: 860px) {
+      .hero-triad-strip {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    .triad-lead-col {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .triad-big-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2.1rem, 3.8vw, 3rem);
-      line-height: 1.18;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 22px;
-    }
-
-    .triad-divider {
-      width: 48px;
-      height: 2px;
-      background: var(--color-charcoal);
-      margin-bottom: 22px;
-    }
-
-    .triad-lead-text {
-      font-size: 1.02rem;
-      line-height: 1.8;
-      color: var(--text-body);
-      max-width: 440px;
-    }
-
-    .triad-list-col {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      position: relative;
-      border-left: 1px solid var(--border-light);
-      padding-left: 36px;
-    }
-
-    @media (max-width: 899px) {
-      .triad-list-col {
-        border-left: none;
-        border-top: 1px solid var(--border-light);
-        padding-left: 0;
-        padding-top: 36px;
-      }
-    }
-
-    .triad-item {
+    .triad-compact-item {
       display: flex;
       align-items: flex-start;
-      gap: 20px;
+      gap: 12px;
+      background: rgba(250, 248, 244, 0.7);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      transition: all 0.2s ease;
     }
 
-    .triad-icon-badge {
-      width: 44px;
-      height: 44px;
+    .triad-compact-item:hover {
+      background: #FFFFFF;
+      border-color: var(--border-card-hover);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .triad-compact-icon {
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: var(--color-charcoal);
       color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-      transition: transform 0.2s ease;
     }
 
-    .triad-item:hover .triad-icon-badge {
-      transform: scale(1.08);
-      background: #000000;
-    }
-
-    .triad-item-content h3 {
+    .triad-compact-text h4 {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
+      font-size: 0.96rem;
       font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
+      margin-bottom: 2px;
+      line-height: 1.3;
     }
 
-    .triad-item-content p {
-      font-size: 0.9rem;
-      line-height: 1.68;
+    .triad-compact-text p {
+      font-size: 0.78rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* ==========================================================================
@@ -1447,301 +1449,106 @@
   </header>
 
   <!-- ==========================================================================
-       HERO STORYTELLER SECTION
+       COMPACT HIGH-DENSITY HERO (Illustration in Background)
        ========================================================================== -->
-  <section class="hero-storyteller" id="hero">
-    <div class="container">
+  <section class="hero-compact-section" id="hero">
+    <div class="container hero-container-rel">
       
-      <div class="hero-avatar-wrap">
-        <img src="assets/portrait.webp" alt="王蕊" class="hero-avatar-img" fetchpriority="high" decoding="async" onerror="this.src='assets/portrait.jpg'">
+      <!-- Background Illustration (Does not occupy separate vertical layout space) -->
+      <div class="hero-bg-art" aria-hidden="true">
+        <img src="assets/hero_illustration.webp" alt="" class="hero-bg-art-img" fetchpriority="high" decoding="async" onerror="this.src='assets/hero_illustration.png'">
       </div>
 
-      <div class="hero-meta-badge">
-        <span class="status-dot-pulse"></span>
-        <span>西南财经大学 · 2027 届本科 · 积极看机会</span>
-      </div>
-
-      <h1 class="hero-main-title">
-        The Product <em>Storyteller</em>
-      </h1>
-
-      <p class="hero-story-lead">
-        我是 <strong>王蕊 (Kristen)</strong>。专注于产品运营、新媒体图文采编排版、视觉物料设计与开源社区协同。<br>
-        兼具金融数学的严谨数据逻辑与新媒体的细腻叙事感知，用文字连接用户心智，以工程交付落地闭环。
-      </p>
-
-      <div class="hero-actions-cluster">
-        <button class="btn-pill-dark" onclick="copyContact('kristen6670@163.com', '邮箱')">
-          <span>Get in touch · 取得联系</span>
-        </button>
-        <a href="https://github.com/kristen7416" target="_blank" class="btn-pill-light">
-          <span>🐙 GitHub @kristen7416</span>
-        </a>
-      </div>
-
-      <div class="hero-quick-tags">
-        <span class="quick-tag highlight">🎓 211 / 双一流 · 金融数学专业</span>
-        <span class="quick-tag">📱 微信公众号采编排版 (秀米/135)</span>
-        <span class="quick-tag">🎨 实体物料印刷设计 (晚会入场券/书签)</span>
-        <span class="quick-tag">🍏 App Store 2560x1600 高清上架图</span>
-        <span class="quick-tag">⚡ GitHub 842 次贡献 & Vibecoding 全栈</span>
-      </div>
-
-      <div class="contact-bar-inline">
-        <button class="contact-chip-btn" onclick="copyContact('kristen6670@163.com', '邮箱')">
-          📧 kristen6670@163.com
-        </button>
-        <span style="color: var(--border-card);">·</span>
-        <button class="contact-chip-btn" onclick="copyContact('kristen6670', '微信')">
-          💬 微信: kristen6670
-        </button>
-        <span style="color: var(--border-card);">·</span>
-        <button class="contact-chip-btn" onclick="copyContact('18708165973', '电话')">
-          📞 18708165973
-        </button>
-      </div>
-
-      <!-- ======================================================================
-           CENTERPIECE COLLAGE ARTWORK (Directly derived from the reference image)
-           ====================================================================== -->
-      <div class="collage-art-wrapper">
-        <svg class="collage-svg" viewBox="0 0 920 640" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <!-- Ochre / Mustard Halftone Dotted Pattern -->
-            <pattern id="dot-ochre" width="14" height="14" patternUnits="userSpaceOnUse">
-              <circle cx="7" cy="7" r="2.2" fill="#B87612" opacity="0.75" />
-            </pattern>
-
-            <!-- Pink / Blush Halftone Dotted Pattern -->
-            <pattern id="dot-pink" width="14" height="14" patternUnits="userSpaceOnUse">
-              <circle cx="7" cy="7" r="2.2" fill="#CF8386" opacity="0.7" />
-            </pattern>
-
-            <!-- Sky Blue Dotted Pattern -->
-            <pattern id="dot-sky" width="16" height="16" patternUnits="userSpaceOnUse">
-              <circle cx="8" cy="8" r="2" fill="#84A7AC" opacity="0.65" />
-            </pattern>
-
-            <!-- Soft Water Ripples Stripe Pattern -->
-            <pattern id="stripe-water" width="30" height="8" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="4" x2="30" y2="4" stroke="#A7C7CB" stroke-width="1.6" stroke-linecap="round" />
-            </pattern>
-          </defs>
-
-          <!-- 1. Top Soft Sky Blue Mountain / Cloud Layer -->
-          <path d="M 330 250 C 350 170 450 140 550 160 C 660 180 730 200 850 280 C 890 310 910 350 880 400 C 760 450 630 380 500 370 C 380 360 310 320 330 250 Z" 
-                fill="#C6DBDD" />
-          
-          <!-- Subtle shade in the sky cloud -->
-          <path d="M 430 200 C 500 170 580 180 660 210 C 760 250 820 280 840 330 C 760 370 660 330 550 330 C 460 330 390 280 430 200 Z" 
-                fill="#B8D1D4" opacity="0.6" />
-
-          <!-- 2. Windmill (Top Center Hillside) -->
-          <g transform="translate(480, 185)">
-            <!-- Windmill Base / Wall -->
-            <path d="M 12 28 L 28 28 L 24 50 L 16 50 Z" fill="#FFFFFF" stroke="#333" stroke-width="1.2" />
-            <!-- Windmill Roof (Yellow) -->
-            <path d="M 10 28 L 20 12 L 30 28 Z" fill="#ECA223" stroke="#333" stroke-width="1.2" />
-            <!-- Windmill Door -->
-            <rect x="18" y="42" width="4" height="8" rx="2" fill="#4B3A2C" />
-            <rect x="18" y="32" width="4" height="5" rx="1" fill="#4B3A2C" />
-            <!-- Windmill Rotating Sails (Cross) -->
-            <g transform="rotate(22, 20, 20)">
-              <!-- Blade 1 -->
-              <rect x="19" y="-6" width="2" height="26" fill="#3B3530" />
-              <line x1="14" y1="-2" x2="26" y2="-2" stroke="#3B3530" stroke-width="1" />
-              <line x1="14" y1="4" x2="26" y2="4" stroke="#3B3530" stroke-width="1" />
-              <line x1="14" y1="10" x2="26" y2="10" stroke="#3B3530" stroke-width="1" />
-              <!-- Blade 2 -->
-              <rect x="19" y="20" width="2" height="26" fill="#3B3530" />
-              <line x1="14" y1="26" x2="26" y2="26" stroke="#3B3530" stroke-width="1" />
-              <line x1="14" y1="32" x2="26" y2="32" stroke="#3B3530" stroke-width="1" />
-              <line x1="14" y1="38" x2="26" y2="38" stroke="#3B3530" stroke-width="1" />
-              <!-- Blade 3 -->
-              <rect x="-6" y="19" width="26" height="2" fill="#3B3530" />
-              <line x1="-2" y1="14" x2="-2" y2="26" stroke="#3B3530" stroke-width="1" />
-              <line x1="4" y1="14" x2="4" y2="26" stroke="#3B3530" stroke-width="1" />
-              <line x1="10" y1="14" x2="10" y2="26" stroke="#3B3530" stroke-width="1" />
-              <!-- Blade 4 -->
-              <rect x="20" y="19" width="26" height="2" fill="#3B3530" />
-              <line x1="26" y1="14" x2="26" y2="26" stroke="#3B3530" stroke-width="1" />
-              <line x1="32" y1="14" x2="32" y2="26" stroke="#3B3530" stroke-width="1" />
-              <line x1="38" y1="14" x2="38" y2="26" stroke="#3B3530" stroke-width="1" />
-              <!-- Center Hub -->
-              <circle cx="20" cy="20" r="3" fill="#D68A1B" />
-            </g>
-          </g>
-
-          <!-- 3. Flock of Silhouetted Birds in Flight -->
-          <g fill="#21201E">
-            <!-- Flight Wave 1 -->
-            <path d="M 570 150 Q 575 146 580 150 Q 585 146 590 150 Q 585 152 580 148 Q 575 152 570 150 Z" />
-            <path d="M 600 135 Q 604 132 608 135 Q 612 132 616 135 Q 612 137 608 134 Q 604 137 600 135 Z" />
-            <path d="M 630 142 Q 635 138 640 142 Q 645 138 650 142 Q 645 144 640 140 Q 635 144 630 142 Z" />
-            <path d="M 660 130 Q 664 126 668 130 Q 672 126 676 130 Q 672 132 668 128 Q 664 132 660 130 Z" />
-            <path d="M 700 128 Q 705 124 710 128 Q 715 124 720 128 Q 715 130 710 126 Q 705 130 700 128 Z" />
-            <path d="M 725 136 Q 729 133 733 136 Q 737 133 741 136 Q 737 138 733 135 Q 729 138 725 136 Z" />
-            <path d="M 750 140 Q 754 137 758 140 Q 762 137 766 140 Q 762 142 758 139 Q 754 142 750 140 Z" />
-            <!-- Flight Wave 2 -->
-            <path d="M 565 170 Q 570 166 575 170 Q 580 166 585 170 Q 580 172 575 168 Q 570 172 565 170 Z" />
-            <path d="M 610 162 Q 614 159 618 162 Q 622 159 626 162 Q 622 164 618 161 Q 614 164 610 162 Z" />
-            <path d="M 645 168 Q 649 165 653 168 Q 657 165 661 168 Q 657 170 653 167 Q 649 170 645 168 Z" />
-            <path d="M 675 155 Q 679 152 683 155 Q 687 152 691 155 Q 687 157 683 154 Q 679 157 675 155 Z" />
-            <path d="M 710 152 Q 713 150 716 152 Q 719 150 722 152 Q 719 154 716 151 Q 713 154 710 152 Z" />
-            <path d="M 735 158 Q 738 156 741 158 Q 744 156 747 158 Q 744 160 741 157 Q 738 160 735 158 Z" />
-            <!-- Flight Wave 3 -->
-            <path d="M 590 190 Q 594 187 598 190 Q 602 187 606 190 Q 602 192 598 189 Q 594 192 590 190 Z" />
-            <path d="M 630 185 Q 634 182 638 185 Q 642 182 646 185 Q 642 187 638 184 Q 634 187 630 185 Z" />
-            <path d="M 670 178 Q 673 176 676 178 Q 679 176 682 178 Q 679 180 676 177 Q 673 180 670 178 Z" />
-          </g>
-
-          <!-- 4. Left Peach-Pink Dotted Mound -->
-          <path d="M 40 310 C 60 250 160 250 250 300 C 230 360 160 410 80 400 C 40 380 30 350 40 310 Z" 
-                fill="#F7C8C4" />
-          <path d="M 40 310 C 60 250 160 250 250 300 C 230 360 160 410 80 400 C 40 380 30 350 40 310 Z" 
-                fill="url(#dot-pink)" />
-
-          <!-- 5. Left Muted Terracotta Ridge -->
-          <path d="M 40 330 C 90 320 200 370 310 360 C 280 430 140 450 60 430 Z" 
-                fill="#E89B88" opacity="0.8" />
-
-          <!-- 6. Dark Charcoal Layer with Contours (Signature Collage Element) -->
-          <path d="M 150 280 C 260 230 420 230 550 260 C 620 280 680 340 640 380 C 510 400 320 420 180 380 C 130 360 120 310 150 280 Z" 
-                fill="#242321" />
-          
-          <!-- Wave Lines inside Charcoal Hill -->
-          <path d="M 170 320 Q 320 270 480 275 T 610 325" stroke="#FFFFFF" stroke-width="1.8" fill="none" opacity="0.65" />
-          <path d="M 180 340 Q 340 295 500 295 T 630 345" stroke="#FFFFFF" stroke-width="1.6" fill="none" opacity="0.6" />
-          <path d="M 190 360 Q 360 320 520 315 T 620 365" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.5" />
-          <path d="M 210 375 Q 380 340 540 335 T 605 380" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.4" />
-
-          <!-- 7. Pale Water Stream / Ripple Layer with Subtle Striping -->
-          <path d="M 180 390 C 320 370 480 380 640 375 C 670 420 540 460 380 460 C 250 460 170 430 180 390 Z" 
-                fill="#CBE0E3" />
-          <path d="M 180 390 C 320 370 480 380 640 375 C 670 420 540 460 380 460 C 250 460 170 430 180 390 Z" 
-                fill="url(#stripe-water)" opacity="0.75" />
-
-          <!-- 8. Right Ochre / Mustard Yellow Mountain with Halftone Dots -->
-          <path d="M 620 380 C 720 340 840 340 910 410 C 920 490 850 580 730 600 C 640 600 580 540 590 480 C 600 430 610 400 620 380 Z" 
-                fill="#E29E29" />
-          <path d="M 620 380 C 720 340 840 340 910 410 C 920 490 850 580 730 600 C 640 600 580 540 590 480 C 600 430 610 400 620 380 Z" 
-                fill="url(#dot-ochre)" />
-          
-          <!-- Golden highlight on bottom ridge -->
-          <path d="M 620 500 C 700 480 820 520 860 570 C 800 610 700 610 640 580 Z" 
-                fill="#C68417" opacity="0.8" />
-
-          <!-- 9. Left Sage Green Tree (Small Organic Silhouette) -->
-          <g transform="translate(290, 260)">
-            <!-- Tree Trunk -->
-            <path d="M 40 40 L 40 100" stroke="#F9F7F2" stroke-width="4.5" stroke-linecap="round" />
-            <path d="M 40 65 L 26 50" stroke="#F9F7F2" stroke-width="3" stroke-linecap="round" />
-            <path d="M 40 75 L 54 62" stroke="#F9F7F2" stroke-width="3" stroke-linecap="round" />
-            <!-- Organic Foliage Lobes -->
-            <path d="M 40 20 C 55 20 62 32 55 42 C 68 45 70 60 58 70 C 65 78 62 90 48 90 C 40 90 38 88 35 88 C 22 90 18 78 24 70 C 12 60 15 45 28 42 C 20 32 26 20 40 20 Z" 
-                  fill="#9DB794" />
-          </g>
-
-          <!-- 10. Mid-Left Sage Pebble / Stone Accent -->
-          <path d="M 270 450 C 310 445 330 465 320 485 C 310 500 280 505 265 490 C 255 475 258 455 270 450 Z" 
-                fill="#94B088" />
-
-          <!-- 11. Bottom Sage Green Dotted Hill -->
-          <path d="M 480 440 C 600 440 720 480 840 500 C 860 530 840 560 780 570 C 660 560 540 530 470 480 C 460 455 465 445 480 440 Z" 
-                fill="#ADC8A2" />
-          <path d="M 480 440 C 600 440 720 480 840 500 C 860 530 840 560 780 570 C 660 560 540 530 470 480 C 460 455 465 445 480 440 Z" 
-                fill="url(#dot-sky)" opacity="0.6" />
-
-          <!-- 12. Prominent Dusty Rose Tree (Right Hero Anchor) -->
-          <g transform="translate(550, 275)">
-            <!-- Outer Organic Tree Silhouette -->
-            <path d="M 120 40 
-                     C 155 35 175 65 160 90 
-                     C 195 95 210 135 180 165 
-                     C 220 180 225 230 185 260 
-                     C 195 280 170 300 145 280 
-                     C 130 330 110 330 100 280 
-                     C 70 300 45 280 55 260 
-                     C 15 230 20 180 60 165 
-                     C 30 135 45 95 80 90 
-                     C 65 65 85 35 120 40 Z" 
-                  fill="#F4A6A9" />
-            
-            <!-- Delicate White Trunk & Branches inside the Pink Tree -->
-            <path d="M 120 320 L 120 110" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" />
-            <!-- Branch 1 (Left Lower) -->
-            <path d="M 120 240 C 95 230 80 200 65 205" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none" />
-            <!-- Branch 2 (Right Lower) -->
-            <path d="M 120 220 C 145 210 165 180 175 190" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none" />
-            <!-- Branch 3 (Left Mid) -->
-            <path d="M 120 170 C 100 155 85 130 80 120" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" />
-            <!-- Branch 4 (Right Mid) -->
-            <path d="M 120 150 C 140 140 160 115 155 105" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" />
-            <!-- Top Twig Split -->
-            <path d="M 120 110 C 110 85 105 75 108 65" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" />
-            <path d="M 120 110 C 130 85 138 75 132 65" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" />
-          </g>
-
-          <!-- 13. Bottom Left Soft Sky Blue Dotted Dune -->
-          <path d="M 20 540 C 100 500 200 530 240 600 C 160 640 40 630 10 610 Z" 
-                fill="#C6DCE0" />
-          <path d="M 20 540 C 100 500 200 530 240 600 C 160 640 40 630 10 610 Z" 
-                fill="url(#dot-sky)" />
-        </svg>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       EDITORIAL FEATURE TRIAD SECTION (Gain the attention your story deserves)
-       ========================================================================== -->
-  <section class="container">
-    <div class="feature-triad-section">
-      <div class="triad-grid">
+      <!-- Compact Information-Dense Card -->
+      <div class="hero-compact-card">
         
-        <!-- Left Column: Editorial Headline -->
-        <div class="triad-lead-col">
-          <h2 class="triad-big-title">
-            Gain the attention<br>your work deserves
-          </h2>
-          <div class="triad-divider"></div>
-          <p class="triad-lead-text">
-            我们是认真讲述产品价值的故事叙述者。<br>
-            兼具金融数学的数据严谨性与新媒体叙事的细腻温差，从 0 到 1 打造高质感产品内容与全栈交付成果。
-          </p>
+        <!-- Top Row: Avatar + Name + Title + Status + Primary CTAs -->
+        <div class="hero-header-row">
+          <div class="hero-profile-cell">
+            <div class="hero-avatar-ring">
+              <img src="assets/portrait.webp" alt="王蕊" class="hero-avatar-photo" fetchpriority="high" decoding="async" onerror="this.src='assets/portrait.jpg'">
+            </div>
+            <div class="hero-name-col">
+              <div class="hero-title-group">
+                <h1 class="hero-name-title">王蕊 <span class="hero-en-name">Kristen Wang</span></h1>
+                <span class="hero-role-badge">产品运营 · AI产品 · 内容生态</span>
+              </div>
+              <div class="hero-edu-status">
+                <span class="status-dot-pulse"></span>
+                <span>西南财经大学（211 / 双一流）金融数学专业 · 2027 届本科 · 积极看机会</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="hero-cta-group">
+            <button class="btn-pill-dark" onclick="copyContact('kristen6670@163.com', '邮箱')">
+              Get in touch · 取得联系
+            </button>
+            <a href="https://github.com/kristen7416" target="_blank" class="btn-pill-light">
+              🐙 GitHub @kristen7416
+            </a>
+          </div>
         </div>
 
-        <!-- Right Column: 3 Pillars with Dark Circular Badges -->
-        <div class="triad-list-col">
-          
-          <!-- Pillar 1 -->
-          <div class="triad-item">
-            <div class="triad-icon-badge">∿</div>
-            <div class="triad-item-content">
-              <h3>End to end service</h3>
-              <p>从选题策划、深度采编、秀米/135排版美化，到多平台宣发与数据转化归因，全链路独立自闭环交付。</p>
+        <!-- Middle Row: Dense Bio, Tags & Contact Strip -->
+        <div class="hero-body-row">
+          <p class="hero-dense-bio">
+            <strong>The Product Storyteller</strong> —— 兼具金融数学的严谨数据逻辑与新媒体的细腻叙事感知。专注于新媒体公众号选题采编与秀米/135精细化美化排版、实体晚会印刷物料质检打样、全球 App Store 2560x1600 高清商店图，以及开源社区敏捷协同与 Vibecoding 全栈交付，用文字与视觉连接用户心智，用工程驱动业务闭环。
+          </p>
+
+          <!-- High-density Capability Tags -->
+          <div class="hero-dense-tags">
+            <span class="dense-tag highlight">🎓 211 金融数学</span>
+            <span class="dense-tag">📱 微信公众号图文采编排版 (秀米/135)</span>
+            <span class="dense-tag">🎨 晚会入场券/书签印刷打样</span>
+            <span class="dense-tag">🍏 App Store 2560x1600 高清图</span>
+            <span class="dense-tag">⚡ GitHub 842 次贡献 (69 PR 合并)</span>
+            <span class="dense-tag">🚀 3 款全栈上线交付产品</span>
+          </div>
+
+          <!-- High-density Interactive Contacts -->
+          <div class="hero-dense-contacts">
+            <button class="dense-contact-btn" onclick="copyContact('kristen6670@163.com', '邮箱')">
+              📧 kristen6670@163.com
+            </button>
+            <button class="dense-contact-btn" onclick="copyContact('kristen6670', '微信')">
+              💬 微信: kristen6670
+            </button>
+            <button class="dense-contact-btn" onclick="copyContact('18708165973', '电话')">
+              📞 18708165973
+            </button>
+            <a href="https://github.com/kristen7416" target="_blank" class="dense-contact-btn">
+              🐙 github.com/kristen7416
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Row: 3 Core Pillars (Compact Horizontal Grid) -->
+        <div class="hero-triad-strip">
+          <div class="triad-compact-item">
+            <div class="triad-compact-icon">∿</div>
+            <div class="triad-compact-text">
+              <h4>End to end service · 全链路内容运营</h4>
+              <p>选题策划、文案采编、秀米/135排版美化到发布复盘，全流程独立高效闭环。</p>
             </div>
           </div>
 
-          <!-- Pillar 2 -->
-          <div class="triad-item">
-            <div class="triad-icon-badge">☼</div>
-            <div class="triad-item-content">
-              <h3>Passion & craft</h3>
-              <p>苛求排版的呼吸感与字距行高细节，精通实体晚会物料印刷出血线与 App Store 2560x1600 高清视觉设计。</p>
+          <div class="triad-compact-item">
+            <div class="triad-compact-icon">☼</div>
+            <div class="triad-compact-text">
+              <h4>Passion & craft · 视觉质感与印刷打样</h4>
+              <p>苛求排版留白与呼吸感，严控实体印刷出血线与 App Store 2560x1600 商店图。</p>
             </div>
           </div>
 
-          <!-- Pillar 3 -->
-          <div class="triad-item">
-            <div class="triad-icon-badge">❖</div>
-            <div class="triad-item-content">
-              <h3>Global & engineering</h3>
-              <p>累计 842 次 GitHub 贡献，参与 530+ Star 国际开源项目协同，构建覆盖 12 类海外技术社区的内容生态矩阵。</p>
+          <div class="triad-compact-item">
+            <div class="triad-compact-icon">❖</div>
+            <div class="triad-compact-text">
+              <h4>Global & code · 全球视野与工程全栈</h4>
+              <p>842 次 GitHub 贡献，参与 530+ Star 开源项目，覆盖 12 大海外社区运营矩阵。</p>
             </div>
           </div>
-
         </div>
 
       </div>
