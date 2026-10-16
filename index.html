@@ -248,68 +248,70 @@
       position: relative;
     }
 
-    /* The illustration image placed in the background without taking up vertical layout space */
-    .hero-bg-art {
-      position: absolute;
-      right: -20px;
-      bottom: -15px;
-      width: 580px;
-      max-width: 55vw;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.28;
-      user-select: none;
-      filter: saturate(1.05);
-      transition: opacity 0.3s ease;
-    }
-
-    @media (max-width: 768px) {
-      .hero-bg-art {
-        width: 380px;
-        max-width: 80vw;
-        right: -30px;
-        bottom: 0;
-        opacity: 0.18;
-      }
-    }
-
-    .hero-bg-art-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
+    /* Hero Card with Color Illustration Background and Transparency */
     .hero-compact-card {
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-xl);
-      padding: 28px 32px;
-      box-shadow: var(--shadow-md);
       position: relative;
-      z-index: 1;
+      overflow: hidden;
+      border: none;
+      border-radius: var(--radius-xl);
+      padding: 32px 36px;
+      box-shadow: 0 16px 48px rgba(45, 42, 38, 0.08);
+      background: #FAF8F5;
       display: flex;
       flex-direction: column;
       gap: 18px;
+      z-index: 1;
     }
 
     @media (max-width: 640px) {
       .hero-compact-card {
-        padding: 20px 18px;
+        padding: 22px 18px;
         gap: 16px;
       }
     }
 
+    /* Card Background Color Illustration Layer with Transparency */
+    .hero-card-bg-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-card-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      opacity: 0.42;
+      filter: saturate(1.15) contrast(1.02);
+    }
+
+    .hero-card-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.78) 0%,
+        rgba(253, 251, 247, 0.58) 50%,
+        rgba(255, 255, 255, 0.72) 100%
+      );
+    }
+
     /* Top Row */
     .hero-header-row {
+      position: relative;
+      z-index: 1;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 16px;
       padding-bottom: 16px;
-      border-bottom: 1px solid var(--border-light);
+      border-bottom: none;
     }
 
     .hero-profile-cell {
@@ -324,8 +326,8 @@
       border-radius: 50%;
       padding: 3px;
       background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.08);
+      border: none;
+      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.12);
       flex-shrink: 0;
     }
 
@@ -370,12 +372,13 @@
     .hero-role-badge {
       font-size: 0.76rem;
       font-weight: 700;
-      background: var(--bg-surface-alt);
-      border: 1px solid var(--border-card);
+      background: rgba(255, 255, 255, 0.85);
+      border: none;
       color: var(--text-main);
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: var(--radius-pill);
       letter-spacing: 0.02em;
+      box-shadow: 0 2px 8px rgba(45, 42, 38, 0.05);
     }
 
     .hero-edu-status {
@@ -430,9 +433,11 @@
     }
 
     .btn-pill-light {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: var(--text-main);
-      border: 1px solid var(--border-card);
+      border: none;
       padding: 9px 18px;
       border-radius: var(--radius-pill);
       font-size: 0.86rem;
@@ -441,15 +446,21 @@
       align-items: center;
       gap: 6px;
       transition: all 0.2s ease;
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.08);
     }
 
     .btn-pill-light:hover {
-      background: var(--bg-surface-tint);
-      border-color: var(--border-card-hover);
+      background: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(45, 42, 38, 0.12);
     }
 
     /* Middle Row */
+    .hero-body-row {
+      position: relative;
+      z-index: 1;
+    }
+
     .hero-dense-bio {
       font-size: 0.92rem;
       line-height: 1.7;
@@ -474,16 +485,18 @@
     .dense-tag {
       font-size: 0.76rem;
       font-weight: 600;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: var(--radius-pill);
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: none;
+      color: var(--text-body);
+      box-shadow: 0 2px 6px rgba(45, 42, 38, 0.04);
     }
 
     .dense-tag.highlight {
       background: var(--color-ochre-soft);
-      border-color: var(--color-ochre-border);
       color: #9A6208;
     }
 
@@ -498,29 +511,35 @@
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-body);
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      padding: 5px 12px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: none;
+      padding: 6px 14px;
       border-radius: var(--radius-pill);
       display: inline-flex;
       align-items: center;
       gap: 6px;
       transition: all 0.18s ease;
+      box-shadow: 0 2px 6px rgba(45, 42, 38, 0.04);
     }
 
     .dense-contact-btn:hover {
-      background: var(--bg-surface-alt);
+      background: #FFFFFF;
       color: var(--text-main);
-      border-color: var(--border-card-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(45, 42, 38, 0.08);
     }
 
     /* Bottom Row: 3 Pillars Strip */
     .hero-triad-strip {
+      position: relative;
+      z-index: 1;
       display: grid;
       grid-template-columns: 1fr;
       gap: 12px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-light);
+      padding-top: 6px;
+      border-top: none;
     }
 
     @media (min-width: 860px) {
@@ -533,17 +552,20 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      background: rgba(250, 248, 244, 0.7);
-      border: 1px solid var(--border-light);
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
       border-radius: var(--radius-md);
-      padding: 12px 14px;
+      padding: 14px 16px;
+      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.05);
       transition: all 0.2s ease;
     }
 
     .triad-compact-item:hover {
-      background: #FFFFFF;
-      border-color: var(--border-card-hover);
-      box-shadow: var(--shadow-sm);
+      background: rgba(255, 255, 255, 0.94);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45, 42, 38, 0.09);
     }
 
     .triad-compact-icon {
@@ -1555,13 +1577,14 @@
   <section class="hero-compact-section" id="hero">
     <div class="container hero-container-rel">
       
-      <!-- Background Illustration (Does not occupy separate vertical layout space) -->
-      <div class="hero-bg-art" aria-hidden="true">
-        <img src="assets/hero_illustration.webp" alt="" class="hero-bg-art-img" fetchpriority="high" decoding="async" onerror="this.src='assets/hero_illustration.png'">
-      </div>
-
-      <!-- Compact Information-Dense Card -->
+      <!-- Compact Information-Dense Card with Art Background -->
       <div class="hero-compact-card">
+        
+        <!-- Card Background Color Illustration with Transparency -->
+        <div class="hero-card-bg-layer" aria-hidden="true">
+          <img src="assets/hero_illustration.webp" alt="" class="hero-card-bg-img" fetchpriority="high" decoding="async" onerror="this.src='assets/hero_illustration.png'">
+          <div class="hero-card-bg-overlay"></div>
+        </div>
         
         <!-- Top Row: Avatar + Name + Title + Status + Primary CTAs -->
         <div class="hero-header-row">
