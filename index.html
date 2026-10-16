@@ -4,48 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>王蕊 | 产品运营与内容生态作品集 · Kristen Wang</title>
-  <meta name="description" content="王蕊的个人求职作品集，集中展示微信公众号实发推文、实体印刷物料、应用商店图、GitHub开源协作与Vibecoding全栈项目成果。">
+  <meta name="description" content="王蕊的个人求职作品集。以细腻的内容叙事与严谨的数据逻辑，展示微信公众号实发推文、实体印刷物料、应用商店图、GitHub开源协作与Vibecoding全栈项目成果。">
+  
+  <!-- Google Fonts: Editorial Serif & Clean Sans (Non-blocking with robust system serif fallbacks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </noscript>
+
   <style>
+    /* ==========================================================================
+       DESIGN TOKENS & SYSTEM VARIABLES (Inspiration: Warm Editorial Collage)
+       ========================================================================== */
     :root {
-      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      /* Typography */
+      --font-serif: "Cormorant Garamond", "Source Han Serif SC", "Songti SC", "Noto Serif SC", "STSong", "SimSun", Georgia, serif;
+      --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-      
-      --bg-page: #F8FAFC;
+
+      /* Color Palette: Warm Paper & Collage Earthy Accents */
+      --bg-page: #F9F7F2;
       --bg-surface: #FFFFFF;
-      --bg-subtle: #F1F5F9;
-      --bg-muted: #E2E8F0;
+      --bg-surface-alt: #F4F0E8;
+      --bg-surface-tint: #FAF8F4;
+
+      --text-main: #1F1D1A;
+      --text-body: #45423C;
+      --text-muted: #787368;
+      --text-subtle: #9E988D;
+
+      --border-light: #EDE7DC;
+      --border-card: #E5DFD1;
+      --border-card-hover: #D4CBBA;
+
+      /* Collage Signature Colors */
+      --color-charcoal: #232220;
+      --color-ochre: #DE9B27;
+      --color-ochre-soft: #FAF3E6;
+      --color-ochre-border: #F0DCB0;
       
-      --primary: #1D4ED8;
-      --primary-light: #3B82F6;
-      --primary-dark: #1E3A8A;
-      --primary-soft: #EFF6FF;
-      --primary-border: #BFDBFE;
-      
-      --accent-emerald: #059669;
-      --accent-emerald-soft: #ECFDF5;
-      --accent-emerald-border: #A7F3D0;
-      
-      --accent-amber: #D97706;
-      --accent-amber-soft: #FFFBEB;
-      
-      --text-main: #0F172A;
-      --text-body: #334155;
-      --text-muted: #64748B;
-      --text-subtle: #94A3B8;
-      
-      --border-light: rgba(226, 232, 240, 0.85);
-      --border-card: #E2E8F0;
-      --border-card-hover: #CBD5E1;
-      
-      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
-      --shadow-lg: 0 16px 32px -6px rgba(15, 23, 42, 0.08), 0 6px 16px -4px rgba(15, 23, 42, 0.04);
-      --shadow-hover: 0 20px 40px -12px rgba(37, 99, 235, 0.12), 0 6px 18px -4px rgba(15, 23, 42, 0.06);
-      
+      --color-rose: #E68B8E;
+      --color-rose-soft: #FDF1F2;
+      --color-rose-border: #F8D0D2;
+
+      --color-sage: #759B6C;
+      --color-sage-soft: #F2F7F0;
+      --color-sage-border: #CFE3CA;
+
+      --color-sky: #5B858D;
+      --color-sky-soft: #F0F6F7;
+      --color-sky-border: #CFE1E4;
+
+      /* Shadows & Radii */
+      --shadow-sm: 0 1px 3px rgba(35, 34, 32, 0.04);
+      --shadow-md: 0 4px 16px -2px rgba(45, 42, 38, 0.06), 0 2px 6px -2px rgba(45, 42, 38, 0.03);
+      --shadow-lg: 0 16px 36px -8px rgba(45, 42, 38, 0.08), 0 4px 12px -2px rgba(45, 42, 38, 0.03);
+      --shadow-hover: 0 20px 40px -10px rgba(40, 35, 30, 0.12), 0 8px 18px -4px rgba(40, 35, 30, 0.04);
+
       --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --radius-xl: 24px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
       --radius-pill: 9999px;
     }
 
@@ -63,875 +84,1398 @@
       font-family: var(--font-sans);
       background-color: var(--bg-page);
       color: var(--text-body);
-      line-height: 1.6;
+      line-height: 1.68;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.04) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%),
-        radial-gradient(at 50% 100%, rgba(241, 245, 249, 0.5) 0px, transparent 60%);
-      background-attachment: fixed;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle paper texture overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
     .container {
-      max-width: 1180px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 28px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
     }
 
     /* ==========================================================================
-       HERO HEADER SECTION
+       TOP EDITORIAL HEADER & NAVIGATION
        ========================================================================== */
-    .hero-header {
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.85) 100%);
-      border-bottom: 1px solid var(--border-light);
-      padding: 56px 0 40px;
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(249, 247, 242, 0.9);
+      border-bottom: none;
+      box-shadow: 0 4px 24px rgba(45, 42, 38, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo-text {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-subtext {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      border-left: 1px solid var(--border-card);
+      padding-left: 12px;
+      margin-left: 4px;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .brand-subtext {
+        display: inline-block;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-link-btn {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 6px 4px;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link-btn:hover {
+      color: var(--text-main);
+    }
+
+    .nav-link-btn.active {
+      color: var(--text-main);
+    }
+
+    .nav-link-btn.active::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color-charcoal);
+      border-radius: 2px;
+    }
+
+    .nav-action-pill {
+      background: var(--color-charcoal);
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-action-pill:hover {
+      background: #000000;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ==========================================================================
+       COMPACT HIGH-DENSITY HERO (Background Art & Single-Fold Compact Layout)
+       ========================================================================== */
+    .hero-compact-section {
+      padding: 32px 0 24px;
       position: relative;
       overflow: hidden;
     }
 
-    .hero-header::before {
-      content: "";
-      position: absolute;
-      top: -120px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 780px;
-      height: 360px;
-      background: radial-gradient(ellipse, rgba(37, 99, 235, 0.09) 0%, rgba(59, 130, 246, 0.02) 60%, transparent 80%);
-      filter: blur(50px);
-      pointer-events: none;
-      z-index: 0;
+    .hero-container-rel {
+      position: relative;
     }
 
-    .hero-inner {
+    /* Hero Card with Color Illustration Background and Transparency */
+    .hero-compact-card {
+      position: relative;
+      overflow: hidden;
+      border: none;
+      border-radius: var(--radius-xl);
+      padding: 32px 36px;
+      box-shadow: 0 16px 48px rgba(45, 42, 38, 0.08);
+      background: #FAF8F5;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 1;
+    }
+
+    @media (max-width: 640px) {
+      .hero-compact-card {
+        padding: 22px 18px;
+        gap: 16px;
+      }
+    }
+
+    /* Card Background Color Illustration Layer with Transparency */
+    .hero-card-bg-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-card-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      opacity: 0.42;
+      filter: saturate(1.15) contrast(1.02);
+    }
+
+    .hero-card-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.78) 0%,
+        rgba(253, 251, 247, 0.58) 50%,
+        rgba(255, 255, 255, 0.72) 100%
+      );
+    }
+
+    /* Top Row */
+    .hero-header-row {
       position: relative;
       z-index: 1;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 36px;
       flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: none;
     }
 
-    .avatar-block {
-      position: relative;
+    .hero-profile-cell {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hero-avatar-ring {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      padding: 3px;
+      background: #FFFFFF;
+      border: none;
+      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.12);
       flex-shrink: 0;
     }
 
-    .avatar-img {
-      width: 112px;
-      height: 112px;
-      border-radius: var(--radius-pill);
+    .hero-avatar-photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
       object-fit: cover;
       display: block;
-      background: #E2E8F0;
-      box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 6px rgba(37, 99, 235, 0.18), 0 12px 24px -4px rgba(15, 23, 42, 0.12);
-      transition: transform 0.3s ease;
     }
 
-    .avatar-img:hover {
-      transform: scale(1.03);
-    }
-
-    .status-badge {
-      position: absolute;
-      bottom: -4px;
-      right: -4px;
-      background: #FFFFFF;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      color: #065F46;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      white-space: nowrap;
-    }
-
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #10B981;
-      animation: pulse 2s infinite ease-in-out;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
-    }
-
-    .hero-info {
-      flex: 1;
-      min-width: 320px;
-    }
-
-    .hero-title-row {
+    .hero-name-col {
       display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
+      flex-direction: column;
+      gap: 4px;
     }
 
-    .hero-name {
-      font-size: 2.2rem;
-      font-weight: 800;
+    .hero-title-group {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-name-title {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 700;
       color: var(--text-main);
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
 
-    .hero-role-chip {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(59, 130, 246, 0.14) 100%);
-      color: var(--primary);
-      border: 1px solid var(--primary-border);
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .hero-subtitle {
-      font-size: 1.02rem;
-      color: var(--text-body);
-      margin-bottom: 16px;
+    .hero-en-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-muted);
       font-weight: 500;
-      line-height: 1.5;
     }
 
-    .hero-badges-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-
-    .hero-pill {
-      background: var(--bg-surface);
-      color: var(--text-body);
-      border: 1px solid var(--border-card);
+    .hero-role-badge {
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.85);
+      border: none;
+      color: var(--text-main);
       padding: 4px 12px;
       border-radius: var(--radius-pill);
-      font-size: 0.8rem;
-      font-weight: 600;
-      display: inline-flex;
+      letter-spacing: 0.02em;
+      box-shadow: 0 2px 8px rgba(45, 42, 38, 0.05);
+    }
+
+    .hero-edu-status {
+      display: flex;
       align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      flex-wrap: wrap;
     }
 
-    .hero-pill:hover {
-      border-color: var(--border-card-hover);
-      background: var(--bg-subtle);
+    .status-dot-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-sage);
+      box-shadow: 0 0 0 3px rgba(117, 155, 108, 0.25);
+      animation: pulseAnim 2.4s infinite ease-in-out;
+      flex-shrink: 0;
     }
 
-    .hero-pill.primary {
-      background: var(--primary-soft);
-      color: var(--primary);
-      border-color: var(--primary-border);
+    @keyframes pulseAnim {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.85); opacity: 0.6; }
     }
 
-    .hero-contact-bar {
+    .hero-cta-group {
       display: flex;
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
-      padding-top: 6px;
     }
 
-    .contact-item-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-card);
-      padding: 7px 14px;
-      border-radius: var(--radius-md);
-      color: var(--text-body);
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .contact-item-btn:hover {
-      background: var(--bg-subtle);
-      border-color: var(--primary-light);
-      color: var(--primary);
-      transform: translateY(-1px);
-    }
-
-    .contact-item-btn.cta-github {
-      background: #0F172A;
+    .btn-pill-dark {
+      background: var(--color-charcoal);
       color: #FFFFFF;
-      border-color: #0F172A;
-    }
-
-    .contact-item-btn.cta-github:hover {
-      background: #1E293B;
-      color: #FFFFFF;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
-    }
-
-    /* ==========================================================================
-       FLOATING GLASS NAV TABS
-       ========================================================================== */
-    .nav-wrapper {
-      position: sticky;
-      top: 18px;
-      z-index: 99;
-      display: flex;
-      justify-content: center;
-      padding: 0 20px;
-      margin-top: -24px;
-      pointer-events: none;
-    }
-
-    .nav-tabs-pill {
-      pointer-events: auto;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(226, 232, 240, 0.95);
+      padding: 9px 20px;
       border-radius: var(--radius-pill);
-      padding: 6px;
-      box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
-      display: flex;
-      gap: 4px;
-      overflow-x: auto;
-      max-width: 100%;
-    }
-
-    .tab-btn {
-      padding: 8px 18px;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      font-family: inherit;
-      font-weight: 600;
       font-size: 0.86rem;
-      border-radius: var(--radius-pill);
-      cursor: pointer;
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      white-space: nowrap;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(35, 34, 32, 0.12);
     }
 
-    .tab-btn:hover {
+    .btn-pill-dark:hover {
+      background: #000000;
+      transform: translateY(-1px);
+    }
+
+    .btn-pill-light {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: var(--text-main);
-      background: rgba(241, 245, 249, 0.8);
+      border: none;
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.86rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.08);
     }
 
-    .tab-btn.active {
-      background: #0F172A;
+    .btn-pill-light:hover {
+      background: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(45, 42, 38, 0.12);
+    }
+
+    /* Middle Row */
+    .hero-body-row {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-dense-bio {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-body);
+      margin-bottom: 12px;
+    }
+
+    .hero-dense-bio strong {
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      color: var(--color-charcoal);
+      font-style: italic;
+    }
+
+    .hero-dense-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .dense-tag {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: none;
+      color: var(--text-body);
+      box-shadow: 0 2px 6px rgba(45, 42, 38, 0.04);
+    }
+
+    .dense-tag.highlight {
+      background: var(--color-ochre-soft);
+      color: #9A6208;
+    }
+
+    .hero-dense-contacts {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .dense-contact-btn {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-body);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: none;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.18s ease;
+      box-shadow: 0 2px 6px rgba(45, 42, 38, 0.04);
+    }
+
+    .dense-contact-btn:hover {
+      background: #FFFFFF;
+      color: var(--text-main);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(45, 42, 38, 0.08);
+    }
+
+    /* Bottom Row: 3 Pillars Strip */
+    .hero-triad-strip {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding-top: 6px;
+      border-top: none;
+    }
+
+    @media (min-width: 860px) {
+      .hero-triad-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .triad-compact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.05);
+      transition: all 0.2s ease;
+    }
+
+    .triad-compact-item:hover {
+      background: rgba(255, 255, 255, 0.94);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45, 42, 38, 0.09);
+    }
+
+    .triad-compact-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-charcoal);
       color: #FFFFFF;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .triad-compact-text h4 {
+      font-family: var(--font-serif);
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+      line-height: 1.3;
+    }
+
+    .triad-compact-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* ==========================================================================
-       MAIN CONTENT LAYOUT
+       SECTION HEADERS & BENTO SHOWCASES
        ========================================================================== */
-    main {
-      padding: 44px 0 80px;
-    }
-
     .portfolio-section {
-      margin-bottom: 64px;
-      scroll-margin-top: 90px;
+      padding-top: 32px;
+      margin-bottom: 72px;
     }
 
-    .section-header {
+    .section-editorial-header {
       margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .section-badge-row {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 8px;
     }
 
-    .section-num {
-      display: inline-flex;
+    .section-order-badge {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-charcoal);
+      color: #FFFFFF;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: #FFFFFF;
-      font-size: 0.85rem;
-      font-weight: 800;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
     }
 
-    .section-tag-sub {
-      color: var(--primary);
-      font-size: 0.82rem;
+    .section-category-tag {
+      font-size: 0.76rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-    }
-
-    .section-title {
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: var(--text-main);
-      letter-spacing: -0.025em;
-    }
-
-    .section-desc {
       color: var(--text-muted);
-      font-size: 0.94rem;
-      margin-top: 4px;
-      max-width: 820px;
     }
 
-    /* ==========================================================================
-       MODERN CARD SYSTEM & BENTO GRIDS
-       ========================================================================== */
-    .bento-card {
-      background: var(--bg-surface);
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border-card);
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    .section-main-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .section-summary-desc {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      line-height: 1.7;
+    }
+
+    /* Editorial Bento Card Frame with Translucent Color Art Background */
+    .editorial-bento-card {
       position: relative;
+      overflow: hidden;
+      background: #FAF8F5;
+      border: none;
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      box-shadow: 0 16px 48px rgba(45, 42, 38, 0.07);
+      margin-bottom: 32px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      z-index: 1;
     }
 
-    .bento-card:hover {
-      border-color: var(--border-card-hover);
-      box-shadow: var(--shadow-md);
+    .editorial-bento-card:hover {
+      box-shadow: 0 20px 56px rgba(45, 42, 38, 0.11);
     }
 
-    .card-topbar {
+    .editorial-bento-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/hero_illustration.webp'), url('assets/hero_illustration.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center right;
+      opacity: 0.32;
+      filter: saturate(1.15) contrast(1.02);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .editorial-bento-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.82) 0%,
+        rgba(253, 251, 247, 0.62) 50%,
+        rgba(255, 255, 255, 0.78) 100%
+      );
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .editorial-bento-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Dynamic Section-Specific Background Focal Points */
+    #media .editorial-bento-card::before {
+      background-position: top right;
+      opacity: 0.34;
+    }
+    #design .editorial-bento-card:nth-of-type(1)::before {
+      background-position: bottom left;
+      opacity: 0.30;
+    }
+    #design .editorial-bento-card:nth-of-type(2)::before {
+      background-position: center right;
+      opacity: 0.32;
+    }
+    #opensource-ai .editorial-bento-card:nth-of-type(1)::before {
+      background-position: top center;
+      opacity: 0.32;
+    }
+    #opensource-ai .editorial-bento-card:nth-of-type(2)::before {
+      background-position: bottom right;
+      opacity: 0.34;
+    }
+    #social-matrix .editorial-bento-card::before {
+      background-position: center center;
+      opacity: 0.35;
+    }
+
+    .bento-card-topbar {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 20px;
+      align-items: center;
       gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+      border-bottom: none;
       flex-wrap: wrap;
     }
 
-    .card-topbar h3 {
-      font-size: 1.18rem;
-      font-weight: 700;
+    .bento-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
       color: var(--text-main);
-      letter-spacing: -0.015em;
+      margin-bottom: 4px;
     }
 
-    .card-topbar p {
-      color: var(--text-muted);
+    .bento-card-subtitle {
       font-size: 0.88rem;
-      margin-top: 3px;
+      color: var(--text-muted);
     }
 
-    .badge-label {
+    .status-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      padding: 4px 10px;
-      border-radius: var(--radius-sm);
-      font-size: 0.78rem;
-      font-weight: 700;
-      background: var(--bg-subtle);
-      color: var(--text-body);
-      border: 1px solid var(--border-card);
+      gap: 6px;
       white-space: nowrap;
+      border: none;
+      box-shadow: 0 1px 4px rgba(45, 42, 38, 0.04);
     }
 
-    .badge-label.blue {
-      background: var(--primary-soft);
-      color: var(--primary);
-      border-color: var(--primary-border);
+    .status-pill.sage {
+      background: var(--color-sage-soft);
+      color: #386330;
     }
 
-    .badge-label.emerald {
-      background: var(--accent-emerald-soft);
-      color: var(--accent-emerald);
-      border-color: var(--accent-emerald-border);
+    .status-pill.ochre {
+      background: var(--color-ochre-soft);
+      color: #9A6208;
     }
 
+    .status-pill.rose {
+      background: var(--color-rose-soft);
+      color: #A3484C;
+    }
+
+    .status-pill.sky {
+      background: var(--color-sky-soft);
+      color: #2F6169;
+    }
+
+    /* Grids */
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 24px;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 22px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 640px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .grid-4 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: 1fr;
       gap: 16px;
     }
 
-    /* ==========================================================================
-       DEVICE FRAMES: PHONE & BROWSER MOCKUPS
-       ========================================================================== */
-    .phone-mockup-frame {
-      background: #FFFFFF;
-      border: 1px solid #CBD5E1;
-      border-radius: 24px;
-      box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-      overflow: hidden;
-      margin-bottom: 18px;
-      position: relative;
+    @media (min-width: 600px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    .phone-mockup-topbar {
-      height: 24px;
-      background: #FFFFFF;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 1px solid #F1F5F9;
-      position: relative;
+    @media (min-width: 1024px) {
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
-    .phone-pill-notch {
-      width: 48px;
-      height: 4px;
-      background: #CBD5E1;
-      border-radius: var(--radius-pill);
-    }
-
-    .phone-mockup-viewport {
-      max-height: 420px;
-      overflow: hidden;
-      background: #F8FAFC;
-      position: relative;
-    }
-
-    .browser-frame {
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
+    /* Sub Item Cards with Translucent Frosted Glass */
+    .editorial-item-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 16px;
-      transition: all 0.25s ease;
-    }
-
-    .browser-frame:hover {
-      border-color: var(--border-card-hover);
-      box-shadow: var(--shadow-md);
-    }
-
-    .browser-header {
-      background: #F8FAFC;
-      border-bottom: 1px solid var(--border-card);
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .browser-dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .browser-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .dot-red { background: #FF5F56; }
-    .dot-yellow { background: #FFBD2E; }
-    .dot-green { background: #27C93F; }
-
-    .browser-address {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: var(--radius-pill);
-      padding: 2px 14px;
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      font-family: var(--font-mono);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex: 1;
-      max-width: 380px;
-    }
-
-    .browser-body {
-      overflow: hidden;
-      background: #F8FAFC;
-    }
-
-    .img-showcase {
-      width: 100%;
-      display: block;
-      cursor: zoom-in;
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .img-showcase:hover {
-      transform: scale(1.015);
-    }
-
-    /* ==========================================================================
-       ITEM ACTION CARDS
-       ========================================================================== */
-    .item-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-lg);
-      padding: 20px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.05);
+      transition: all 0.22s ease;
     }
 
-    .item-card:hover {
-      border-color: var(--border-card-hover);
-      box-shadow: var(--shadow-hover);
+    .editorial-item-card:hover {
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 8px 24px rgba(45, 42, 38, 0.09);
       transform: translateY(-2px);
     }
 
-    .item-card-header {
+    .item-meta-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .item-title {
-      font-size: 1.08rem;
-      font-weight: 700;
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 6px;
-      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+      line-height: 1.35;
     }
 
     .item-desc {
       font-size: 0.88rem;
       color: var(--text-body);
-      line-height: 1.55;
-      margin-bottom: 14px;
+      line-height: 1.65;
+      margin-bottom: 16px;
     }
 
-    .item-tags {
+    .item-tags-wrap {
       display: flex;
+      flex-wrap: wrap;
       gap: 6px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-    .tag-chip {
-      font-size: 0.76rem;
-      font-family: var(--font-mono);
-      background: var(--bg-subtle);
-      color: var(--text-body);
-      border: 1px solid var(--border-card);
-      padding: 2px 8px;
-      border-radius: 4px;
+    .item-tag {
+      font-size: 0.74rem;
       font-weight: 500;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.85);
+      border: none;
+      box-shadow: 0 1px 3px rgba(45, 42, 38, 0.04);
+      color: var(--text-muted);
     }
 
-    .tag-chip.code {
-      background: #EFF6FF;
-      color: #1D4ED8;
-      border-color: #DBEAFE;
+    .item-tag.code {
+      font-family: var(--font-mono);
+      color: var(--text-main);
+      background: rgba(240, 237, 229, 0.75);
     }
 
-    .item-btn-group {
+    /* Button Actions */
+    .item-actions-row {
       display: flex;
-      gap: 8px;
+      gap: 10px;
+      align-items: center;
       flex-wrap: wrap;
-      margin-top: auto;
+      padding-top: 14px;
+      border-top: none;
     }
 
-    .btn-action {
+    .btn-act-primary {
+      background: var(--color-charcoal);
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 14px;
-      border-radius: var(--radius-md);
-      font-size: 0.84rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      border: none;
+      transition: all 0.2s ease;
     }
 
-    .btn-action.primary {
-      background: var(--primary);
-      color: #FFFFFF;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
-    }
-
-    .btn-action.primary:hover {
-      background: var(--primary-dark);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    .btn-act-primary:hover {
+      background: #000000;
       transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .btn-action.secondary {
-      background: var(--bg-surface);
+    .btn-act-secondary {
+      background: rgba(255, 255, 255, 0.88);
       color: var(--text-body);
-      border-color: var(--border-card);
+      border: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 2px 8px rgba(45, 42, 38, 0.06);
+      transition: all 0.2s ease;
     }
 
-    .btn-action.secondary:hover {
-      background: var(--bg-subtle);
-      border-color: var(--border-card-hover);
+    .btn-act-secondary:hover {
+      background: #FFFFFF;
       color: var(--text-main);
+      box-shadow: 0 4px 12px rgba(45, 42, 38, 0.1);
       transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       FRAMES: PHONE MOCKUP & BROWSER WINDOW
+       ========================================================================== */
+    .phone-mockup-frame {
+      background: #1E1D1B;
+      border-radius: 36px;
+      padding: 10px 10px 14px;
+      box-shadow: 0 16px 36px -6px rgba(35, 30, 25, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+      margin-bottom: 18px;
+      transition: transform 0.25s ease;
+    }
+
+    .phone-mockup-frame:hover {
+      transform: scale(1.015);
+    }
+
+    .phone-notch-bar {
+      height: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .phone-notch-pill {
+      width: 70px;
+      height: 5px;
+      background: #3A3835;
+      border-radius: 4px;
+    }
+
+    .phone-viewport-screen {
+      background: #FFFFFF;
+      border-radius: 26px;
+      overflow: hidden;
+      max-height: 380px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #D4CBBA #FAF8F4;
+      position: relative;
+      cursor: zoom-in;
+    }
+
+    .phone-viewport-screen::-webkit-scrollbar {
+      width: 5px;
+    }
+    .phone-viewport-screen::-webkit-scrollbar-thumb {
+      background: #D4CBBA;
+      border-radius: 4px;
+    }
+
+    .img-zoom-target {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .img-zoom-target:hover {
+      opacity: 0.96;
+    }
+
+    /* Browser Mockup Frame with Translucent Frosted Glass */
+    .browser-mockup-frame {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(45, 42, 38, 0.07);
+      margin-bottom: 16px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .browser-mockup-frame:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(45, 42, 38, 0.1);
+    }
+
+    .browser-top-bar {
+      background: rgba(244, 240, 232, 0.85);
+      border-bottom: none;
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .browser-dots-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .browser-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+
+    .dot-red { background: #E68B8E; }
+    .dot-yellow { background: #DE9B27; }
+    .dot-green { background: #759B6C; }
+
+    .browser-address-bar {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      border-radius: var(--radius-pill);
+      padding: 3px 12px;
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .browser-viewport {
+      overflow: hidden;
+      cursor: zoom-in;
+      background: #FAF8F4;
     }
 
     /* ==========================================================================
        APP STORE SHOWCASE GRID
        ========================================================================== */
-    .appstore-grid-showcase {
+    .appstore-showcase-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 18px;
-      margin-top: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
-    .appstore-card-item {
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
+    @media (min-width: 640px) {
+      .appstore-showcase-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .appstore-showcase-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    .appstore-slide-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
       border-radius: var(--radius-md);
       overflow: hidden;
-      transition: all 0.25s ease;
       cursor: zoom-in;
+      transition: all 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.05);
     }
 
-    .appstore-card-item:hover {
-      border-color: var(--border-card-hover);
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-3px);
+    .appstore-slide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(45, 42, 38, 0.1);
+      background: rgba(255, 255, 255, 0.95);
     }
 
-    .appstore-card-caption {
-      padding: 10px 14px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text-main);
-      background: #FFFFFF;
-      border-bottom: 1px solid var(--border-light);
+    .appstore-card-header {
+      padding: 10px 12px;
+      border-bottom: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: rgba(255, 255, 255, 0.85);
     }
 
-    .appstore-card-caption .order-num {
-      color: var(--primary);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
+    .appstore-caption-text {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .appstore-order-tag {
+      font-family: var(--font-serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-ochre);
+    }
+
+    .appstore-img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #F4F0E8;
+    }
+
+    .appstore-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .appstore-slide-card:hover .appstore-img-wrap img {
+      transform: scale(1.05);
     }
 
     /* ==========================================================================
        SOCIAL MEDIA MATRIX CARDS
        ========================================================================== */
-    .social-matrix-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-lg);
+    .social-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
+      border-radius: var(--radius-md);
       padding: 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.05);
+      transition: all 0.2s ease;
     }
 
-    .social-matrix-card:hover {
-      border-color: var(--border-card-hover);
-      box-shadow: var(--shadow-hover);
+    .social-card:hover {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 22px rgba(45, 42, 38, 0.09);
       transform: translateY(-2px);
     }
 
-    .social-card-head {
+    .social-card-top {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 10px;
     }
 
-    .social-avatar-square {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
+    .social-badge-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 0.95rem;
       color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: 700;
       flex-shrink: 0;
     }
 
-    .social-platform-name {
-      font-size: 0.96rem;
+    .social-meta-info h4 {
+      font-size: 0.92rem;
       font-weight: 700;
       color: var(--text-main);
+      line-height: 1.2;
     }
 
-    .social-category-tag {
+    .social-type-sub {
       font-size: 0.72rem;
       color: var(--text-muted);
     }
 
-    .social-desc-text {
-      font-size: 0.84rem;
+    .social-blurb {
+      font-size: 0.82rem;
       color: var(--text-body);
-      line-height: 1.5;
+      line-height: 1.55;
       margin-bottom: 14px;
     }
 
-    .social-btn-link {
+    .social-card-btn {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      border: none;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 2px 8px rgba(45, 42, 38, 0.06);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      text-align: center;
+      transition: all 0.18s ease;
+    }
+
+    .social-card-btn:hover {
+      background: var(--color-charcoal);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       MEDIUM SHOWCASE COMPACT (Moved to End & Reduced Scale)
+       ========================================================================== */
+    .medium-showcase-compact {
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: none;
+    }
+
+    .medium-showcase-inner {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.05);
+      transition: all 0.22s ease;
+    }
+
+    .medium-showcase-inner:hover {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 24px rgba(45, 42, 38, 0.09);
+    }
+
+    .medium-showcase-preview {
+      width: 260px;
+      max-width: 35%;
+      flex-shrink: 0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.08);
+      cursor: zoom-in;
+      background: #FFFFFF;
+    }
+
+    .medium-showcase-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .medium-showcase-preview:hover img {
+      transform: scale(1.03);
+    }
+
+    .medium-showcase-info {
+      flex: 1;
+    }
+
+    @media (max-width: 768px) {
+      .medium-showcase-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .medium-showcase-preview {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    /* ==========================================================================
+       AI PIPELINE ARCHITECTURE (Four Steps)
+       ========================================================================== */
+    .pipeline-board {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: none;
+    }
+
+    .pipeline-board-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pipeline-step-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .pipeline-step-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .pipeline-step-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .pipeline-box {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: 18px;
+      position: relative;
+      box-shadow: 0 4px 14px rgba(45, 42, 38, 0.05);
+      transition: all 0.2s ease;
+    }
+
+    .pipeline-box:hover {
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 6px 18px rgba(45, 42, 38, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .pipeline-box-num {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-ochre);
+      margin-bottom: 6px;
+    }
+
+    .pipeline-box-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .pipeline-box-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       EDITORIAL FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: var(--color-charcoal);
+      color: #FFFFFF;
+      padding: 48px 0;
+      margin-top: 80px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand p {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 520px;
+    }
+
+    .footer-contact-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-contact-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #FFFFFF;
+      font-size: 0.84rem;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 5px;
-      padding: 6px 12px;
-      border-radius: var(--radius-sm);
-      background: var(--bg-subtle);
-      color: var(--text-main);
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      transition: all 0.2s ease;
     }
 
-    .social-btn-link:hover {
-      background: #0F172A;
-      color: #FFFFFF;
-    }
-
-    /* ==========================================================================
-       AI AGENT WORKFLOW PIPELINE
-       ========================================================================== */
-    .pipeline-container {
-      margin-top: 28px;
-      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-lg);
-      padding: 22px 24px;
-    }
-
-    .pipeline-title {
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .pipeline-steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-    }
-
-    .pipeline-step-box {
+    .footer-contact-btn:hover {
       background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-md);
-      padding: 14px;
-      position: relative;
+      color: var(--color-charcoal);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
     }
 
-    .pipeline-step-box .step-header {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
-    .pipeline-step-box p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
 
     /* ==========================================================================
-       FOOTER
+       MODAL & TOAST & UTILITIES
        ========================================================================== */
-    footer {
-      border-top: 1px solid var(--border-card);
-      padding: 48px 0;
-      background: #FFFFFF;
-      text-align: center;
-    }
-
-    .footer-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 8px;
-    }
-
-    .footer-meta {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .footer-edu {
-      font-size: 0.82rem;
-      color: var(--text-subtle);
-    }
-
-    /* ==========================================================================
-       INTERACTIVE: TOAST & LIGHTBOX MODAL
-       ========================================================================== */
-    .toast-container {
+    .lightbox-modal {
       position: fixed;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: #0F172A;
-      color: #FFFFFF;
-      padding: 10px 20px;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-      font-size: 0.88rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      z-index: 9999;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .toast-container.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(15, 23, 42, 0.8);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(25, 24, 22, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       z-index: 10000;
+      display: none;
       align-items: center;
       justify-content: center;
       padding: 24px;
@@ -939,809 +1483,975 @@
       transition: opacity 0.25s ease;
     }
 
-    .modal.active {
+    .lightbox-modal.active {
       display: flex;
       opacity: 1;
     }
 
-    .modal-content-wrap {
-      max-width: 92%;
-      max-height: 90vh;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: #FFFFFF;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    .lightbox-wrap {
       position: relative;
-      transform: scale(0.96);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      max-width: 92vw;
+      max-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .modal.active .modal-content-wrap {
-      transform: scale(1);
-    }
-
-    .modal-img {
+    .lightbox-img {
       max-width: 100%;
-      max-height: 86vh;
-      display: block;
+      max-height: 90vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
       object-fit: contain;
     }
 
-    .modal-close-btn {
+    .lightbox-close-btn {
       position: absolute;
-      top: 14px;
-      right: 14px;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: rgba(15, 23, 42, 0.7);
-      color: #FFFFFF;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      transition: background 0.2s;
-      z-index: 10;
-    }
-
-    .modal-close-btn:hover {
-      background: #0F172A;
-    }
-
-    /* Back to top button */
-    .back-to-top {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 44px;
-      height: 44px;
+      top: -16px;
+      right: -16px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: #FFFFFF;
-      color: var(--text-main);
-      border: 1px solid var(--border-card);
-      box-shadow: var(--shadow-md);
-      cursor: pointer;
+      color: var(--color-charcoal);
+      font-size: 1.1rem;
+      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
-      z-index: 98;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .lightbox-close-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .toast-box {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--color-charcoal);
+      color: #FFFFFF;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       opacity: 0;
       pointer-events: none;
       transition: all 0.25s ease;
     }
 
-    .back-to-top.visible {
+    .toast-box.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .back-to-top-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: var(--color-charcoal);
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(45, 42, 38, 0.14);
+      z-index: 900;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+    }
+
+    .back-to-top-btn.visible {
       opacity: 1;
       pointer-events: auto;
     }
 
-    .back-to-top:hover {
-      background: #0F172A;
+    .back-to-top-btn:hover {
+      background: var(--color-charcoal);
       color: #FFFFFF;
       transform: translateY(-2px);
     }
 
-    @media (max-width: 768px) {
-      .hero-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-      }
-      .hero-name {
-        font-size: 1.85rem;
-      }
-      .nav-wrapper {
-        margin-top: -12px;
-      }
-      .tab-btn {
-        padding: 7px 12px;
-        font-size: 0.8rem;
-      }
-      .bento-card {
-        padding: 20px;
-      }
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+    /* Official Vector SVG Icons */
+    .svg-icon {
+      width: 15px;
+      height: 15px;
+      vertical-align: -0.16em;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .svg-icon-sm {
+      width: 13px;
+      height: 13px;
+      vertical-align: -0.14em;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .svg-icon-ext {
+      width: 12px;
+      height: 12px;
+      margin-left: 3px;
+      vertical-align: -0.1em;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    a:hover .svg-icon-ext, button:hover .svg-icon-ext {
+      transform: translate(1.5px, -1.5px);
+    }
+    .svg-brand-app {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .svg-brand-app svg {
+      width: 32px;
+      height: 32px;
+    }
+    .social-badge-icon svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+    .triad-compact-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO HEADER SECTION -->
-  <header class="hero-header">
+  <!-- ==========================================================================
+       TOP EDITORIAL NAVIGATION
+       ========================================================================== -->
+  <header class="site-nav" id="siteNav">
     <div class="container">
-      <div class="hero-inner">
-        <div class="avatar-block">
-          <img src="assets/portrait.webp" alt="王蕊" class="avatar-img" fetchpriority="high" decoding="async" onerror="this.src='assets/portrait.jpg'">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <span>积极看机会 · 2027届</span>
-          </div>
-        </div>
-        <div class="hero-info">
-          <div class="hero-title-row">
-            <h1 class="hero-name">王蕊</h1>
-            <span class="hero-role-chip">产品运营 · AI产品 · 内容生态</span>
-          </div>
-          <p class="hero-subtitle">
-            西南财经大学（211 / 双一流）金融数学专业 · 专注于产品运营、新媒体图文采编排版、视觉设计与开源社区敏捷交付
-          </p>
-          <div class="hero-badges-row">
-            <span class="hero-pill primary">🎓 西南财经大学 · 本科 2027 届</span>
-            <span class="hero-pill">📱 微信公众号采编排版（秀米/135）</span>
-            <span class="hero-pill">🎨 实体物料印刷设计（晚会入场券/书签）</span>
-            <span class="hero-pill">🐙 GitHub 贡献 842 次</span>
-            <span class="hero-pill">⚡ Vibecoding 全栈交付</span>
-          </div>
-          <div class="hero-contact-bar">
-            <a href="https://github.com/kristen7416" target="_blank" class="contact-item-btn cta-github">
-              <span>🐙 GitHub @kristen7416</span>
-            </a>
-            <button class="contact-item-btn" onclick="copyContact('kristen6670@163.com', '邮箱')">
-              <span>📧 kristen6670@163.com</span>
-            </button>
-            <button class="contact-item-btn" onclick="copyContact('kristen6670', '微信')">
-              <span>💬 微信: kristen6670</span>
-            </button>
-            <button class="contact-item-btn" onclick="copyContact('18708165973', '电话')">
-              <span>📞 18708165973</span>
-            </button>
-          </div>
-        </div>
+      <div class="nav-inner">
+        <a href="#" class="brand-mark">
+          <span class="brand-logo-text">Kristen Wang</span>
+          <span class="brand-subtext">Storyteller & Operations</span>
+        </a>
+
+        <nav class="nav-links">
+          <button class="nav-link-btn active" onclick="scrollToSection('hero')">Home</button>
+          <button class="nav-link-btn" onclick="scrollToSection('media')">微信采编</button>
+          <button class="nav-link-btn" onclick="scrollToSection('design')">物料与设计</button>
+          <button class="nav-link-btn" onclick="scrollToSection('opensource-ai')">开源与全栈</button>
+          <button class="nav-link-btn" onclick="scrollToSection('social-matrix')">全球社媒</button>
+          <button class="nav-action-pill" onclick="copyContact('kristen6670@163.com', '邮箱')">
+            Get in touch
+          </button>
+        </nav>
       </div>
     </div>
   </header>
 
-  <!-- FLOATING GLASS NAV TABS -->
-  <div class="nav-wrapper">
-    <nav class="nav-tabs-pill" id="navbar">
-      <button class="tab-btn active" onclick="scrollToSection('media')">📱 1. 微信公众号图文</button>
-      <button class="tab-btn" onclick="scrollToSection('design')">🎨 2. 活动物料 & 商店图</button>
-      <button class="tab-btn" onclick="scrollToSection('opensource-ai')">⚡ 3. GitHub开源与全栈交付</button>
-      <button class="tab-btn" onclick="scrollToSection('social-matrix')">🌍 4. 全球多渠道社媒矩阵</button>
-    </nav>
-  </div>
+  <!-- ==========================================================================
+       COMPACT HIGH-DENSITY HERO (Illustration in Background)
+       ========================================================================== -->
+  <section class="hero-compact-section" id="hero">
+    <div class="container hero-container-rel">
+      
+      <!-- Compact Information-Dense Card with Art Background -->
+      <div class="hero-compact-card">
+        
+        <!-- Card Background Color Illustration with Transparency -->
+        <div class="hero-card-bg-layer" aria-hidden="true">
+          <img src="assets/hero_illustration.webp" alt="" class="hero-card-bg-img" fetchpriority="high" decoding="async" onerror="this.src='assets/hero_illustration.png'">
+          <div class="hero-card-bg-overlay"></div>
+        </div>
+        
+        <!-- Top Row: Avatar + Name + Title + Status + Primary CTAs -->
+        <div class="hero-header-row">
+          <div class="hero-profile-cell">
+            <div class="hero-avatar-ring">
+              <img src="assets/portrait.webp" alt="王蕊" class="hero-avatar-photo" fetchpriority="high" decoding="async" onerror="this.src='assets/portrait.jpg'">
+            </div>
+            <div class="hero-name-col">
+              <div class="hero-title-group">
+                <h1 class="hero-name-title">王蕊 <span class="hero-en-name">Kristen Wang</span></h1>
+                <span class="hero-role-badge">产品运营 · AI产品 · 内容生态</span>
+              </div>
+              <div class="hero-edu-status">
+                <span class="status-dot-pulse"></span>
+                <span>西南财经大学（211 / 双一流）金融数学专业 · 2027 届本科</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="hero-cta-group">
+            <button class="btn-pill-dark" onclick="copyContact('kristen6670@163.com', '邮箱')">
+              Get in touch · 取得联系
+            </button>
+            <a href="https://github.com/kristen7416" target="_blank" class="btn-pill-light">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> GitHub @kristen7416
+            </a>
+          </div>
+        </div>
+
+        <!-- Middle Row: Dense Bio, Tags & Contact Strip -->
+        <div class="hero-body-row">
+          <p class="hero-dense-bio">
+            <strong>The Product Storyteller</strong> —— 兼具金融数学的严谨数据逻辑与新媒体的细腻叙事感知。专注于新媒体公众号选题采编与秀米/135精细化美化排版、实体晚会印刷物料质检打样、全球 App Store 2560x1600 高清商店图，以及开源社区敏捷协同与 Vibecoding 全栈交付，用文字与视觉连接用户心智，用工程驱动业务闭环。
+          </p>
+
+          <!-- High-density Capability Tags -->
+          <div class="hero-dense-tags">
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> 211 金融数学</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> 微信公众号图文采编排版 (秀米/135)</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"/><circle cx="13.5" cy="6.5" r="1" fill="currentColor"/><circle cx="17.5" cy="10.5" r="1" fill="currentColor"/><circle cx="8.5" cy="7.5" r="1" fill="currentColor"/><circle cx="6.5" cy="12.5" r="1" fill="currentColor"/></svg> 晚会入场券/书签印刷打样</span>
+            <span class="dense-tag"><span class="svg-icon-sm"><svg viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.69-14.01-6.74-10.33-11.77-21.84-15.09-34.54-3.32-12.7-4.98-24.81-4.98-36.33 0-14.15 3.57-26.06 10.7-35.73 7.13-9.67 16.27-14.65 27.42-14.93 4.9 0 10.37 1.34 16.42 4.02 6.05 2.68 9.99 4.07 11.83 4.17 1.63 0 5.8-1.46 12.51-4.38 6.71-2.92 12.39-4.22 17.04-3.9 12.72.63 22.86 5.39 30.43 14.28-11.09 6.75-16.53 16.14-16.32 28.18.22 9.47 3.86 17.38 10.92 23.74 7.06 6.36 15.35 10.02 24.88 10.98-2.17 6.32-4.8 12.55-7.89 18.7zM119.22 31.84c0-7.39 2.66-14.37 7.98-20.94 5.32-6.57 11.96-10.5 19.92-11.79.11 1.09.16 2.07.16 2.94 0 7.39-2.83 14.53-8.49 21.43-5.66 6.9-12.39 10.87-20.19 11.9-.33-1.2-.5-2.2-.5-3.54z"/></svg></span> App Store 2560x1600 高清图</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> GitHub 888 次贡献 (69 PR 合并)</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> 3 款全栈上线交付产品</span>
+          </div>
+
+          <!-- High-density Interactive Contacts -->
+          <div class="hero-dense-contacts">
+            <button class="dense-contact-btn" onclick="copyContact('kristen6670@163.com', '邮箱')">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> kristen6670@163.com
+            </button>
+            <button class="dense-contact-btn" onclick="copyContact('kristen6670', '微信')">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.213.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 微信: kristen6670
+            </button>
+            <button class="dense-contact-btn" onclick="copyContact('18708165973', '电话')">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 18708165973
+            </button>
+            <a href="https://github.com/kristen7416" target="_blank" class="dense-contact-btn">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> github.com/kristen7416
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Row: 3 Core Pillars (Compact Horizontal Grid) -->
+        <div class="hero-triad-strip">
+          <div class="triad-compact-item">
+            <div class="triad-compact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c3-6 7-6 10 0s7 6 10 0"/></svg></div>
+            <div class="triad-compact-text">
+              <h4>End to end service · 全链路内容运营</h4>
+              <p>选题策划、文案采编、秀米/135排版美化到发布复盘，全流程独立高效闭环。</p>
+            </div>
+          </div>
+
+          <div class="triad-compact-item">
+            <div class="triad-compact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
+            <div class="triad-compact-text">
+              <h4>Passion & craft · 视觉质感与印刷打样</h4>
+              <p>苛求排版留白与呼吸感，严控实体印刷出血线与 App Store 2560x1600 商店图。</p>
+            </div>
+          </div>
+
+          <div class="triad-compact-item">
+            <div class="triad-compact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 12 12 22 2 12 12 2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+            <div class="triad-compact-text">
+              <h4>Global & code · 全球视野与工程全栈</h4>
+              <p>888 次 GitHub 贡献，参与 530+ Star 开源项目，覆盖 12 大海外社区运营矩阵。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <main class="container">
 
     <!-- ==========================================================================
-         板块一：新媒体图文采编与排版作品
+         板块一：新媒体图文采编与排版作品 (Media Operations)
          ========================================================================== -->
     <section id="media" class="portfolio-section">
-      <div class="section-header">
+      <div class="section-editorial-header">
         <div class="section-badge-row">
-          <span class="section-num">1</span>
-          <span class="section-tag-sub">Media Operations</span>
+          <span class="section-order-badge">1</span>
+          <span class="section-category-tag">Media Operations</span>
         </div>
-        <h2 class="section-title">新媒体图文采编与排版作品</h2>
-        <p class="section-desc">负责微信公众号选题策划、文案撰写、秀米/135精细化美化排版与审校发布，注重图文排版呼吸感与视觉规范。</p>
+        <h2 class="section-main-heading">新媒体图文采编与排版作品</h2>
       </div>
 
-      <div class="bento-card">
-        <div class="card-topbar">
-          <div>
-            <h3>实发微信公众号长图文（附移动端精美排版实录与官方原文）</h3>
-            <p>结合不同活动场景定制视觉基调，把控字间距、行高、色彩分层与转化组件。</p>
-          </div>
-          <span class="badge-label emerald">✨ 真实已发表案例</span>
+      <div class="editorial-bento-card">
+        <div class="bento-card-topbar">
+          <h3 class="bento-card-title">实发微信公众号长图文排版</h3>
         </div>
 
         <div class="grid-2">
           <!-- 案例 1：保研讲座 -->
-          <div class="item-card">
+          <div class="editorial-item-card">
             <div>
               <div class="phone-mockup-frame">
-                <div class="phone-mockup-topbar">
-                  <div class="phone-pill-notch"></div>
+                <div class="phone-notch-bar">
+                  <div class="phone-notch-pill"></div>
                 </div>
-                <div class="phone-mockup-viewport">
-                  <img src="assets/wechat_article_01.webp" alt="青春就业大讲堂文章截图" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/wechat_article_01.png'" onclick="openModal(this.src)">
+                <div class="phone-viewport-screen" onclick="openModal('assets/wechat_article_01.webp')">
+                  <img src="assets/wechat_article_01.webp" alt="青春就业大讲堂文章截图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/wechat_article_01.png'">
                 </div>
               </div>
-              <div class="item-card-header">
-                <span class="badge-label blue">讲座专栏</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted);">西南财经大学数学学院</span>
-              </div>
+
               <h4 class="item-title">《青春就业大讲堂 —— 保研经验分享讲座》</h4>
-              <p class="item-desc">
-                采用清新明亮的校园视觉规范，结合重点引言加框、图文多栏排版与文末互动引导，实现移动端高舒适度阅读体验。
-              </p>
-              <div class="item-tags">
-                <span class="tag-chip code">排版工具：秀米 / 135</span>
-                <span class="tag-chip">视觉规范：行高1.75 / 字间距0.5px</span>
-                <span class="tag-chip">转化：互动留言与活动提醒</span>
+
+              <div class="item-tags-wrap">
+                <span class="item-tag code">秀米 / 135</span>
+                <span class="item-tag">校园专栏</span>
+                <span class="item-tag">多栏图文</span>
               </div>
             </div>
-            <div class="item-btn-group">
-              <a href="https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw" target="_blank" class="btn-action primary">
-                🔗 跳转微信阅读原文 ↗
+
+            <div class="item-actions-row">
+              <a href="https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw" target="_blank" class="btn-act-primary">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 跳转微信阅读原文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
-              <button class="btn-action secondary" onclick="copyContact('https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw', '文章链接')">复制链接</button>
+              <button class="btn-act-secondary" onclick="copyContact('https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw', '文章链接')">
+                复制链接
+              </button>
             </div>
           </div>
 
           <!-- 案例 2：竹艺新传 -->
-          <div class="item-card">
+          <div class="editorial-item-card">
             <div>
               <div class="phone-mockup-frame">
-                <div class="phone-mockup-topbar">
-                  <div class="phone-pill-notch"></div>
+                <div class="phone-notch-bar">
+                  <div class="phone-notch-pill"></div>
                 </div>
-                <div class="phone-mockup-viewport">
-                  <img src="assets/wechat_article_02.webp" alt="竹艺新传文章截图" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/wechat_article_02.png'" onclick="openModal(this.src)">
+                <div class="phone-viewport-screen" onclick="openModal('assets/wechat_article_02.webp')">
+                  <img src="assets/wechat_article_02.webp" alt="竹艺新传文章截图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/wechat_article_02.png'">
                 </div>
               </div>
-              <div class="item-card-header">
-                <span class="badge-label emerald">参访与社会实践专题</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted);">好竹意实践队 · 崇州道明实地调研</span>
-              </div>
+
               <h4 class="item-title">《“竹艺新传，点亮竹林”—— 园区参访与非遗调研实录》</h4>
-              <p class="item-desc">
-                采用生动活泼的宣发设计语言，配合实地参访图解、园区非遗手作流程与人物深度访谈，实现移动端高舒适度阅读体验。
-              </p>
-              <div class="item-tags">
-                <span class="tag-chip code">采编形式：实地调研 / 深度访谈</span>
-                <span class="tag-chip">排版亮点：图文卡片式结构</span>
-                <span class="tag-chip">非遗文化：国家级非遗道明竹编</span>
+
+              <div class="item-tags-wrap">
+                <span class="item-tag code">实地调研采编</span>
+                <span class="item-tag">非遗手作访谈</span>
+                <span class="item-tag">道明竹编</span>
               </div>
             </div>
-            <div class="item-btn-group">
-              <a href="https://mp.weixin.qq.com/s/CzqslP4nFd_cIzrZaHDIKw" target="_blank" class="btn-action primary">
-                🔗 跳转微信阅读原文 ↗
+
+            <div class="item-actions-row">
+              <a href="https://mp.weixin.qq.com/s/CzqslP4nFd_cIzrZaHDIKw" target="_blank" class="btn-act-primary">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 跳转微信阅读原文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
-              <button class="btn-action secondary" onclick="copyContact('https://mp.weixin.qq.com/s/CzqslP4nFd_cIzrZaHDIKw', '文章链接')">复制链接</button>
+              <button class="btn-act-secondary" onclick="copyContact('https://mp.weixin.qq.com/s/CzqslP4nFd_cIzrZaHDIKw', '文章链接')">
+                复制链接
+              </button>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- 科技长文视觉排版补充 -->
-        <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border-light);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-            <div>
-              <h4 style="font-size: 0.98rem; font-weight: 700; color: var(--text-main);">🌟 延伸视觉创作：科技产品 Medium 深度长文头图（1600x900px）</h4>
-              <p style="font-size: 0.84rem; color: var(--text-muted);">针对海外科技技术读者独立设计的 16:9 宽屏视觉头图，建立统一的产品色彩与空间逻辑。</p>
-            </div>
-            <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="btn-action secondary" style="font-size: 0.8rem;">
-              查看 Medium 原文 ↗
-            </a>
+    <!-- ==========================================================================
+         板块二：实体活动物料 & LynavoDrive 官方应用商店图 (Visual & Print Design)
+         ========================================================================== -->
+    <section id="design" class="portfolio-section">
+      <div class="section-editorial-header">
+        <div class="section-badge-row">
+          <span class="section-order-badge">2</span>
+          <span class="section-category-tag">Visual & Print Design</span>
+        </div>
+        <h2 class="section-main-heading">实体活动物料 & 官方应用商店图</h2>
+      </div>
+
+      <!-- 实物入场券设计 -->
+      <div class="editorial-bento-card">
+        <div class="bento-card-topbar">
+          <h3 class="bento-card-title">配音社团年度晚会实物入场券 / 书签设计</h3>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.78); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 24px; border-radius: var(--radius-lg); border: none; box-shadow: 0 4px 16px rgba(45, 42, 38, 0.05);">
+          <div style="border-radius: var(--radius-md); overflow: hidden; border: none; box-shadow: 0 4px 16px rgba(45, 42, 38, 0.08); cursor: zoom-in;" onclick="openModal('assets/ticket_design.webp')">
+            <img src="assets/ticket_design.webp" alt="不语配音社年度晚会入场券设计" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/ticket_design.png'">
           </div>
-          <div class="browser-frame" style="margin-bottom: 0;">
-            <div class="browser-header">
-              <div class="browser-dots">
+          <div style="margin-top: 16px; display: flex; justify-content: flex-end; align-items: center;">
+            <button class="btn-act-secondary" onclick="openModal('assets/ticket_design.webp')">
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg> 点击放大全图
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LynavoDrive 官方应用商店图 (App Store Screenshots) -->
+      <div class="editorial-bento-card">
+        <div class="bento-card-topbar">
+          <h3 class="bento-card-title">LynavoDrive 官方应用商店上架图</h3>
+          <button class="btn-act-secondary" onclick="openModal('assets/appstore_exhibition.webp')" style="font-size: 0.8rem;">
+            <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg> 点击全屏查看高清展览图
+          </button>
+        </div>
+
+        <!-- 商店全景展览图 (Panoramic Showcase) -->
+        <div style="margin-bottom: 24px;">
+          <div class="browser-mockup-frame" style="margin-bottom: 0; cursor: zoom-in;" onclick="openModal('assets/appstore_exhibition.webp')">
+            <div class="browser-top-bar">
+              <div class="browser-dots-group">
                 <span class="browser-dot dot-red"></span>
                 <span class="browser-dot dot-yellow"></span>
                 <span class="browser-dot dot-green"></span>
               </div>
-              <div class="browser-address">🔒 medium.com/@openimfounder/...</div>
+              <div class="browser-address-bar"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> apps.apple.com/app/lynavodrive · App Store 官方上架全景展览图</div>
             </div>
-            <div class="browser-body">
-              <img src="assets/medium_cover.webp" alt="科技长文封面排版" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/medium_cover.png'" onclick="openModal(this.src)">
+            <div class="browser-viewport" style="background: #F8FAFC; padding: 12px 10px;">
+              <img src="assets/appstore_exhibition.webp" alt="LynavoDrive 应用商店全景展览图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/appstore_exhibition.png'" style="border-radius: var(--radius-sm); box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
             </div>
           </div>
         </div>
+
+        <!-- 6 张应用商店分图展示 -->
+        <div style="margin-top: 20px; padding-top: 10px; margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <h4 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--text-main);">
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> 单张详细分图（01 ~ 06 · 点击放大）
+            </h4>
+          </div>
+        </div>
+
+        <div class="appstore-showcase-grid">
+          <div class="appstore-slide-card" onclick="openModal('assets/appstore_preview_01.webp')">
+            <div class="appstore-card-header">
+              <span class="appstore-caption-text">电脑与手机无缝连接</span>
+              <span class="appstore-order-tag">01</span>
+            </div>
+            <div class="appstore-img-wrap">
+              <img src="assets/appstore_preview_01.webp" alt="应用商店图 01" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_01.jpg'">
+            </div>
+          </div>
+
+          <div class="appstore-slide-card" onclick="openModal('assets/appstore_preview_02.webp')">
+            <div class="appstore-card-header">
+              <span class="appstore-caption-text">自动相册备份到电脑</span>
+              <span class="appstore-order-tag">02</span>
+            </div>
+            <div class="appstore-img-wrap">
+              <img src="assets/appstore_preview_02.webp" alt="应用商店图 02" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_02.jpg'">
+            </div>
+          </div>
+
+          <div class="appstore-slide-card" onclick="openModal('assets/appstore_preview_03.webp')">
+            <div class="appstore-card-header">
+              <span class="appstore-caption-text">跨端原图原文件传输</span>
+              <span class="appstore-order-tag">03</span>
+            </div>
+            <div class="appstore-img-wrap">
+              <img src="assets/appstore_preview_03.webp" alt="应用商店图 03" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_03.jpg'">
+            </div>
+          </div>
+
+          <div class="appstore-slide-card" onclick="openModal('assets/appstore_preview_04.webp')">
+            <div class="appstore-card-header">
+              <span class="appstore-caption-text">手机端随时访问电脑</span>
+              <span class="appstore-order-tag">04</span>
+            </div>
+            <div class="appstore-img-wrap">
+              <img src="assets/appstore_preview_04.webp" alt="应用商店图 04" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_04.jpg'">
+            </div>
+          </div>
+
+          <div class="appstore-slide-card" onclick="openModal('assets/appstore_preview_05.webp')">
+            <div class="appstore-card-header">
+              <span class="appstore-caption-text">局域网点对点直连</span>
+              <span class="appstore-order-tag">05</span>
+            </div>
+            <div class="appstore-img-wrap">
+              <img src="assets/appstore_preview_05.webp" alt="应用商店图 05" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_05.jpg'">
+            </div>
+          </div>
+
+          <div class="appstore-slide-card" onclick="openModal('assets/appstore_preview_06.webp')">
+            <div class="appstore-card-header">
+              <span class="appstore-caption-text">独立删除与双向备份</span>
+              <span class="appstore-order-tag">06</span>
+            </div>
+            <div class="appstore-img-wrap">
+              <img src="assets/appstore_preview_06.webp" alt="应用商店图 06" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_06.jpg'">
+            </div>
+          </div>
+        </div>
+
+        <!-- 商店官方下载入口 -->
+        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(45, 42, 38, 0.08); display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <a href="https://apps.apple.com/app/lynavodrive/id6771620902" target="_blank" class="btn-act-primary">
+            <span class="svg-icon-sm"><svg viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.69-14.01-6.74-10.33-11.77-21.84-15.09-34.54-3.32-12.7-4.98-24.81-4.98-36.33 0-14.15 3.57-26.06 10.7-35.73 7.13-9.67 16.27-14.65 27.42-14.93 4.9 0 10.37 1.34 16.42 4.02 6.05 2.68 9.99 4.07 11.83 4.17 1.63 0 5.8-1.46 12.51-4.38 6.71-2.92 12.39-4.22 17.04-3.9 12.72.63 22.86 5.39 30.43 14.28-11.09 6.75-16.53 16.14-16.32 28.18.22 9.47 3.86 17.38 10.92 23.74 7.06 6.36 15.35 10.02 24.88 10.98-2.17 6.32-4.8 12.55-7.89 18.7zM119.22 31.84c0-7.39 2.66-14.37 7.98-20.94 5.32-6.57 11.96-10.5 19.92-11.79.11 1.09.16 2.07.16 2.94 0 7.39-2.83 14.53-8.49 21.43-5.66 6.9-12.39 10.87-20.19 11.9-.33-1.2-.5-2.2-.5-3.54z"/></svg></span> Apple App Store 官方下载页 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.vividrop.mobile.global" target="_blank" class="btn-act-primary">
+            <span class="svg-icon-sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.6 1.7L13.8 12 3.6 22.3c-.4-.4-.6-1-.6-1.7V3.4c0-.7.2-1.3.6-1.7z"/><path fill="#34A853" d="M17.3 8.5L13.8 12l3.5 3.5 4-2.3c1.1-.6 1.1-1.7 0-2.4l-4-2.3z"/><path fill="#EA4335" d="M3.6 22.3l10.2-10.3 3.5 3.5-11.6 6.6c-.8.5-1.7.5-2.1.2z"/><path fill="#FBBC04" d="M3.6 1.7c.4-.3 1.3-.3 2.1.2l11.6 6.6-3.5 3.5L3.6 1.7z"/></svg></span> Google Play Store 官方下载页 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+
       </div>
     </section>
 
     <!-- ==========================================================================
-         板块二：活动物料设计 & LynavoDrive 官方应用商店图
-         ========================================================================== -->
-    <section id="design" class="portfolio-section">
-      <div class="section-header">
-        <div class="section-badge-row">
-          <span class="section-num">2</span>
-          <span class="section-tag-sub">Visual & Print Design</span>
-        </div>
-        <h2 class="section-title">实体活动物料 & LynavoDrive 官方应用商店图</h2>
-        <p class="section-desc">涵盖线下大型专场展演的实物印刷品打样，以及面向全球 Apple App Store / Google Play 的高清商店上架物料。</p>
-      </div>
-
-      <!-- 实物入场券设计 -->
-      <div class="bento-card" style="margin-bottom: 28px;">
-        <div class="card-topbar">
-          <div>
-            <h3>配音社团年度晚会实物入场券 / 书签正面设计</h3>
-            <p>为「不语配音社」年度专场展演操盘设计的实体印刷品，兼具晚会检票与永久纪念书签双重功能。</p>
-          </div>
-          <span class="badge-label">实物打样 · 印刷交付</span>
-        </div>
-
-        <div style="background: #FAFAF9; padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--border-card);">
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid #CBD5E1; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
-            <img src="assets/ticket_design.webp" alt="不语配音社年度晚会入场券设计" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/ticket_design.png'" onclick="openModal(this.src)">
-          </div>
-          <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-            <div style="font-size: 0.88rem; color: var(--text-body); max-width: 820px; line-height: 1.6;">
-              <strong>设计构思</strong>：主标「语你结缘」，副标「不语配音社年度晚会」，预留「NO.20241215」独立编号；融合“传统祥云金纹”与“声波流线”，左侧融入专属徽章标志；严格把控印刷出血线、烫金质感与成品质检。
-            </div>
-            <button class="btn-action secondary" onclick="openModal('assets/ticket_design.webp')">🔍 点击放大全图</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- LynavoDrive 应用商店高清大图 -->
-      <div class="bento-card">
-        <div class="card-topbar">
-          <div>
-            <h3>LynavoDrive 官方应用商店上架图（App Store Screenshots · 高清全览）</h3>
-            <p>针对 App Store 规范制作的 2560x1600 高清应用商店图，结构化传达产品核心功能与私有云安全优势。</p>
-          </div>
-          <span class="badge-label blue">App Store 官方上架物料</span>
-        </div>
-
-        <!-- 商店下载链接预览卡片 -->
-        <div class="grid-2" style="margin-bottom: 20px;">
-          <div class="item-card" style="flex-direction: row; align-items: center; gap: 16px;">
-            <div style="font-size: 2.2rem;">🍏</div>
-            <div>
-              <h4 style="font-size: 1rem; color: var(--text-main);">Apple App Store 官方下载页</h4>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 6px;">iOS 客户端已正式上架苹果应用商店</p>
-              <a href="https://apps.apple.com/app/lynavodrive/id6771620902" target="_blank" class="btn-action primary" style="padding: 5px 12px; font-size: 0.8rem;">
-                🔗 访问 iOS App Store 页面 ↗
-              </a>
-            </div>
-          </div>
-          <div class="item-card" style="flex-direction: row; align-items: center; gap: 16px;">
-            <div style="font-size: 2.2rem;">🤖</div>
-            <div>
-              <h4 style="font-size: 1rem; color: var(--text-main);">Google Play Store 官方下载页</h4>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 6px;">Android 客户端已正式上架谷歌商店</p>
-              <a href="https://play.google.com/store/apps/details?id=com.vividrop.mobile.global" target="_blank" class="btn-action primary" style="padding: 5px 12px; font-size: 0.8rem;">
-                🔗 访问 Google Play 页面 ↗
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 张应用商店图展示 -->
-        <div class="appstore-grid-showcase">
-          <div class="appstore-card-item" onclick="openModal('assets/appstore_preview_01.webp')">
-            <div class="appstore-card-caption">
-              <span>电脑与手机无缝连接</span>
-              <span class="order-num">01</span>
-            </div>
-            <img src="assets/appstore_preview_01.webp" alt="应用商店图 01" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_01.jpg'">
-          </div>
-          <div class="appstore-card-item" onclick="openModal('assets/appstore_preview_02.webp')">
-            <div class="appstore-card-caption">
-              <span>自动相册备份到电脑</span>
-              <span class="order-num">02</span>
-            </div>
-            <img src="assets/appstore_preview_02.webp" alt="应用商店图 02" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_02.jpg'">
-          </div>
-          <div class="appstore-card-item" onclick="openModal('assets/appstore_preview_03.webp')">
-            <div class="appstore-card-caption">
-              <span>跨端原图原文件传输</span>
-              <span class="order-num">03</span>
-            </div>
-            <img src="assets/appstore_preview_03.webp" alt="应用商店图 03" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_03.jpg'">
-          </div>
-          <div class="appstore-card-item" onclick="openModal('assets/appstore_preview_04.webp')">
-            <div class="appstore-card-caption">
-              <span>手机端随时访问电脑文件</span>
-              <span class="order-num">04</span>
-            </div>
-            <img src="assets/appstore_preview_04.webp" alt="应用商店图 04" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_04.jpg'">
-          </div>
-          <div class="appstore-card-item" onclick="openModal('assets/appstore_preview_05.webp')">
-            <div class="appstore-card-caption">
-              <span>局域网高速无中继点对点</span>
-              <span class="order-num">05</span>
-            </div>
-            <img src="assets/appstore_preview_05.webp" alt="应用商店图 05" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_05.jpg'">
-          </div>
-          <div class="appstore-card-item" onclick="openModal('assets/appstore_preview_06.webp')">
-            <div class="appstore-card-caption">
-              <span>独立删除与多重备份安全</span>
-              <span class="order-num">06</span>
-            </div>
-            <img src="assets/appstore_preview_06.webp" alt="应用商店图 06" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/appstore_preview_06.jpg'">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         板块三：开源社区生态与 Vibecoding 全栈交付
+         板块三：开源社区生态（GitHub）与 Vibecoding 全栈交付
          ========================================================================== -->
     <section id="opensource-ai" class="portfolio-section">
-      <div class="section-header">
+      <div class="section-editorial-header">
         <div class="section-badge-row">
-          <span class="section-num">3</span>
-          <span class="section-tag-sub">Engineering & Open Source</span>
+          <span class="section-order-badge">3</span>
+          <span class="section-category-tag">Engineering & Open Source</span>
         </div>
-        <h2 class="section-title">开源社区生态（GitHub）与 Vibecoding 全栈交付</h2>
-        <p class="section-desc">结合产品思维与 AI 辅助编程能力（Vibecoding），深入开源社区协同，完成从需求分析、架构设计到在线部署的端到端闭环。</p>
+        <h2 class="section-main-heading">开源社区生态与 Vibecoding 全栈交付</h2>
       </div>
 
       <!-- GitHub 展位 -->
-      <div class="bento-card" style="margin-bottom: 28px;">
-        <div class="card-topbar">
+      <div class="editorial-bento-card">
+        <div class="bento-card-topbar">
           <div>
-            <h3>GitHub 个人开源贡献与开发者协作（JD 明确加分项）</h3>
-            <p>过去一年累计贡献 <strong>842 次（842 contributions）</strong>，参与 530+ Star 开源项目协同，熟悉 Git/PR 工作流。</p>
+            <h3 class="bento-card-title">GitHub 个人开源贡献与开发者协作</h3>
           </div>
-          <span class="badge-label emerald">🟢 GitHub 842 Contributions</span>
         </div>
 
-        <div class="browser-frame">
-          <div class="browser-header">
-            <div class="browser-dots">
+        <div class="browser-mockup-frame">
+          <div class="browser-top-bar">
+            <div class="browser-dots-group">
               <span class="browser-dot dot-red"></span>
               <span class="browser-dot dot-yellow"></span>
               <span class="browser-dot dot-green"></span>
             </div>
-            <div class="browser-address">🔒 github.com/kristen7416</div>
+            <div class="browser-address-bar"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> github.com/kristen7416</div>
           </div>
-          <div class="browser-body">
-            <img src="assets/github_profile.webp" alt="GitHub 个人贡献与开源项目" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/github_profile.png'" onclick="openModal(this.src)">
+          <div class="browser-viewport" onclick="openModal('assets/github_profile.webp')">
+            <img src="assets/github_profile.webp" alt="GitHub 个人贡献与开源项目" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/github_profile.png'">
           </div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
-          <div style="font-size: 0.9rem; color: var(--text-body);">
-            <strong>开源履历亮点</strong>：在 GitHub 深度协同 <span style="color: var(--primary); font-weight: 700;">Lynavo/lynavo-drive</span>（530 Stars、81 Forks）、参与 OpenIM 开源协同（69 个合并 PR）；主导独立开源项目 <span style="color: var(--primary); font-weight: 700;">swufe-club-news</span> 与 <span style="color: var(--primary); font-weight: 700;">successbank</span>。
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 16px;">
+          <div style="font-size: 0.92rem; color: var(--text-body); max-width: 780px;">
+            累计贡献 <strong>888 次</strong>，协同 <span style="color: var(--color-charcoal); font-weight: 700;">Lynavo/lynavo-drive</span>（530 Stars）与 OpenIM 开源项目；主导开源项目 <span style="color: var(--color-charcoal); font-weight: 700;">universal-growth-agent</span>（全球出海运营工作流智能体）、<span style="color: var(--color-charcoal); font-weight: 700;">swufe-club-news</span> 与 <span style="color: var(--color-charcoal); font-weight: 700;">successbank</span>。
           </div>
-          <div style="display: flex; gap: 8px;">
-            <a href="https://github.com/kristen7416" target="_blank" class="btn-action primary">
-              🐙 访问 GitHub 主页 (@kristen7416) ↗
+          <div style="display: flex; gap: 10px;">
+            <a href="https://github.com/kristen7416" target="_blank" class="btn-act-primary">
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> 访问 GitHub 主页 (@kristen7416) <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
-            <button class="btn-action secondary" onclick="copyContact('https://github.com/kristen7416', 'GitHub主页')">复制链接</button>
+            <button class="btn-act-secondary" onclick="copyContact('https://github.com/kristen7416', 'GitHub主页')">复制链接</button>
           </div>
         </div>
       </div>
 
-      <!-- Vibecoding 独立网页上线案例 -->
-      <div class="bento-card">
-        <div class="card-topbar">
+      <!-- Vibecoding 独立全栈案例 (3个上线项目) -->
+      <div class="editorial-bento-card">
+        <div class="bento-card-topbar">
           <div>
-            <h3>Vibecoding 独立全栈项目（已部署上线 · 真实可交互）</h3>
-            <p>利用现代 AI 编码工作流全栈独立落地，涵盖 Web 云部署、跨端小程序与商业产品官网。</p>
+            <h3 class="bento-card-title">Vibecoding 独立全栈项目</h3>
           </div>
-          <span class="badge-label blue">全栈交付 · 已上线</span>
         </div>
 
         <div class="grid-3">
           <!-- 站点一：SWUFE Club News -->
-          <div class="item-card">
+          <div class="editorial-item-card">
             <div>
-              <div class="browser-frame">
-                <div class="browser-header">
-                  <div class="browser-dots">
+              <div class="browser-mockup-frame">
+                <div class="browser-top-bar">
+                  <div class="browser-dots-group">
                     <span class="browser-dot dot-red"></span>
                     <span class="browser-dot dot-yellow"></span>
                     <span class="browser-dot dot-green"></span>
                   </div>
-                  <div class="browser-address">swufe-club-news.vercel.app</div>
+                  <div class="browser-address-bar">swufe-club-news.vercel.app</div>
                 </div>
-                <div class="browser-body">
-                  <img src="assets/swufe_club_preview.webp" alt="SWUFE社团资讯站真实截图" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/swufe_club_preview.png'" onclick="openModal(this.src)">
+                <div class="browser-viewport" onclick="openModal('assets/swufe_club_preview.webp')">
+                  <img src="assets/swufe_club_preview.webp" alt="SWUFE社团资讯站真实截图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/swufe_club_preview.png'">
                 </div>
               </div>
-              <div class="item-card-header">
-                <span class="badge-label blue">Vercel 云部署</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted);">高校资讯平台</span>
-              </div>
-              <h4 class="item-title">SWUFE Club News（财大社团资讯站）</h4>
-              <p class="item-desc">
-                针对高校社团信息分散痛点构建的轻量资讯网站。包含新闻列表、社团活动预告与分类导航，由 Python 后端与现代前端结合交付。
-              </p>
-              <div class="item-tags">
-                <span class="tag-chip code">Python</span>
-                <span class="tag-chip code">HTML5 / CSS3</span>
-                <span class="tag-chip">Vercel Deploy</span>
+
+              <h4 class="item-title">SWUFE Club News 财大社团资讯站</h4>
+
+              <div class="item-tags-wrap">
+                <span class="item-tag code">Python</span>
+                <span class="item-tag code">HTML5 / CSS3</span>
+                <span class="item-tag">Vercel 云部署</span>
               </div>
             </div>
-            <div class="item-btn-group">
-              <a href="http://swufe-club-news.vercel.app" target="_blank" class="btn-action primary" style="font-size: 0.8rem;">
-                🚀 立即在线访问 ↗
+
+            <div class="item-actions-row">
+              <a href="http://swufe-club-news.vercel.app" target="_blank" class="btn-act-primary">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> 立即在线访问 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
-              <button class="btn-action secondary" style="font-size: 0.8rem;" onclick="copyContact('http://swufe-club-news.vercel.app', 'SWUFE资讯站链接')">复制链接</button>
+              <button class="btn-act-secondary" onclick="copyContact('http://swufe-club-news.vercel.app', 'SWUFE资讯站链接')">
+                复制链接
+              </button>
             </div>
           </div>
 
           <!-- 站点二：Lynavo 官网 -->
-          <div class="item-card">
+          <div class="editorial-item-card">
             <div>
-              <div class="browser-frame">
-                <div class="browser-header">
-                  <div class="browser-dots">
+              <div class="browser-mockup-frame">
+                <div class="browser-top-bar">
+                  <div class="browser-dots-group">
                     <span class="browser-dot dot-red"></span>
                     <span class="browser-dot dot-yellow"></span>
                     <span class="browser-dot dot-green"></span>
                   </div>
-                  <div class="browser-address">drive.lynavo.io</div>
+                  <div class="browser-address-bar">drive.lynavo.io</div>
                 </div>
-                <div class="browser-body">
-                  <img src="assets/lynavo_app_01.webp" alt="Lynavo官网截图" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/lynavo_app_01.png'" onclick="openModal(this.src)">
+                <div class="browser-viewport" onclick="openModal('assets/lynavo_app_01.webp')">
+                  <img src="assets/lynavo_app_01.webp" alt="Lynavo官网截图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/lynavo_app_01.png'">
                 </div>
               </div>
-              <div class="item-card-header">
-                <span class="badge-label emerald">商业产品官网</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted);">15 个正式页面</span>
-              </div>
+
               <h4 class="item-title">LynavoDrive 官方网站与 Web 触点</h4>
-              <p class="item-desc">
-                主导信息架构、文案与 SEO 结构设计，梳理转化漏斗；完成 34 次个人提交与 11 个合并 PR，配合自动化冒烟测试上线。
-              </p>
-              <div class="item-tags">
-                <span class="tag-chip code">SEO 架构</span>
-                <span class="tag-chip code">转化漏斗</span>
-                <span class="tag-chip">自动化冒烟测试</span>
+
+              <div class="item-tags-wrap">
+                <span class="item-tag code">SEO 架构</span>
+                <span class="item-tag code">转化漏斗</span>
+                <span class="item-tag">自动化测试</span>
               </div>
             </div>
-            <div class="item-btn-group">
-              <a href="https://drive.lynavo.io" target="_blank" class="btn-action primary" style="font-size: 0.8rem;">
-                🌐 访问产品官网 ↗
+
+            <div class="item-actions-row">
+              <a href="https://drive.lynavo.io" target="_blank" class="btn-act-primary">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 访问产品官网 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
-              <button class="btn-action secondary" style="font-size: 0.8rem;" onclick="copyContact('https://drive.lynavo.io', '官网链接')">复制链接</button>
+              <button class="btn-act-secondary" onclick="copyContact('https://drive.lynavo.io', '官网链接')">
+                复制链接
+              </button>
             </div>
           </div>
 
           <!-- 站点三：SuccessBank 成功银行 -->
-          <div class="item-card">
+          <div class="editorial-item-card">
             <div>
-              <div class="browser-frame">
-                <div class="browser-header">
-                  <div class="browser-dots">
+              <div class="browser-mockup-frame">
+                <div class="browser-top-bar">
+                  <div class="browser-dots-group">
                     <span class="browser-dot dot-red"></span>
                     <span class="browser-dot dot-yellow"></span>
                     <span class="browser-dot dot-green"></span>
                   </div>
-                  <div class="browser-address">kristen7416.github.io/successbank</div>
+                  <div class="browser-address-bar">kristen7416.github.io/successbank</div>
                 </div>
-                <div class="browser-body">
-                  <img src="assets/successbank_preview.webp" alt="SuccessBank成功银行小程序截图" class="img-showcase" loading="lazy" decoding="async" onerror="this.src='assets/successbank_preview.png'" onclick="openModal(this.src)">
+                <div class="browser-viewport" onclick="openModal('assets/successbank_preview.webp')">
+                  <img src="assets/successbank_preview.webp" alt="SuccessBank成功银行小程序截图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/successbank_preview.png'">
                 </div>
               </div>
-              <div class="item-card-header">
-                <span class="badge-label blue">小程序 Web 版</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted);">GitHub Pages</span>
-              </div>
-              <h4 class="item-title">SuccessBank（成功银行小程序 Web 端）</h4>
-              <p class="item-desc">
-                基于 Taro + React 构建的正向习惯激励小程序，跨端编译为移动端 Web (H5) 并静态部署，提供完整在线交互体验与花园成就系统。
-              </p>
-              <div class="item-tags">
-                <span class="tag-chip code">Taro / React</span>
-                <span class="tag-chip code">TypeScript</span>
-                <span class="tag-chip code">TailwindCSS</span>
+
+              <h4 class="item-title">SuccessBank 正向习惯激励小程序</h4>
+
+              <div class="item-tags-wrap">
+                <span class="item-tag code">Taro / React</span>
+                <span class="item-tag code">TypeScript</span>
+                <span class="item-tag code">TailwindCSS</span>
               </div>
             </div>
-            <div class="item-btn-group">
-              <a href="https://kristen7416.github.io/successbank/" target="_blank" class="btn-action primary" style="font-size: 0.8rem;">
-                🚀 在线交互体验 ↗
+
+            <div class="item-actions-row">
+              <a href="https://kristen7416.github.io/successbank/" target="_blank" class="btn-act-primary">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> 在线交互体验 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
-              <a href="https://github.com/kristen7416/successbank" target="_blank" class="btn-action secondary" style="font-size: 0.8rem;">
-                🐙 源码仓库
+              <a href="https://github.com/kristen7416/successbank" target="_blank" class="btn-act-secondary">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> 源码仓库
               </a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- ==========================================================================
-         板块四：全球多渠道社媒矩阵
+         板块四：LynavoDrive 全球多渠道社交媒体与内容矩阵
          ========================================================================== -->
     <section id="social-matrix" class="portfolio-section">
-      <div class="section-header">
+      <div class="section-editorial-header">
         <div class="section-badge-row">
-          <span class="section-num">4</span>
-          <span class="section-tag-sub">Global Operations</span>
+          <span class="section-order-badge">4</span>
+          <span class="section-category-tag">Global Operations</span>
         </div>
-        <h2 class="section-title">LynavoDrive 全球多渠道社交媒体与内容矩阵</h2>
-        <p class="section-desc">建立包含 12 类平台的内容规范，针对不同社区生态定制标题、结构、身份披露与 UTM 转化归因，沉淀长期技术品牌资产。</p>
+        <h2 class="section-main-heading">全球多渠道社媒矩阵与运营流水线</h2>
       </div>
 
-      <div class="bento-card">
-        <div class="card-topbar">
+      <div class="editorial-bento-card">
+        <div class="bento-card-topbar">
           <div>
-            <h3>海外主流技术社区与社媒公开发布记录（全部附真实链接）</h3>
-            <p>系统化触达全球开发者与极客人群，测试用户需求痛点，构建多维内容矩阵。</p>
+            <h3 class="bento-card-title">海外主流技术社区与社媒发布矩阵</h3>
           </div>
-          <span class="badge-label">🌐 全球社媒矩阵</span>
         </div>
 
         <div class="grid-4">
           <!-- X (Twitter) -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #000000;">𝕏</div>
-                <div>
-                  <div class="social-platform-name">X / Twitter</div>
-                  <div class="social-category-tag">官方动态发布</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #000000;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>X / Twitter</h4>
                 </div>
               </div>
-              <p class="social-desc-text">发布产品更新动态与视频推文，开展观点互动与海外用户痛点测试。</p>
+              <p class="social-blurb">发布产品动态与推文，测试海外用户痛点。</p>
             </div>
-            <a href="https://x.com/founder_im63606/status/2082676677302477197" target="_blank" class="social-btn-link">
-              查看 X 推文 ↗
+            <a href="https://x.com/founder_im63606/status/2082676677302477197" target="_blank" class="social-card-btn">
+              查看 X 推文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
           <!-- YouTube -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #FF0000;">▶</div>
-                <div>
-                  <div class="social-platform-name">YouTube</div>
-                  <div class="social-category-tag">产品演示视频</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #FF0000;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>YouTube</h4>
                 </div>
               </div>
-              <p class="social-desc-text">发布产品场景演示与对比实录，建立真实透明的视频信任资产。</p>
+              <p class="social-blurb">发布产品演示与对比实录，建立透明视频资产。</p>
             </div>
-            <a href="https://www.youtube.com/watch?v=XB397hMaeEo" target="_blank" class="social-btn-link">
-              观看 YouTube 视频 ↗
+            <a href="https://www.youtube.com/watch?v=XB397hMaeEo" target="_blank" class="social-card-btn">
+              观看 YouTube 视频 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
           <!-- Quora -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #B92B27;">Q</div>
-                <div>
-                  <div class="social-platform-name">Quora</div>
-                  <div class="social-category-tag">深度问答专栏</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #B92B27;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12.001 0C5.372 0 0 5.372 0 12c0 6.626 5.372 12 12.001 12 2.457 0 4.74-.741 6.634-2.012l2.671 2.012a.75.75 0 0 0 1.2-.6v-3.79C23.36 17.472 24 14.862 24 12c0-6.628-5.372-12-11.999-12zm4.186 16.71c-.732.55-1.613.93-2.585 1.111l-.85 1.543c-.22.4-.64.636-1.09.636-.2 0-.41-.05-.6-.15a1.26 1.26 0 0 1-.58-1.28l.19-.94c-2.31-.41-4.14-2.35-4.14-4.8 0-2.69 2.21-4.87 4.93-4.87 2.73 0 4.94 2.18 4.94 4.87 0 1.48-.67 2.82-1.73 3.73l1.515.15z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>Quora</h4>
                 </div>
               </div>
-              <p class="social-desc-text">回答手机访问电脑文件的真实痛点问题，长尾承接高意向搜索流量。</p>
+              <p class="social-blurb">回答文件访问真实痛点，长尾承接搜索流量。</p>
             </div>
-            <a href="https://www.quora.com/How-do-I-access-my-files-on-my-mobile-smartphone/answer/Lynavo" target="_blank" class="social-btn-link">
-              阅读 Quora 回答 ↗
+            <a href="https://www.quora.com/How-do-I-access-my-files-on-my-mobile-smartphone/answer/Lynavo" target="_blank" class="social-card-btn">
+              阅读 Quora 回答 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
           <!-- Dev.to -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #0A0A0A;">DEV</div>
-                <div>
-                  <div class="social-platform-name">Dev.to</div>
-                  <div class="social-category-tag">开发者技术社区</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #0A0A0A;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M7.42 10.05c-.18-.1-.4-.14-.66-.14H5.4v4.18h1.36c.26 0 .48-.05.66-.14.18-.1.32-.24.41-.43.1-.19.14-.42.14-.7v-2.07c0-.28-.05-.51-.14-.7-.1-.19-.24-.33-.41-.43v.43zm9.16-.14h-1.32v4.18h1.32v-4.18zm-3.3 0h-1.64v4.18h1.64c.3 0 .56-.06.78-.18.22-.12.38-.3.5-.54.11-.23.17-.52.17-.85v-1.9c0-.33-.06-.61-.17-.85-.11-.24-.28-.42-.5-.54-.22-.11-.48-.17-.78-.17v-.15zm10.72-3.41v15H0v-15h24zm-14.73 4.29H5.4c-.64 0-1.19.22-1.63.66-.45.44-.67.98-.67 1.63v2.96c0 .64.22 1.19.67 1.63.44.44.99.67 1.63.67h3.85c.64 0 1.19-.22 1.64-.67.44-.44.66-.99.66-1.63v-2.96c0-.65-.22-1.19-.66-1.63-.45-.44-.99-.66-1.64-.66h.05zm4.99 7.55h-2.12V6.43h2.12v7.36zm6.36-2.27c0 .64-.22 1.19-.67 1.63-.44.44-.99.67-1.63.67h-3.85c-.65 0-1.19-.22-1.64-.67-.44-.44-.67-.99-.67-1.63v-2.96c0-.65.23-1.19.67-1.63.45-.44.99-.66 1.64-.66h3.85c.64 0 1.19.22 1.63.66.45.44.67.98.67 1.63v2.96z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>Dev.to</h4>
                 </div>
               </div>
-              <p class="social-desc-text">发布技术测试矩阵长文，面向海外开发者群体建立技术信任。</p>
+              <p class="social-blurb">发布技术测试长文，面向海外开发者建立技术信任。</p>
             </div>
-            <a href="https://dev.to/lynavo/local-first-is-not-offline-how-to-test-phone-to-computer-file-access-33pe" target="_blank" class="social-btn-link">
-              访问 Dev.to 文章 ↗
+            <a href="https://dev.to/lynavo/local-first-is-not-offline-how-to-test-phone-to-computer-file-access-33pe" target="_blank" class="social-card-btn">
+              访问 Dev.to 文章 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
           <!-- Hashnode -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #2962FF;">H</div>
-                <div>
-                  <div class="social-platform-name">Hashnode</div>
-                  <div class="social-category-tag">技术博客专栏</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #2962FF;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M22.351 8.019l-6.37-6.37a5.645 5.645 0 0 0-7.98 0l-6.37 6.37a5.645 5.645 0 0 0 0 7.98l6.37 6.37a5.645 5.645 0 0 0 7.98 0l6.37-6.37a5.645 5.645 0 0 0 0-7.98zm-6.86 4.966a3.491 3.491 0 1 1-4.937-4.937 3.491 3.491 0 0 1 4.937 4.937z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>Hashnode</h4>
                 </div>
               </div>
-              <p class="social-desc-text">发布可执行的 Runbook 架构文章，沉淀可复用的工程技术品牌资产。</p>
+              <p class="social-blurb">发布可执行架构文章，沉淀工程技术品牌资产。</p>
             </div>
-            <a href="https://lynavodrive.hashnode.dev/designing-a-reliable-runbook-for-phone-to-computer-file-access" target="_blank" class="social-btn-link">
-              阅读 Hashnode 文章 ↗
+            <a href="https://lynavodrive.hashnode.dev/designing-a-reliable-runbook-for-phone-to-computer-file-access" target="_blank" class="social-card-btn">
+              阅读 Hashnode 文章 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
           <!-- Product Hunt -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #DA552F;">P</div>
-                <div>
-                  <div class="social-platform-name">Product Hunt</div>
-                  <div class="social-category-tag">社区自荐与讨论</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #DA552F;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 18.5c-.828 0-1.5-.672-1.5-1.5v-3.5H9.25c-.414 0-.75-.336-.75-.75V7.75c0-.414.336-.75.75-.75h4.25c2.485 0 4.5 2.015 4.5 4.5s-2.015 4.5-4.5 4.5H12v2.5zm0-8.5h1.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5H12v3z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>Product Hunt</h4>
                 </div>
               </div>
-              <p class="social-desc-text">在 Self-Promotion 社区发起产品深度讨论，收集早期种子用户反馈。</p>
+              <p class="social-blurb">在自荐社区发起讨论，收集早期用户反馈。</p>
             </div>
-            <a href="https://www.producthunt.com/p/self-promotion/we-documented-the-boundary-between-local-first-and-always-offline" target="_blank" class="social-btn-link">
-              查看 PH 讨论帖 ↗
+            <a href="https://www.producthunt.com/p/self-promotion/we-documented-the-boundary-between-local-first-and-always-offline" target="_blank" class="social-card-btn">
+              查看 PH 讨论帖 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
           <!-- Hacker News -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #FF6600;">Y</div>
-                <div>
-                  <div class="social-platform-name">Hacker News</div>
-                  <div class="social-category-tag">科技首发与讨论</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #FF6600;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M0 0v24h24V0H0zm12.923 13.91v4.887h-1.846v-4.887L7.42 5.203h2.128l2.427 4.887 2.427-4.887h2.128l-3.607 8.707z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>Hacker News</h4>
                 </div>
               </div>
-              <p class="social-desc-text">发布客观克制的普通链接帖，获取高标准全球极客社区技术反馈。</p>
+              <p class="social-blurb">发布客观链接帖，获取全球极客技术反馈。</p>
             </div>
-            <a href="https://news.ycombinator.com/item?id=49107192" target="_blank" class="social-btn-link">
-              查看 HN 帖子 ↗
+            <a href="https://news.ycombinator.com/item?id=49107192" target="_blank" class="social-card-btn">
+              查看 HN 帖子 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
           <!-- Medium -->
-          <div class="social-matrix-card">
+          <div class="social-card">
             <div>
-              <div class="social-card-head">
-                <div class="social-avatar-square" style="background: #12100E;">M</div>
-                <div>
-                  <div class="social-platform-name">Medium</div>
-                  <div class="social-category-tag">官方深度长文</div>
+              <div class="social-card-top">
+                <div class="social-badge-icon" style="background: #12100E;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></div>
+                <div class="social-meta-info">
+                  <h4>Medium</h4>
                 </div>
               </div>
-              <p class="social-desc-text">深度母文章发布，系统阐述个人数据存储工作流与产品核心逻辑。</p>
+              <p class="social-blurb">深度母文发布，系统阐述核心逻辑与产品思考。</p>
             </div>
-            <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="social-btn-link">
-              阅读 Medium 母文 ↗
+            <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="social-card-btn">
+              阅读 Medium 母文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- AI Agent 运营流水线总结 -->
-        <div class="pipeline-container">
-          <div class="pipeline-title">
-            <span>⚡ 支撑底层：AI Agent 辅助运营流水线架构</span>
+        <!-- 开源智能体套件：Universal Growth Agent 全球运营工作流 -->
+        <div class="pipeline-board">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap;">
+                <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin: 0; display: flex; align-items: center; gap: 8px;">
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: var(--color-ochre);"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Universal Growth Agent 全球出海运营工作流
+                </h3>
+                <span class="item-tag" style="background: rgba(184, 80, 66, 0.12); color: var(--color-terracotta); font-weight: 600;">开源智能体套件</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-body); margin: 0; line-height: 1.5; max-width: 780px;">
+                专为全球化产品打造的多渠道出海增长、社媒内容矩阵与全生命周期运营工作流智能体（Agent Skills）与自动化脚本套件。
+              </p>
+            </div>
+
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <a href="https://github.com/kristen7416/universal-growth-agent" target="_blank" class="btn-act-primary">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> 访问 GitHub 开源仓库 (@kristen7416/universal-growth-agent) <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+              <button class="btn-act-secondary" onclick="copyContact('https://github.com/kristen7416/universal-growth-agent', 'Universal Growth Agent 开源仓库')">复制链接</button>
+            </div>
           </div>
-          <div class="pipeline-steps-grid">
-            <div class="pipeline-step-box">
-              <div class="step-header">01 · 痛点检索与选题</div>
-              <p>自动化监控行业热点与用户真实痛点，关键词打分入库。</p>
+
+          <div class="pipeline-step-grid">
+            <div class="pipeline-box">
+              <div class="pipeline-box-num">01</div>
+              <h4 class="pipeline-box-title">需求检索与选题</h4>
+              <p class="pipeline-box-desc">自动化监控海外社媒真实痛点与极客提问，精准筛选高价值需求并入库。</p>
             </div>
-            <div class="pipeline-step-box">
-              <div class="step-header">02 · 事实源与简报生成</div>
-              <p>对齐产品事实真源表，明确宣传红线，AI 生成母内容大纲。</p>
+
+            <div class="pipeline-box">
+              <div class="pipeline-box-num">02</div>
+              <h4 class="pipeline-box-title">事实源与大纲生成</h4>
+              <p class="pipeline-box-desc">基于事实源（Source of Truth）对齐宣传红线，严禁虚构造假，生成母内容大纲。</p>
             </div>
-            <div class="pipeline-step-box">
-              <div class="step-header">03 · 原生多渠道改写</div>
-              <p>针对 12 类平台生态定制标题、结构、身份披露与 CTA。</p>
+
+            <div class="pipeline-box">
+              <div class="pipeline-box-num">03</div>
+              <h4 class="pipeline-box-title">原生多渠道改写</h4>
+              <p class="pipeline-box-desc">适配海外 10 大平台与国内社区，原生定制标题、语调、结构与身份披露。</p>
             </div>
-            <div class="pipeline-step-box">
-              <div class="step-header">04 · 多层审核与复盘</div>
-              <p>人工介入四级审核，生成 UTM 追踪，执行效果归因。</p>
+
+            <div class="pipeline-box">
+              <div class="pipeline-box-num">04</div>
+              <h4 class="pipeline-box-title">全周期排期与归因</h4>
+              <p class="pipeline-box-desc">12 渠道全周期排期引擎，自动化生成 UTM 追踪链路与转化归因复盘。</p>
+            </div>
+          </div>
+
+          <div class="item-tags-wrap" style="margin-top: 16px;">
+            <span class="item-tag code">5 大 Agent Skills</span>
+            <span class="item-tag code">Python 自动化工具链</span>
+            <span class="item-tag">防幻觉事实核对机制</span>
+            <span class="item-tag">12 类渠道排期引擎</span>
+            <span class="item-tag">UTM 链路归因</span>
+            <span class="item-tag">MIT 开源许可</span>
+          </div>
+        </div>
+
+        <!-- 延伸视觉创作：科技产品 Medium 深度长文头图 -->
+        <div class="medium-showcase-compact">
+          <div class="medium-showcase-inner">
+            <div class="medium-showcase-preview" onclick="openModal('assets/medium_cover.webp')">
+              <img src="assets/medium_cover.webp" alt="Medium 科技长文封面排版" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/medium_cover.png'">
+            </div>
+            <div class="medium-showcase-info">
+              <h4 style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 6px;">
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Medium 深度长文图解头图
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-body); line-height: 1.6; margin-bottom: 12px;">
+                为 Medium 深度长文设计的 16:9 视觉图解，直观对比云端与本地存储流差异，兼具严谨逻辑与国际化科技质感。
+              </p>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="btn-act-primary" style="font-size: 0.78rem; padding: 6px 14px;">
+                  查看 Medium 原文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                </a>
+                <button class="btn-act-secondary" onclick="openModal('assets/medium_cover.webp')" style="font-size: 0.78rem; padding: 6px 12px;">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg> 查看大图
+                </button>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- ==========================================================================
+       EDITORIAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-title">王蕊 | 产品运营与内容生态作品集 · Kristen Wang</div>
-      <div class="footer-meta">
-        联系电话：18708165973 · 邮箱：kristen6670@163.com · 微信：kristen6670 · GitHub：github.com/kristen7416
-      </div>
-      <div class="footer-edu">
-        西南财经大学（211 / 双一流）· 金融数学 本科（2027 届）
+      <div class="footer-inner">
+        <div class="footer-top-row">
+          <div class="footer-brand">
+            <h3>王蕊 · Kristen Wang</h3>
+            <p>
+              西南财经大学（211 / 双一流）· 金融数学专业本科（2027 届）
+            </p>
+          </div>
+
+          <div class="footer-contact-pills">
+            <button class="footer-contact-btn" onclick="copyContact('kristen6670@163.com', '邮箱')">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> kristen6670@163.com
+            </button>
+            <button class="footer-contact-btn" onclick="copyContact('kristen6670', '微信')">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.213.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 微信: kristen6670
+            </button>
+            <button class="footer-contact-btn" onclick="copyContact('18708165973', '电话')">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 18708165973
+            </button>
+            <a href="https://github.com/kristen7416" target="_blank" class="footer-contact-btn">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> GitHub @kristen7416
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </footer>
 
-  <!-- LIGHTBOX MODAL -->
-  <div class="modal" id="imageModal" onclick="closeModal()">
-    <div class="modal-content-wrap" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeModal()" aria-label="关闭">✕</button>
-      <img src="" alt="放大预览" class="modal-img" id="modalImg">
+  <!-- ==========================================================================
+       LIGHTBOX MODAL & TOAST
+       ========================================================================== -->
+  <div class="lightbox-modal" id="imageModal" onclick="closeModal()">
+    <div class="lightbox-wrap" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeModal()" aria-label="关闭预览"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <img src="" alt="放大预览" class="lightbox-img" id="modalImg">
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast-container" id="toast">
-    <span id="toastIcon">✨</span>
+  <div class="toast-box" id="toast">
+    <span id="toastIcon"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"/></svg></span>
     <span id="toastText">已复制到剪贴板</span>
   </div>
 
-  <!-- BACK TO TOP BUTTON -->
-  <button class="back-to-top" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="返回顶部">↑</button>
+  <button class="back-to-top-btn" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="返回顶部"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
 
   <script>
     // 平滑滚动至锚点
@@ -1753,9 +2463,9 @@
       }
     }
 
-    // 导航高亮与返回顶部按钮监听
-    const sections = ['media', 'design', 'opensource-ai', 'social-matrix'];
-    const navButtons = document.querySelectorAll('.tab-btn');
+    // 导航高亮与返回顶部监听
+    const sectionIds = ['hero', 'media', 'design', 'opensource-ai', 'social-matrix'];
+    const navButtons = document.querySelectorAll('.nav-link-btn');
     const backToTopBtn = document.getElementById('backToTopBtn');
 
     function updateActiveNav(activeId) {
@@ -1773,12 +2483,12 @@
 
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY || window.pageYOffset;
-      let current = sections[0];
+      let current = sectionIds[0];
 
-      sections.forEach(id => {
+      sectionIds.forEach(id => {
         const el = document.getElementById(id);
         if (el) {
-          const sectionTop = el.offsetTop - 180;
+          const sectionTop = el.offsetTop - 120;
           if (scrollY >= sectionTop) {
             current = id;
           }
@@ -1787,14 +2497,14 @@
 
       updateActiveNav(current);
 
-      if (scrollY > 350) {
+      if (scrollY > 380) {
         backToTopBtn.classList.add('visible');
       } else {
         backToTopBtn.classList.remove('visible');
       }
     }, { passive: true });
 
-    // 图片放大弹窗
+    // 灯箱图片放大
     function openModal(src) {
       const modal = document.getElementById('imageModal');
       const img = document.getElementById('modalImg');
@@ -1809,7 +2519,7 @@
       document.body.style.overflow = '';
     }
 
-    // 复制交互与 Toast 提示（支持现代 Clipboard API 与全环境兜底）
+    // 一键复制与 Toast 提示
     function copyContact(text, label) {
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
@@ -1842,8 +2552,6 @@
         prompt(`请手动复制${label}：`, text);
       }
     }
-
-    const copyText = copyContact;
 
     function showToast(msg) {
       const toast = document.getElementById('toast');
