@@ -1483,6 +1483,55 @@
       color: #FFFFFF;
       transform: translateY(-2px);
     }
+
+    /* Official Vector SVG Icons */
+    .svg-icon {
+      width: 15px;
+      height: 15px;
+      vertical-align: -0.16em;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .svg-icon-sm {
+      width: 13px;
+      height: 13px;
+      vertical-align: -0.14em;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .svg-icon-ext {
+      width: 12px;
+      height: 12px;
+      margin-left: 3px;
+      vertical-align: -0.1em;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    a:hover .svg-icon-ext, button:hover .svg-icon-ext {
+      transform: translate(1.5px, -1.5px);
+    }
+    .svg-brand-app {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .svg-brand-app svg {
+      width: 32px;
+      height: 32px;
+    }
+    .social-badge-icon svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+    .triad-compact-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -1550,7 +1599,7 @@
               Get in touch · 取得联系
             </button>
             <a href="https://github.com/kristen7416" target="_blank" class="btn-pill-light">
-              🐙 GitHub @kristen7416
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> GitHub @kristen7416
             </a>
           </div>
         </div>
@@ -1563,27 +1612,27 @@
 
           <!-- High-density Capability Tags -->
           <div class="hero-dense-tags">
-            <span class="dense-tag highlight">🎓 211 金融数学</span>
-            <span class="dense-tag">📱 微信公众号图文采编排版 (秀米/135)</span>
-            <span class="dense-tag">🎨 晚会入场券/书签印刷打样</span>
-            <span class="dense-tag">🍏 App Store 2560x1600 高清图</span>
-            <span class="dense-tag">⚡ GitHub 842 次贡献 (69 PR 合并)</span>
-            <span class="dense-tag">🚀 3 款全栈上线交付产品</span>
+            <span class="dense-tag highlight"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> 211 金融数学</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> 微信公众号图文采编排版 (秀米/135)</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"/><circle cx="13.5" cy="6.5" r="1" fill="currentColor"/><circle cx="17.5" cy="10.5" r="1" fill="currentColor"/><circle cx="8.5" cy="7.5" r="1" fill="currentColor"/><circle cx="6.5" cy="12.5" r="1" fill="currentColor"/></svg> 晚会入场券/书签印刷打样</span>
+            <span class="dense-tag"><span class="svg-icon-sm"><svg viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.69-14.01-6.74-10.33-11.77-21.84-15.09-34.54-3.32-12.7-4.98-24.81-4.98-36.33 0-14.15 3.57-26.06 10.7-35.73 7.13-9.67 16.27-14.65 27.42-14.93 4.9 0 10.37 1.34 16.42 4.02 6.05 2.68 9.99 4.07 11.83 4.17 1.63 0 5.8-1.46 12.51-4.38 6.71-2.92 12.39-4.22 17.04-3.9 12.72.63 22.86 5.39 30.43 14.28-11.09 6.75-16.53 16.14-16.32 28.18.22 9.47 3.86 17.38 10.92 23.74 7.06 6.36 15.35 10.02 24.88 10.98-2.17 6.32-4.8 12.55-7.89 18.7zM119.22 31.84c0-7.39 2.66-14.37 7.98-20.94 5.32-6.57 11.96-10.5 19.92-11.79.11 1.09.16 2.07.16 2.94 0 7.39-2.83 14.53-8.49 21.43-5.66 6.9-12.39 10.87-20.19 11.9-.33-1.2-.5-2.2-.5-3.54z"/></svg></span> App Store 2560x1600 高清图</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> GitHub 842 次贡献 (69 PR 合并)</span>
+            <span class="dense-tag"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> 3 款全栈上线交付产品</span>
           </div>
 
           <!-- High-density Interactive Contacts -->
           <div class="hero-dense-contacts">
             <button class="dense-contact-btn" onclick="copyContact('kristen6670@163.com', '邮箱')">
-              📧 kristen6670@163.com
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> kristen6670@163.com
             </button>
             <button class="dense-contact-btn" onclick="copyContact('kristen6670', '微信')">
-              💬 微信: kristen6670
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.213.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 微信: kristen6670
             </button>
             <button class="dense-contact-btn" onclick="copyContact('18708165973', '电话')">
-              📞 18708165973
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 18708165973
             </button>
             <a href="https://github.com/kristen7416" target="_blank" class="dense-contact-btn">
-              🐙 github.com/kristen7416
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> github.com/kristen7416
             </a>
           </div>
         </div>
@@ -1591,7 +1640,7 @@
         <!-- Bottom Row: 3 Core Pillars (Compact Horizontal Grid) -->
         <div class="hero-triad-strip">
           <div class="triad-compact-item">
-            <div class="triad-compact-icon">∿</div>
+            <div class="triad-compact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c3-6 7-6 10 0s7 6 10 0"/></svg></div>
             <div class="triad-compact-text">
               <h4>End to end service · 全链路内容运营</h4>
               <p>选题策划、文案采编、秀米/135排版美化到发布复盘，全流程独立高效闭环。</p>
@@ -1599,7 +1648,7 @@
           </div>
 
           <div class="triad-compact-item">
-            <div class="triad-compact-icon">☼</div>
+            <div class="triad-compact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
             <div class="triad-compact-text">
               <h4>Passion & craft · 视觉质感与印刷打样</h4>
               <p>苛求排版留白与呼吸感，严控实体印刷出血线与 App Store 2560x1600 商店图。</p>
@@ -1607,7 +1656,7 @@
           </div>
 
           <div class="triad-compact-item">
-            <div class="triad-compact-icon">❖</div>
+            <div class="triad-compact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 12 12 22 2 12 12 2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
             <div class="triad-compact-text">
               <h4>Global & code · 全球视野与工程全栈</h4>
               <p>842 次 GitHub 贡献，参与 530+ Star 开源项目，覆盖 12 大海外社区运营矩阵。</p>
@@ -1640,7 +1689,7 @@
             <h3 class="bento-card-title">实发微信公众号长图文（移动端精美排版实录与官方原文）</h3>
             <p class="bento-card-subtitle">针对不同活动场景定制视觉基调，把控字间距、行高、色彩分层与转化组件。</p>
           </div>
-          <span class="status-pill sage">✨ 真实已发表案例</span>
+          <span class="status-pill sage"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"/></svg> 真实已发表案例</span>
         </div>
 
         <div class="grid-2">
@@ -1675,7 +1724,7 @@
 
             <div class="item-actions-row">
               <a href="https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw" target="_blank" class="btn-act-primary">
-                🔗 跳转微信阅读原文 ↗
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.213.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 跳转微信阅读原文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
               <button class="btn-act-secondary" onclick="copyContact('https://mp.weixin.qq.com/s/apsx1c1SZBKdUgKSml9EWw', '文章链接')">
                 复制链接
@@ -1714,7 +1763,7 @@
 
             <div class="item-actions-row">
               <a href="https://mp.weixin.qq.com/s/CzqslP4nFd_cIzrZaHDIKw" target="_blank" class="btn-act-primary">
-                🔗 跳转微信阅读原文 ↗
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.213.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 跳转微信阅读原文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
               <button class="btn-act-secondary" onclick="copyContact('https://mp.weixin.qq.com/s/CzqslP4nFd_cIzrZaHDIKw', '文章链接')">
                 复制链接
@@ -1757,7 +1806,7 @@
               <strong>设计构思</strong>：主标「语你结缘」，副标「不语配音社年度晚会」，预留「NO.20241215」独立编号；融合“传统祥云金纹”与“声波流线”，左侧融入专属徽章标志；严格把控印刷出血线、烫金质感与成品质检。
             </div>
             <button class="btn-act-secondary" onclick="openModal('assets/ticket_design.webp')">
-              🔍 点击放大全图
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg> 点击放大全图
             </button>
           </div>
         </div>
@@ -1776,23 +1825,23 @@
         <!-- 商店下载链接预览卡片 -->
         <div class="grid-2" style="margin-bottom: 24px;">
           <div class="editorial-item-card" style="flex-direction: row; align-items: center; gap: 18px;">
-            <div style="font-size: 2.2rem;">🍏</div>
+            <div class="svg-brand-app" style="color: var(--color-charcoal);"><svg viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.69-14.01-6.74-10.33-11.77-21.84-15.09-34.54-3.32-12.7-4.98-24.81-4.98-36.33 0-14.15 3.57-26.06 10.7-35.73 7.13-9.67 16.27-14.65 27.42-14.93 4.9 0 10.37 1.34 16.42 4.02 6.05 2.68 9.99 4.07 11.83 4.17 1.63 0 5.8-1.46 12.51-4.38 6.71-2.92 12.39-4.22 17.04-3.9 12.72.63 22.86 5.39 30.43 14.28-11.09 6.75-16.53 16.14-16.32 28.18.22 9.47 3.86 17.38 10.92 23.74 7.06 6.36 15.35 10.02 24.88 10.98-2.17 6.32-4.8 12.55-7.89 18.7zM119.22 31.84c0-7.39 2.66-14.37 7.98-20.94 5.32-6.57 11.96-10.5 19.92-11.79.11 1.09.16 2.07.16 2.94 0 7.39-2.83 14.53-8.49 21.43-5.66 6.9-12.39 10.87-20.19 11.9-.33-1.2-.5-2.2-.5-3.54z"/></svg></div>
             <div>
               <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-main);">Apple App Store 官方下载页</h4>
               <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px;">iOS 客户端已正式上架苹果应用商店</p>
               <a href="https://apps.apple.com/app/lynavodrive/id6771620902" target="_blank" class="btn-act-primary">
-                🔗 访问 iOS App Store 页面 ↗
+                <span class="svg-icon-sm"><svg viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.69-14.01-6.74-10.33-11.77-21.84-15.09-34.54-3.32-12.7-4.98-24.81-4.98-36.33 0-14.15 3.57-26.06 10.7-35.73 7.13-9.67 16.27-14.65 27.42-14.93 4.9 0 10.37 1.34 16.42 4.02 6.05 2.68 9.99 4.07 11.83 4.17 1.63 0 5.8-1.46 12.51-4.38 6.71-2.92 12.39-4.22 17.04-3.9 12.72.63 22.86 5.39 30.43 14.28-11.09 6.75-16.53 16.14-16.32 28.18.22 9.47 3.86 17.38 10.92 23.74 7.06 6.36 15.35 10.02 24.88 10.98-2.17 6.32-4.8 12.55-7.89 18.7zM119.22 31.84c0-7.39 2.66-14.37 7.98-20.94 5.32-6.57 11.96-10.5 19.92-11.79.11 1.09.16 2.07.16 2.94 0 7.39-2.83 14.53-8.49 21.43-5.66 6.9-12.39 10.87-20.19 11.9-.33-1.2-.5-2.2-.5-3.54z"/></svg></span> 访问 iOS App Store 页面 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
             </div>
           </div>
 
           <div class="editorial-item-card" style="flex-direction: row; align-items: center; gap: 18px;">
-            <div style="font-size: 2.2rem;">🤖</div>
+            <div class="svg-brand-app"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.6 1.7L13.8 12 3.6 22.3c-.4-.4-.6-1-.6-1.7V3.4c0-.7.2-1.3.6-1.7z"/><path fill="#34A853" d="M17.3 8.5L13.8 12l3.5 3.5 4-2.3c1.1-.6 1.1-1.7 0-2.4l-4-2.3z"/><path fill="#EA4335" d="M3.6 22.3l10.2-10.3 3.5 3.5-11.6 6.6c-.8.5-1.7.5-2.1.2z"/><path fill="#FBBC04" d="M3.6 1.7c.4-.3 1.3-.3 2.1.2l11.6 6.6-3.5 3.5L3.6 1.7z"/></svg></div>
             <div>
               <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-main);">Google Play Store 官方下载页</h4>
               <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px;">Android 客户端已正式上架谷歌商店</p>
               <a href="https://play.google.com/store/apps/details?id=com.vividrop.mobile.global" target="_blank" class="btn-act-primary">
-                🔗 访问 Google Play 页面 ↗
+                <span class="svg-icon-sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.6 1.7L13.8 12 3.6 22.3c-.4-.4-.6-1-.6-1.7V3.4c0-.7.2-1.3.6-1.7z"/><path fill="#34A853" d="M17.3 8.5L13.8 12l3.5 3.5 4-2.3c1.1-.6 1.1-1.7 0-2.4l-4-2.3z"/><path fill="#EA4335" d="M3.6 22.3l10.2-10.3 3.5 3.5-11.6 6.6c-.8.5-1.7.5-2.1.2z"/><path fill="#FBBC04" d="M3.6 1.7c.4-.3 1.3-.3 2.1.2l11.6 6.6-3.5 3.5L3.6 1.7z"/></svg></span> 访问 Google Play 页面 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
             </div>
           </div>
@@ -1802,10 +1851,10 @@
         <div style="margin-bottom: 28px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
             <h4 style="font-family: var(--font-serif); font-size: 1.18rem; font-weight: 600; color: var(--text-main);">
-              🖼️ LynavoDrive 官方应用商店全景展览图（App Store Panoramic Showcase）
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> LynavoDrive 官方应用商店全景展览图（App Store Panoramic Showcase）
             </h4>
             <button class="btn-act-secondary" onclick="openModal('assets/appstore_exhibition.webp')" style="font-size: 0.8rem;">
-              🔍 点击全屏查看高清展览图
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg> 点击全屏查看高清展览图
             </button>
           </div>
           <div class="browser-mockup-frame" style="margin-bottom: 10px; cursor: zoom-in;" onclick="openModal('assets/appstore_exhibition.webp')">
@@ -1815,7 +1864,7 @@
                 <span class="browser-dot dot-yellow"></span>
                 <span class="browser-dot dot-green"></span>
               </div>
-              <div class="browser-address-bar">🔒 apps.apple.com/app/lynavodrive · App Store 官方上架全景展览图</div>
+              <div class="browser-address-bar"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> apps.apple.com/app/lynavodrive · App Store 官方上架全景展览图</div>
             </div>
             <div class="browser-viewport" style="background: #F8FAFC; padding: 12px 10px;">
               <img src="assets/appstore_exhibition.webp" alt="LynavoDrive 应用商店全景展览图" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/appstore_exhibition.png'" style="border-radius: var(--radius-sm); box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
@@ -1830,7 +1879,7 @@
         <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-light); margin-bottom: 14px;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
             <h4 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--text-main);">
-              📱 单张高清详细分图（01 ~ 06 · 2560x1600 · 点击放大）
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> 单张高清详细分图（01 ~ 06 · 2560x1600 · 点击放大）
             </h4>
             <span style="font-size: 0.78rem; color: var(--text-muted);">针对应用商店各功能点拆解展示</span>
           </div>
@@ -1921,7 +1970,7 @@
             <h3 class="bento-card-title">GitHub 个人开源贡献与开发者协作（JD 明确加分项）</h3>
             <p class="bento-card-subtitle">过去一年累计贡献 <strong>842 次（842 contributions）</strong>，参与 530+ Star 开源项目协同，熟悉 Git/PR 工作流。</p>
           </div>
-          <span class="status-pill sage">🟢 GitHub 842 Contributions</span>
+          <span class="status-pill sage"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> 842 Contributions</span>
         </div>
 
         <div class="browser-mockup-frame">
@@ -1931,7 +1980,7 @@
               <span class="browser-dot dot-yellow"></span>
               <span class="browser-dot dot-green"></span>
             </div>
-            <div class="browser-address-bar">🔒 github.com/kristen7416</div>
+            <div class="browser-address-bar"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> github.com/kristen7416</div>
           </div>
           <div class="browser-viewport" onclick="openModal('assets/github_profile.webp')">
             <img src="assets/github_profile.webp" alt="GitHub 个人贡献与开源项目" class="img-zoom-target" loading="lazy" decoding="async" onerror="this.src='assets/github_profile.png'">
@@ -1944,7 +1993,7 @@
           </div>
           <div style="display: flex; gap: 10px;">
             <a href="https://github.com/kristen7416" target="_blank" class="btn-act-primary">
-              🐙 访问 GitHub 主页 (@kristen7416) ↗
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> 访问 GitHub 主页 (@kristen7416) <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
             <button class="btn-act-secondary" onclick="copyContact('https://github.com/kristen7416', 'GitHub主页')">复制链接</button>
           </div>
@@ -1998,7 +2047,7 @@
 
             <div class="item-actions-row">
               <a href="http://swufe-club-news.vercel.app" target="_blank" class="btn-act-primary">
-                🚀 立即在线访问 ↗
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> 立即在线访问 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
               <button class="btn-act-secondary" onclick="copyContact('http://swufe-club-news.vercel.app', 'SWUFE资讯站链接')">
                 复制链接
@@ -2042,7 +2091,7 @@
 
             <div class="item-actions-row">
               <a href="https://drive.lynavo.io" target="_blank" class="btn-act-primary">
-                🌐 访问产品官网 ↗
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 访问产品官网 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
               <button class="btn-act-secondary" onclick="copyContact('https://drive.lynavo.io', '官网链接')">
                 复制链接
@@ -2086,10 +2135,10 @@
 
             <div class="item-actions-row">
               <a href="https://kristen7416.github.io/successbank/" target="_blank" class="btn-act-primary">
-                🚀 在线交互体验 ↗
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> 在线交互体验 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
               <a href="https://github.com/kristen7416/successbank" target="_blank" class="btn-act-secondary">
-                🐙 源码仓库
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> 源码仓库
               </a>
             </div>
           </div>
@@ -2117,7 +2166,7 @@
             <h3 class="bento-card-title">海外主流技术社区与社媒公开发布记录（全部附真实链接）</h3>
             <p class="bento-card-subtitle">系统化触达全球开发者与极客人群，测试用户需求痛点，构建多维内容矩阵。</p>
           </div>
-          <span class="status-pill sky">🌐 全球社媒矩阵</span>
+          <span class="status-pill sky"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 全球社媒矩阵</span>
         </div>
 
         <div class="grid-4">
@@ -2125,7 +2174,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #000000;">𝕏</div>
+                <div class="social-badge-icon" style="background: #000000;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>X / Twitter</h4>
                   <span class="social-type-sub">官方动态发布</span>
@@ -2134,7 +2183,7 @@
               <p class="social-blurb">发布产品更新动态与视频推文，开展观点互动与海外用户痛点测试。</p>
             </div>
             <a href="https://x.com/founder_im63606/status/2082676677302477197" target="_blank" class="social-card-btn">
-              查看 X 推文 ↗
+              查看 X 推文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
@@ -2142,7 +2191,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #E62117;">▶</div>
+                <div class="social-badge-icon" style="background: #FF0000;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>YouTube</h4>
                   <span class="social-type-sub">产品演示视频</span>
@@ -2151,7 +2200,7 @@
               <p class="social-blurb">发布产品场景演示与对比实录，建立真实透明的视频信任资产。</p>
             </div>
             <a href="https://www.youtube.com/watch?v=XB397hMaeEo" target="_blank" class="social-card-btn">
-              观看 YouTube 视频 ↗
+              观看 YouTube 视频 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
@@ -2159,7 +2208,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #B92B27;">Q</div>
+                <div class="social-badge-icon" style="background: #B92B27;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12.001 0C5.372 0 0 5.372 0 12c0 6.626 5.372 12 12.001 12 2.457 0 4.74-.741 6.634-2.012l2.671 2.012a.75.75 0 0 0 1.2-.6v-3.79C23.36 17.472 24 14.862 24 12c0-6.628-5.372-12-11.999-12zm4.186 16.71c-.732.55-1.613.93-2.585 1.111l-.85 1.543c-.22.4-.64.636-1.09.636-.2 0-.41-.05-.6-.15a1.26 1.26 0 0 1-.58-1.28l.19-.94c-2.31-.41-4.14-2.35-4.14-4.8 0-2.69 2.21-4.87 4.93-4.87 2.73 0 4.94 2.18 4.94 4.87 0 1.48-.67 2.82-1.73 3.73l1.515.15z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>Quora</h4>
                   <span class="social-type-sub">深度问答专栏</span>
@@ -2168,7 +2217,7 @@
               <p class="social-blurb">回答手机访问电脑文件的真实痛点问题，长尾承接高意向搜索流量。</p>
             </div>
             <a href="https://www.quora.com/How-do-I-access-my-files-on-my-mobile-smartphone/answer/Lynavo" target="_blank" class="social-card-btn">
-              阅读 Quora 回答 ↗
+              阅读 Quora 回答 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
@@ -2176,7 +2225,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #0A0A0A;">DEV</div>
+                <div class="social-badge-icon" style="background: #0A0A0A;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M7.42 10.05c-.18-.1-.4-.14-.66-.14H5.4v4.18h1.36c.26 0 .48-.05.66-.14.18-.1.32-.24.41-.43.1-.19.14-.42.14-.7v-2.07c0-.28-.05-.51-.14-.7-.1-.19-.24-.33-.41-.43v.43zm9.16-.14h-1.32v4.18h1.32v-4.18zm-3.3 0h-1.64v4.18h1.64c.3 0 .56-.06.78-.18.22-.12.38-.3.5-.54.11-.23.17-.52.17-.85v-1.9c0-.33-.06-.61-.17-.85-.11-.24-.28-.42-.5-.54-.22-.11-.48-.17-.78-.17v-.15zm10.72-3.41v15H0v-15h24zm-14.73 4.29H5.4c-.64 0-1.19.22-1.63.66-.45.44-.67.98-.67 1.63v2.96c0 .64.22 1.19.67 1.63.44.44.99.67 1.63.67h3.85c.64 0 1.19-.22 1.64-.67.44-.44.66-.99.66-1.63v-2.96c0-.65-.22-1.19-.66-1.63-.45-.44-.99-.66-1.64-.66h.05zm4.99 7.55h-2.12V6.43h2.12v7.36zm6.36-2.27c0 .64-.22 1.19-.67 1.63-.44.44-.99.67-1.63.67h-3.85c-.65 0-1.19-.22-1.64-.67-.44-.44-.67-.99-.67-1.63v-2.96c0-.65.23-1.19.67-1.63.45-.44.99-.66 1.64-.66h3.85c.64 0 1.19.22 1.63.66.45.44.67.98.67 1.63v2.96z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>Dev.to</h4>
                   <span class="social-type-sub">开发者技术社区</span>
@@ -2185,7 +2234,7 @@
               <p class="social-blurb">发布技术测试矩阵长文，面向海外开发者群体建立技术信任。</p>
             </div>
             <a href="https://dev.to/lynavo/local-first-is-not-offline-how-to-test-phone-to-computer-file-access-33pe" target="_blank" class="social-card-btn">
-              访问 Dev.to 文章 ↗
+              访问 Dev.to 文章 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
@@ -2193,7 +2242,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #2962FF;">H</div>
+                <div class="social-badge-icon" style="background: #2962FF;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M22.351 8.019l-6.37-6.37a5.645 5.645 0 0 0-7.98 0l-6.37 6.37a5.645 5.645 0 0 0 0 7.98l6.37 6.37a5.645 5.645 0 0 0 7.98 0l6.37-6.37a5.645 5.645 0 0 0 0-7.98zm-6.86 4.966a3.491 3.491 0 1 1-4.937-4.937 3.491 3.491 0 0 1 4.937 4.937z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>Hashnode</h4>
                   <span class="social-type-sub">技术博客专栏</span>
@@ -2202,7 +2251,7 @@
               <p class="social-blurb">发布可执行的 Runbook 架构文章，沉淀可复用的工程技术品牌资产。</p>
             </div>
             <a href="https://lynavodrive.hashnode.dev/designing-a-reliable-runbook-for-phone-to-computer-file-access" target="_blank" class="social-card-btn">
-              阅读 Hashnode 文章 ↗
+              阅读 Hashnode 文章 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
@@ -2210,7 +2259,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #DA552F;">P</div>
+                <div class="social-badge-icon" style="background: #DA552F;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 18.5c-.828 0-1.5-.672-1.5-1.5v-3.5H9.25c-.414 0-.75-.336-.75-.75V7.75c0-.414.336-.75.75-.75h4.25c2.485 0 4.5 2.015 4.5 4.5s-2.015 4.5-4.5 4.5H12v2.5zm0-8.5h1.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5H12v3z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>Product Hunt</h4>
                   <span class="social-type-sub">社区自荐与讨论</span>
@@ -2219,7 +2268,7 @@
               <p class="social-blurb">在 Self-Promotion 社区发起产品深度讨论，收集早期种子用户反馈。</p>
             </div>
             <a href="https://www.producthunt.com/p/self-promotion/we-documented-the-boundary-between-local-first-and-always-offline" target="_blank" class="social-card-btn">
-              查看 PH 讨论帖 ↗
+              查看 PH 讨论帖 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
@@ -2227,7 +2276,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #FF6600;">Y</div>
+                <div class="social-badge-icon" style="background: #FF6600;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M0 0v24h24V0H0zm12.923 13.91v4.887h-1.846v-4.887L7.42 5.203h2.128l2.427 4.887 2.427-4.887h2.128l-3.607 8.707z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>Hacker News</h4>
                   <span class="social-type-sub">科技首发与讨论</span>
@@ -2236,7 +2285,7 @@
               <p class="social-blurb">发布客观克制的普通链接帖，获取高标准全球极客社区技术反馈。</p>
             </div>
             <a href="https://news.ycombinator.com/item?id=49107192" target="_blank" class="social-card-btn">
-              查看 HN 帖子 ↗
+              查看 HN 帖子 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
 
@@ -2244,7 +2293,7 @@
           <div class="social-card">
             <div>
               <div class="social-card-top">
-                <div class="social-badge-icon" style="background: #12100E;">M</div>
+                <div class="social-badge-icon" style="background: #12100E;"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></div>
                 <div class="social-meta-info">
                   <h4>Medium</h4>
                   <span class="social-type-sub">官方深度长文</span>
@@ -2253,7 +2302,7 @@
               <p class="social-blurb">深度母文章发布，系统阐述个人数据存储工作流与产品核心逻辑。</p>
             </div>
             <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="social-card-btn">
-              阅读 Medium 母文 ↗
+              阅读 Medium 母文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </div>
         </div>
@@ -2261,7 +2310,7 @@
         <!-- 4 步 AI Agent 运营流水线架构 -->
         <div class="pipeline-board">
           <div class="pipeline-board-title">
-            <span>⚡ 支撑底层：AI Agent 辅助运营流水线架构</span>
+            <span><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 支撑底层：AI Agent 辅助运营流水线架构</span>
           </div>
 
           <div class="pipeline-step-grid">
@@ -2303,17 +2352,17 @@
                 <span style="font-size: 0.78rem; color: var(--text-muted);">针对海外读者建立统一产品空间色彩与认知逻辑</span>
               </div>
               <h4 style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
-                🌟 延伸视觉创作：科技产品 Medium 深度长文头图
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 延伸视觉创作：科技产品 Medium 深度长文头图
               </h4>
               <p style="font-size: 0.82rem; color: var(--text-body); line-height: 1.6; margin-bottom: 10px;">
                 为 Medium 深度母文独立设计的 16:9 视觉图解，清晰呈现 iCloud vs Google Drive vs LynavoDrive 的云端/本地存储流差异，兼具严谨逻辑与国际化科技质感。
               </p>
               <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                 <a href="https://medium.com/@openimfounder/stop-sending-files-to-yourself-just-to-open-them-on-your-phone-66937e45ae18" target="_blank" class="btn-act-primary" style="font-size: 0.78rem; padding: 6px 14px;">
-                  查看 Medium 原文 ↗
+                  查看 Medium 原文 <svg class="svg-icon-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
                 </a>
                 <button class="btn-act-secondary" onclick="openModal('assets/medium_cover.webp')" style="font-size: 0.78rem; padding: 6px 12px;">
-                  🔍 点击放大头图
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg> 点击放大头图
                 </button>
               </div>
             </div>
@@ -2342,16 +2391,16 @@
 
           <div class="footer-contact-pills">
             <button class="footer-contact-btn" onclick="copyContact('kristen6670@163.com', '邮箱')">
-              📧 kristen6670@163.com
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> kristen6670@163.com
             </button>
             <button class="footer-contact-btn" onclick="copyContact('kristen6670', '微信')">
-              💬 微信: kristen6670
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.858-2.554.15-5.253 2.57-6.715 1.99-1.202 4.438-1.455 6.634-.771C17.702 5.6 13.543 2.188 8.691 2.188zm-2.58 3.513c.67 0 1.213.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.213-1.214c0-.67.543-1.214 1.213-1.214zm5.162 0c.67 0 1.214.543 1.214 1.214 0 .67-.543 1.214-1.214 1.214a1.214 1.214 0 0 1-1.214-1.214c0-.67.543-1.214 1.214-1.214zM15.308 10.5c-4.14 0-7.5 2.766-7.5 6.18 0 1.865.986 3.545 2.531 4.681a.5.5 0 0 1 .18.562l-.328 1.248c-.016.059-.041.119-.041.18 0 .137.11.248.245.248a.276.276 0 0 0 .141-.046l1.605-.94c.189-.11.4-.15.605-.083a8.56 8.56 0 0 0 2.557.391c4.14 0 7.5-2.767 7.5-6.181 0-3.414-3.36-6.18-7.49-6.18zm-2.176 2.962c.565 0 1.024.459 1.024 1.025 0 .566-.459 1.025-1.024 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.46-1.025 1.025-1.025zm4.352 0c.566 0 1.025.459 1.025 1.025 0 .566-.459 1.025-1.025 1.025a1.025 1.025 0 0 1-1.025-1.025c0-.566.459-1.025 1.025-1.025z"/></svg> 微信: kristen6670
             </button>
             <button class="footer-contact-btn" onclick="copyContact('18708165973', '电话')">
-              📞 18708165973
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 18708165973
             </button>
             <a href="https://github.com/kristen7416" target="_blank" class="footer-contact-btn">
-              🐙 GitHub @kristen7416
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> GitHub @kristen7416
             </a>
           </div>
         </div>
@@ -2373,17 +2422,17 @@
        ========================================================================== -->
   <div class="lightbox-modal" id="imageModal" onclick="closeModal()">
     <div class="lightbox-wrap" onclick="event.stopPropagation()">
-      <button class="lightbox-close-btn" onclick="closeModal()" aria-label="关闭预览">✕</button>
+      <button class="lightbox-close-btn" onclick="closeModal()" aria-label="关闭预览"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       <img src="" alt="放大预览" class="lightbox-img" id="modalImg">
     </div>
   </div>
 
   <div class="toast-box" id="toast">
-    <span id="toastIcon">✨</span>
+    <span id="toastIcon"><svg class="svg-icon-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"/></svg></span>
     <span id="toastText">已复制到剪贴板</span>
   </div>
 
-  <button class="back-to-top-btn" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="返回顶部">↑</button>
+  <button class="back-to-top-btn" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="返回顶部"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
 
   <script>
     // 平滑滚动至锚点
