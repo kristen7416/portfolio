@@ -12,3 +12,14 @@
    - SuccessBank（成功银行小程序 Web 版）
    - GitHub 活跃贡献与开源协作
 5. **全球社媒矩阵与海外技术社区运营**：X / Twitter、Medium、Reddit、Product Hunt、Discord 等渠道内容规范与增长运营。
+
+## 版权与许可
+
+本项目为个人作品集，**保留所有权利（All Rights Reserved）**，不适用任何开源许可证。
+
+- ✅ 允许：浏览在线站点、通过 GitHub 平台查看（Star / Watch / Fork）。
+- ❌ 未经书面许可，禁止复制、转载、修改、分发，或将其中的代码、设计、图片、文案、
+  个人信息用于任何其他用途（含商业使用与 AI 训练）。
+
+完整条款见 [LICENSE](LICENSE)。如需转载或授权合作，请联系
+GitHub [@kristen7416](https://github.com/kristen7416)。
